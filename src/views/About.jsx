@@ -54,7 +54,7 @@ const About = () => {
                     {/* <AboutHero /> */}
 
                     <div className="relative w-full h-[90vh] min-h-[600px] 2xl:min-h-[500px]">
-                        {/* <CardSwap
+                          <CardSwap
                             cardDistance={60}
                             verticalDistance={70}
                             delay={2000}
@@ -77,13 +77,13 @@ const About = () => {
                                     </div>
                                 </Card>
                             ))}
-                        </CardSwap> */}
+                        </CardSwap>  
                     </div>
                 </div>
 
 
                 
-                {/* <div className='text-white w-full lg:max-w-[980px] 2xl:max-w-[1400px] text-center flex items-center justify-center mx-auto
+                <div className='text-white w-full lg:max-w-[980px] 2xl:max-w-[1400px] text-center flex items-center justify-center mx-auto
                     pt-24 md:pt-40 lg:pt-60 2xl:pt-80
                     mb-24 lg:mb-32 2xl:mb-40
                     px-4
@@ -96,17 +96,17 @@ const About = () => {
                     >
                         For us, creativity is a refined and strategic flow where deep understanding shapes ideas, thoughtful design creates balance, and digital innovation transforms vision into powerful and scalable solutions, delivered with clarity, consistency, and measurable performance across every stage of the brand journey.
                     </ScrollReveal>
-                </div> */}
+                </div>
                 {/* <ScrollFillText /> */}
 
 
 
-{/* 
-                this is 
-                <ScrollFillText />
+ 
+              
+                {/* <ScrollFillText /> */}
                 <DigitalEraSection />
                 <ApproachSection />
-                <LogoCarousel /> */}
+                <LogoCarousel />  
                 <CTASection />
                 {/* <ManaginDiroctor />
                 <OurTeam /> */}

@@ -69,14 +69,13 @@ const Services = () => {
             </div>
 
 
-            {/* <ServiceCards />
+         <ServiceCards />
 
             <OurApproach />
             <WhyCompany />
             <LogoCarousel />
             <FAQSection />
-            <CTASection /> */}
-
+            <CTASection />  
         </div>
     );
 };

@@ -52,12 +52,12 @@ export default function Home() {
     <main>
       <Hero />
       <HeroSection />
-      {/* <HomeAbout />
+      <HomeAbout />
       <EndToEndExcellence />
       <ForthSection />
       <LogoCarousel />
       <TorchlightTextReveal />
-      <ContactSection /> */}
+      <ContactSection />  
     </main>
   );
 }

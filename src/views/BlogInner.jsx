@@ -14,5 +14,5 @@ export default function BlogInner() {
     return <p className="text-white p-10">Blog not found</p>;
   }
 
-  // return <BlogLayout blog={blog} />;
+  return <BlogLayout blog={blog} />;
 }

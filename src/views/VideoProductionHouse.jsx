@@ -17,7 +17,7 @@ const VideoportfolioCoursal = dynamic(() => import('../components/videoproductio
 const VideoProductionHouse = () => {
     return (
         <div className="bg-black min-h-screen">
-            {/* <ExcellenceHero />
+            <ExcellenceHero />
             <WhyChooseUs />    
             <HowWeWork />
             <CaseStudies />
@@ -25,7 +25,7 @@ const VideoProductionHouse = () => {
             <VideoportfolioCoursal />
             <LogoCarousel />
             <FAQSection />
-            <CTASection /> */}
+            <CTASection /> 
         </div>
 
 

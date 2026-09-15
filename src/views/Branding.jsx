@@ -63,7 +63,7 @@ const Branding = () => {
 
     return (
         <main className="bg-black min-h-screen pt-24 md:pt-40">
-            {/* <div className="relative z-10 px-4">
+             <div className="relative z-10 px-4">
                 <h1 className='text-white text-center text-4xl md:text-6xl lg:text-8xl font-bold tracking-tighter'>
                     Branding & Identity
                 </h1>
@@ -91,7 +91,7 @@ const Branding = () => {
                         </div>
                     </Suspense>
                 </div>
-            </div> */}
+            </div>  
         </main>
     );
 };
