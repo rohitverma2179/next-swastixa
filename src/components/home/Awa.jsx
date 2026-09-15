@@ -147,8 +147,7 @@ const AwardsHero = () => {
 
         {/* Left Image */}
         <div className="flex items-center justify-center h-full w-full">
-          <img
-            src={Award?.src || Award}
+          <img loading="lazy" decoding="async"             src={Award?.src || Award}
             alt="Awards_img"
             className="max-w-xs md:max-w-2xl w-full object-contain"
           />

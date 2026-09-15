@@ -68,8 +68,7 @@ const PDFViewerModal = ({ pdfUrl, isOpen, onClose, title }) => {
           {/* Page/Image Display Container */}
           <div className="flex-1 flex items-center justify-center p-4 relative overflow-hidden bg-neutral-50 rounded-2xl border border-neutral-100">
             {isImg ? (
-              <img
-                src={pdfUrl}
+              <img loading="lazy" decoding="async"                 src={pdfUrl}
                 alt={title || "Project Image"}
                 className="max-w-full max-h-[58vh] object-contain rounded-2xl shadow-xl border border-neutral-200/30"
               />

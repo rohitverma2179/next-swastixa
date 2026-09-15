@@ -101,8 +101,7 @@ const OurTeam = () => {
             <div className="cards-container">
                 {teamMembers.map((member) => (
                     <div className="card" key={member.id}>
-                        <img
-                            src={member.image}
+                        <img loading="lazy" decoding="async"                             src={member.image}
                             alt={member.name}
                             className="img"
                         />

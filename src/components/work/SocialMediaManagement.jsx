@@ -18,7 +18,7 @@ const SocialMediaManagement = () => {
   return (
     <main className="bg-black min-h-screen">
       {/* Hero Section with Circular Gallery */}
-      <section style={{ height: '600px', position: 'relative' }}>
+      {/* <section style={{ height: '600px', position: 'relative' }}>
         <Suspense fallback={<div className="w-full h-full bg-neutral-900 animate-pulse" />}>
           <CircularGallery
             bend={4}
@@ -28,10 +28,10 @@ const SocialMediaManagement = () => {
             scrollSpeed={5}
           />
         </Suspense>
-      </section>
+      </section> */}
 
       {/* Main Content */}
-      <div className="relative z-10">
+      {/* <div className="relative z-10">
         <h1 className='pt-24 md:pt-40 lg:pt-60 2xl:pt-30 text-white text-center text-4xl md:text-6xl lg:text-8xl font-bold tracking-tighter'>
           Social Media 
         </h1>
@@ -46,9 +46,9 @@ const SocialMediaManagement = () => {
         }>
           <SMMGrid smmContent={smmContent} />
         </Suspense>
-      </div>
+      </div> */}
     </main>
   )
 }
 
-export default SocialMediaManagement
+export default SocialMediaManagement;

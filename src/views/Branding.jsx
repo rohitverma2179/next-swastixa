@@ -1,7 +1,8 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import React, { Suspense, lazy } from 'react';
-import Smmbutton from '../components/work/Smmbutton.jsx';
+const Smmbutton = dynamic(() => import('../components/work/Smmbutton.jsx'));
 
 // // PDF Files (for modal view)
 // import bestmatePdf from '../assets/bestmate-brand-guidlines.pdf';
@@ -62,7 +63,7 @@ const Branding = () => {
 
     return (
         <main className="bg-black min-h-screen pt-24 md:pt-40">
-            <div className="relative z-10 px-4">
+            {/* <div className="relative z-10 px-4">
                 <h1 className='text-white text-center text-4xl md:text-6xl lg:text-8xl font-bold tracking-tighter'>
                     Branding & Identity
                 </h1>
@@ -72,13 +73,11 @@ const Branding = () => {
                 </div>
 
                 <div className="max-w-[1800px] mx-auto pb-20">
-                {/* <div className="max-w-[2500px] mx-auto flex flex-row gap-4 sm:gap-6"> */}
                     <Suspense fallback={
                         <div className="w-full h-[30vh] flex items-center justify-center">
                             <div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin"></div>
                         </div>
                     }>
-                        {/* max-w-[2500px] mx-auto flex flex-row gap-4 sm:gap-6 */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                             {brandingDocs.map((doc) => (
                                 <StaticPDFCard
@@ -92,7 +91,7 @@ const Branding = () => {
                         </div>
                     </Suspense>
                 </div>
-            </div>
+            </div> */}
         </main>
     );
 };

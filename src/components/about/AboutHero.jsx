@@ -131,8 +131,7 @@
 
 //                             {/* Right Image (Top on mobile) */}
 //                             <div className="w-full md:w-1/2 h-1/2 md:h-full">
-//                                 <img
-//                                     src={item.image}
+//                                 <img loading="lazy" decoding="async" //                                     src={item.image}
 //                                     alt={item.title}
 //                                     className="w-full h-full object-cover"
 //                                 />

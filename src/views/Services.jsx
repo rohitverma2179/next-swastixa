@@ -1,12 +1,13 @@
 "use client";
 
-import LogoCarousel from "../components/home/Logo";
+import dynamic from 'next/dynamic';
+const LogoCarousel = dynamic(() => import('../components/home/Logo'));
 import LightRays from "../components/services/LightRays";
-import ServiceCards from "../components/services/servicecards";
-import OurApproach from "../components/services/OurApproach";
-import WhyCompany from "../components/services/Whycompany";
-import FAQSection from "../components/services/FAQSection";
-import CTASection from "../components/common/CTASection";
+const ServiceCards = dynamic(() => import('../components/services/servicecards'));
+const OurApproach = dynamic(() => import('../components/services/OurApproach'));
+const WhyCompany = dynamic(() => import('../components/services/Whycompany'));
+const FAQSection = dynamic(() => import('../components/services/FAQSection'));
+const CTASection = dynamic(() => import('../components/common/CTASection'));
 
 const Services = () => {
     return (
@@ -68,13 +69,13 @@ const Services = () => {
             </div>
 
 
-            <ServiceCards />
+            {/* <ServiceCards />
 
             <OurApproach />
             <WhyCompany />
             <LogoCarousel />
             <FAQSection />
-            <CTASection />
+            <CTASection /> */}
 
         </div>
     );

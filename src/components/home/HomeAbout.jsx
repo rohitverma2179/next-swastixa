@@ -128,8 +128,7 @@ const HomeAbout = () => {
               className="w-full sm:w-[90%] md:w-[85%] h-[45vh] sm:h-[55vh] md:h-[67vh] 
                 relative overflow-hidden rounded-xl"
             >
-              <img
-                ref={addToImgRefs}
+              <img loading="lazy" decoding="async"                 ref={addToImgRefs}
                 src={src}
                 alt=""
                 className="w-full h-full object-cover rounded-xl"

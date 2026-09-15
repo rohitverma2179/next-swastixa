@@ -1,28 +1,29 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import React from 'react'
 import ExcellenceHero from '../components/PackagingDesign/ExcellenceHero'
-import LogoCarousel from '../components/home/Logo'
-import ServiceCards from '../components/services/servicecards'
-import PortfolioCarousel from '../components/PackagingDesign/portfolioData'
-import WhyChooseUs from '../components/PackagingDesign/WhyChooseUs'
-import HowWeWork from '../components/PackagingDesign/HowWeWork'
+const LogoCarousel = dynamic(() => import('../components/home/Logo'));
+const ServiceCards = dynamic(() => import('../components/services/servicecards'));
+const PortfolioCarousel = dynamic(() => import('../components/PackagingDesign/portfolioData'));
+const WhyChooseUs = dynamic(() => import('../components/PackagingDesign/WhyChooseUs'));
+const HowWeWork = dynamic(() => import('../components/PackagingDesign/HowWeWork'));
 // import CaseStudies from '../components/PackagingDesign/caseStudies'
-import FAQSection from '../components/PackagingDesign/FAQSection'
-import CTASection from '../components/common/CTASection'
+const FAQSection = dynamic(() => import('../components/PackagingDesign/FAQSection'));
+const CTASection = dynamic(() => import('../components/common/CTASection'));
 
 const PackagingDesign = () => {
     return (
         <div className="bg-black min-h-screen">
-            <ExcellenceHero />
+            {/* <ExcellenceHero />
             <WhyChooseUs />
-            <HowWeWork />
+            <HowWeWork /> */}
             {/* <CaseStudies /> */}
-            <ServiceCards />
+            {/* <ServiceCards />
             <PortfolioCarousel />
             <LogoCarousel />
             <FAQSection />
-            <CTASection />
+            <CTASection /> */}
         </div>
 
 

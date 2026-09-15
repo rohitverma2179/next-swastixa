@@ -162,8 +162,7 @@ const WhyCompany = () => {
 
             {/* Image Container */}
             <div className="w-full aspect-[2.2/1] overflow-hidden rounded-[8px] mb-6 relative">
-              <img
-                src={card.image}
+              <img loading="lazy" decoding="async"                 src={card.image}
                 alt={card.alt}
                 className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out group-hover:scale-105"
               />

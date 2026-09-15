@@ -1,18 +1,19 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import React from 'react'
 // import AboutHero from '../components/about/AboutHero'
-import DigitalEraSection from '../components/about/DigitalEraSection'
-import LogoCarousel from '../components/home/Logo'
-import ScrollReveal from '../components/common/ScrollReveal'
+const DigitalEraSection = dynamic(() => import('../components/about/DigitalEraSection'));
+const LogoCarousel = dynamic(() => import('../components/home/Logo'));
+const ScrollReveal = dynamic(() => import('../components/common/ScrollReveal'));
 import CardSwap, { Card } from '../components/common/CardSwap'
-import ApproachSection from '../components/about/ApproachSection'
-import ManaginDiroctor from '../components/about/ManaginDiroctor'
+const ApproachSection = dynamic(() => import('../components/about/ApproachSection'));
+const ManaginDiroctor = dynamic(() => import('../components/about/ManaginDiroctor'));
 // import OurTeam from '../components/about/OurTeam'
-import ScrollRevealText from '../components/common/scrollRevealText'
+const ScrollRevealText = dynamic(() => import('../components/common/scrollRevealText'));
 // import BrandManifesto from '../components/common/ScrollFillText'
-import ScrollFillText from '../components/common/ScrollFillText'
-import CTASection from '../components/common/CTASection'
+const ScrollFillText = dynamic(() => import('../components/common/ScrollFillText'));
+const CTASection = dynamic(() => import('../components/common/CTASection'));
 
 const About = () => {
 
@@ -53,7 +54,7 @@ const About = () => {
                     {/* <AboutHero /> */}
 
                     <div className="relative w-full h-[90vh] min-h-[600px] 2xl:min-h-[500px]">
-                        <CardSwap
+                        {/* <CardSwap
                             cardDistance={60}
                             verticalDistance={70}
                             delay={2000}
@@ -76,9 +77,12 @@ const About = () => {
                                     </div>
                                 </Card>
                             ))}
-                        </CardSwap>
+                        </CardSwap> */}
                     </div>
                 </div>
+
+
+                
                 {/* <div className='text-white w-full lg:max-w-[980px] 2xl:max-w-[1400px] text-center flex items-center justify-center mx-auto
                     pt-24 md:pt-40 lg:pt-60 2xl:pt-80
                     mb-24 lg:mb-32 2xl:mb-40
@@ -94,11 +98,15 @@ const About = () => {
                     </ScrollReveal>
                 </div> */}
                 {/* <ScrollFillText /> */}
+
+
+
+{/* 
+                this is 
                 <ScrollFillText />
-                {/* <BrandManifesto /> */}
                 <DigitalEraSection />
                 <ApproachSection />
-                <LogoCarousel />
+                <LogoCarousel /> */}
                 <CTASection />
                 {/* <ManaginDiroctor />
                 <OurTeam /> */}

@@ -60,8 +60,7 @@ export default function ContentRenderer({ block }) {
       return (
         <div className="flex flex-col md:flex-row gap-8 items-center mb-12">
           <div className="w-full md:w-1/2 overflow-hidden rounded-xl border border-white/10">
-            <img
-              src={block.image}
+            <img loading="lazy" decoding="async"               src={block.image}
               alt={block.alt || "content image"}
               className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
             />
@@ -78,15 +77,14 @@ export default function ContentRenderer({ block }) {
     //       {/* <p className="text-gray-300">
     //         {renderTextWithLinks(block.text)}
     //       </p> */}
-    //       <img src={block.image} alt={block.alt} className="rounded-lg" />
+    //       <img loading="lazy" decoding="async" src={block.image} alt={block.alt} className="rounded-lg" />
     //     </div>
     //   );
 
     case "imageRightText":
       return (
         <div className="flex justify-center items-center mb-12 overflow-hidden rounded-2xl border border-white/10">
-          <img
-            src={block.image}
+          <img loading="lazy" decoding="async"             src={block.image}
             alt={block.alt || "image"}
             className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500"
           />

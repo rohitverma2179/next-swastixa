@@ -1,9 +1,10 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import React, { lazy, Suspense, useEffect } from 'react';
 import { useNavigate } from "@/lib/router";
 import { reelsData } from '../data/reelsData.js';
-import Smmbutton from '../components/work/Smmbutton.jsx';
+const Smmbutton = dynamic(() => import('../components/work/Smmbutton.jsx'));
 
 const ReelsGrid = lazy(() => import('../components/work/ReelsGrid.jsx'));
 

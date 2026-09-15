@@ -214,8 +214,7 @@ const PDFCard = ({ pdfUrl, thumbnail, imageUrl, title, onClick, customAspectRati
 
         {!loading && !error && (
           displaySrc ? (
-            <img
-              src={displaySrc}
+            <img loading="lazy" decoding="async"               src={displaySrc}
               alt={title || "Preview"}
               className="w-full h-full object-cover transition-opacity duration-500 group-hover:scale-102 transition-transform duration-700"
             />

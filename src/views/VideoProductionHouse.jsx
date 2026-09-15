@@ -1,30 +1,31 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import React from 'react'
 // import ExcellenceHero from '../components/websitedevelopment/ExcellenceHero'
 import ExcellenceHero from '../components/videoproductionhouse/ExcellenceHero'
-import LogoCarousel from '../components/home/Logo'
-import ServiceCards from '../components/services/servicecards'
+const LogoCarousel = dynamic(() => import('../components/home/Logo'));
+const ServiceCards = dynamic(() => import('../components/services/servicecards'));
 // import PortfolioCarousel from '../components/videoproductionhouse/portfolioData'
-import WhyChooseUs from '../components/videoproductionhouse/WhyChooseUs'
-import HowWeWork from '../components/videoproductionhouse/HowWeWork'
+const WhyChooseUs = dynamic(() => import('../components/videoproductionhouse/WhyChooseUs'));
+const HowWeWork = dynamic(() => import('../components/videoproductionhouse/HowWeWork'));
 // import CaseStudies from '../components/videoproductionhouse/caseStudies'
-import FAQSection from '../components/videoproductionhouse/FAQSection'
-import CTASection from '../components/common/CTASection'
-import VideoportfolioCoursal from '../components/videoproductionhouse/VideoportfolioCoursal'
+const FAQSection = dynamic(() => import('../components/videoproductionhouse/FAQSection'));
+const CTASection = dynamic(() => import('../components/common/CTASection'));
+const VideoportfolioCoursal = dynamic(() => import('../components/videoproductionhouse/VideoportfolioCoursal'));
 
 const VideoProductionHouse = () => {
     return (
         <div className="bg-black min-h-screen">
-            <ExcellenceHero />
+            {/* <ExcellenceHero />
             <WhyChooseUs />    
             <HowWeWork />
-            {/* <CaseStudies /> */}
+            <CaseStudies />
             <ServiceCards /> 
-            {/* <VideoportfolioCoursal /> */}
+            <VideoportfolioCoursal />
             <LogoCarousel />
             <FAQSection />
-            <CTASection />
+            <CTASection /> */}
         </div>
 
 

@@ -1,11 +1,12 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import React from "react";
 // import CareersHero from "../components/careers/CareersHero";
-import ContactCareer from "../components/careers/ContactCareer";
-import InnerPageHeader from "../components/common/innerPageHeader";
-import Particles from "../components/home/Particles";
-import CTASection from "../components/common/CTASection";
+const ContactCareer = dynamic(() => import('../components/careers/ContactCareer'));
+const InnerPageHeader = dynamic(() => import('../components/common/innerPageHeader'));
+const Particles = dynamic(() => import('../components/home/Particles'));
+const CTASection = dynamic(() => import('../components/common/CTASection'));
 // import CareersHero from "../components/careers/careersHero";
 
 export default function Careers() {
@@ -13,7 +14,7 @@ export default function Careers() {
     <>
       <div className="relative z-0 w-full bg-black pt-24 min-h-screen xl:px-20 px-0 pt-20 overflow-hidden">
         {/* <CareersHero /> */}
-        <Particles
+        {/* <Particles
           particleBaseSize={400}
           particleColors={['#2196F3', '#FFFFFF']}
           particleCount={350}
@@ -25,9 +26,9 @@ export default function Careers() {
           disableRotation={false}
         />
         <InnerPageHeader title="Careers" description="At Swastixa, our Careers page showcases opportunities for creative and strategic talent, including Senior Graphic Designer, Copywriter, Client Servicing Executive, Art Director, Motion Graphics Designer, and Social Media Manager, with more roles to be added as we grow." />
-        <ContactCareer />
+        <ContactCareer /> */}
       </div>
-      <CTASection />
+      {/* <CTASection /> */}
     </>
   );
 }

@@ -1,7 +1,8 @@
 "use client";
 
 
-import VirtualVideoList from "../components/work/VirtualVideoList";
+import dynamic from 'next/dynamic';
+const VirtualVideoList = dynamic(() => import('../components/work/VirtualVideoList'));
 import WorkHero from "../components/work/WorkHero";
 
 const Work = () => {
@@ -12,9 +13,13 @@ const Work = () => {
         description="High-performance creative work powered by optimized video delivery."
         /> */}
       {/* <WorkFilterSearch /> */}
-      <WorkHero />
+
+
+
+
+      {/* <WorkHero />
       
-      <VirtualVideoList />
+      <VirtualVideoList /> */}
     </main>
   );
 };

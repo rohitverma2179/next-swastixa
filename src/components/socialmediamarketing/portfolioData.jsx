@@ -350,8 +350,7 @@ const PortfolioCarousel = () => {
                   onClick={handleProjectClick}
                   className="block h-full w-full cursor-pointer"
                 >
-                  <img
-                    src={item.image}
+                  <img loading="lazy" decoding="async"                     src={item.image}
                     alt={`Portfolio project ${item.id}`}
                     draggable={false}
                     className="
@@ -367,8 +366,7 @@ const PortfolioCarousel = () => {
                   />
                 </a>
               ) : (
-                <img
-                  src={item.image}
+                <img loading="lazy" decoding="async"                   src={item.image}
                   alt={`Portfolio project ${item.id}`}
                   draggable={false}
                   className="

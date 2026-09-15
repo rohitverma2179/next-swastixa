@@ -1,7 +1,8 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import React, { lazy, Suspense } from 'react';
-import Smmbutton from '../components/work/Smmbutton.jsx';
+const Smmbutton = dynamic(() => import('../components/work/Smmbutton.jsx'));
 
 // Lazy loaded components
 const PDFCard = lazy(() => import('../components/work/PDFCard.jsx'));

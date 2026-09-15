@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import AOS from "aos";
 import { Toaster } from "react-hot-toast";
 import Lenis from "lenis";
 import gsap from "gsap";
@@ -14,15 +13,6 @@ import ScrollButton from "@/components/common/ScrollButton";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Providers({ children }) {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-      offset: 120,
-    });
-  }, []);
-
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,

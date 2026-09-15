@@ -9,6 +9,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  experimental: {
+    // Better tree-shaking for icon libraries
+    optimizePackageImports: ["lucide-react", "react-icons", "framer-motion", "gsap", "lenis"],
+  },
 };
 
 export default nextConfig;

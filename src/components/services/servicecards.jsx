@@ -64,7 +64,7 @@ const ServiceCards = () => {
   const filteredServices = serviceList.filter(service => service.path !== location.pathname);
 
   return (
-    <section data-aos="fade-up" data-aos-duration="1500" className="bg-black text-white  px-6 sm:px-12 lg:px-24 xl:px-32 flex flex-col items-start text-left w-full select-none py-24">
+    <section className="bg-black text-white  px-6 sm:px-12 lg:px-24 xl:px-32 flex flex-col items-start text-left w-full select-none py-24">
       {/* Upper Title Section */}
 
 

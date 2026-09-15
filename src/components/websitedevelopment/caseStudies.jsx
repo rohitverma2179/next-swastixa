@@ -127,8 +127,7 @@ function Card({ item }) {
   return (
     <div className="group">
       <div className="relative overflow-hidden rounded-2xl bg-[#1A1A1A]">
-        <img
-          src={item.image}
+        <img loading="lazy" decoding="async"           src={item.image}
           alt={item.title}
           className="
             w-full

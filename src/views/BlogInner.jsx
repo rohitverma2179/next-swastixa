@@ -1,8 +1,9 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import { useParams } from "@/lib/router";
 import { blogs } from "../data/blogs";
-import BlogLayout from "../components/blog/bloginnerPages/BlogLayout";
+const BlogLayout = dynamic(() => import('../components/blog/bloginnerPages/BlogLayout'));
 
 export default function BlogInner() {
   const { slug } = useParams();     
@@ -13,5 +14,5 @@ export default function BlogInner() {
     return <p className="text-white p-10">Blog not found</p>;
   }
 
-  return <BlogLayout blog={blog} />;
+  // return <BlogLayout blog={blog} />;
 }

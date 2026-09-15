@@ -10,8 +10,7 @@ const StaticPDFCard = ({ pdfUrl, imageUrl, title, onClick }) => {
       {/* Visual Content Display */}
       <div className="absolute inset-0 w-full h-full flex items-center justify-center overflow-hidden bg-black select-none">
         {imageUrl ? (
-          <img
-            src={imageUrl}
+          <img loading="lazy" decoding="async"             src={imageUrl}
             alt={title || "Document Preview"}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102"
           />

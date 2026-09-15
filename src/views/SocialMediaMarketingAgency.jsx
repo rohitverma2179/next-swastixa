@@ -1,28 +1,29 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import React from 'react'
 import ExcellenceHero from '../components/socialmediamarketing/ExcellenceHero'
-import LogoCarousel from '../components/home/Logo'
-import ServiceCards from '../components/services/servicecards'
-import PortfolioCarousel from '../components/socialmediamarketing/portfolioData'
-import WhyChooseUs from '../components/socialmediamarketing/WhyChooseUs'
-import HowWeWork from '../components/socialmediamarketing/HowWeWork'
+const LogoCarousel = dynamic(() => import('../components/home/Logo'));
+const ServiceCards = dynamic(() => import('../components/services/servicecards'));
+const PortfolioCarousel = dynamic(() => import('../components/socialmediamarketing/portfolioData'));
+const WhyChooseUs = dynamic(() => import('../components/socialmediamarketing/WhyChooseUs'));
+const HowWeWork = dynamic(() => import('../components/socialmediamarketing/HowWeWork'));
 // import CaseStudies from '../components/socialmediamarketing/caseStudies'
-import FAQSection from "../components/socialmediamarketing/FAQSection";
-import CTASection from '../components/common/CTASection'
+const FAQSection = dynamic(() => import('../components/socialmediamarketing/FAQSection'));
+const CTASection = dynamic(() => import('../components/common/CTASection'));
 
 const SocialMediaMarketingAgency = () => {
     return (
         <div className="bg-black min-h-screen">
-            <ExcellenceHero />
+            {/* <ExcellenceHero />
             <WhyChooseUs />
             <HowWeWork />
-            {/* <CaseStudies /> */}
             <ServiceCards />
             <PortfolioCarousel />
             <LogoCarousel />
             <FAQSection />
-            <CTASection />
+            <CTASection /> */}
+            {/* <CaseStudies /> */}
         </div>
     )
 }

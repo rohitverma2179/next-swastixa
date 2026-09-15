@@ -212,8 +212,7 @@ const VideoPlayer = ({ src, poster }) => {
       {/* Poster */}
       {(!isReady || !shouldLoad) && (
         <div className="absolute inset-0 z-10 transition-opacity duration-700 pointer-events-none">
-          <img
-            src={poster}
+          <img loading="lazy" decoding="async"             src={poster}
             alt="Video Poster"
             className="w-full h-full object-cover blur-sm opacity-50"
           />

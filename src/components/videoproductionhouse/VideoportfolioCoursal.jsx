@@ -105,8 +105,7 @@ const HoverPreviewVideo = ({ item }) => {
       />
 
       {/* Static Thumbnail Overlay */}
-      <img
-        src={item.thumbnail}
+      <img loading="lazy" decoding="async"         src={item.thumbnail}
         alt={`Project ${item.id} preview`}
         draggable={false}
         className={`pointer-events-none absolute inset-0 h-full w-full rounded-[8px] object-cover transition-all duration-300 ease-out group-hover:scale-[1.035] ${

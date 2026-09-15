@@ -13,8 +13,7 @@ export default function BlogHero({ hero }) {
       </div>
 
       <div className="relative group overflow-hidden rounded-2xl md:rounded-3xl border border-white/10">
-        <img
-          src={hero.image}
+        <img loading="lazy" decoding="async"           src={hero.image}
           alt={hero.title}
           className="w-full h-auto min-h-[300px] md:max-h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
         />

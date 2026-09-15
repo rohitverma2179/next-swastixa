@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import OptimizedVideo from "../common/OptimizedVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,28 +102,18 @@ const Hero = () => {
           Culture Guides Us. Creativity Defines Us
         </h1>
 
-        {/* Video Section */}
-        <div
-          className="mt-8 w-full flex justify-center relative z-10"
-          dangerouslySetInnerHTML={{
-            __html: `
-              <video
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                class="w-full min-h-[60vh] object-cover"
-                style="border: none; outline: none;"
-              >
-                <source
-                  src="https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-hero-video/swastixa-top.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            `
-          }}
-        />
+        <div className="mt-8 w-full flex justify-center relative z-10">
+          <OptimizedVideo
+            src="https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-hero-video/swastixa-top.mp4"
+            poster="/posters/swastixa-hero-poster.jpg"
+            autoPlay={true}
+            muted={true}
+            loop={true}
+            playsInline={true}
+            className="w-full min-h-[60vh] object-cover"
+            style={{ border: "none", outline: "none" }}
+          />
+        </div>
       </div>
     </>
   );

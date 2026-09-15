@@ -54,7 +54,7 @@ export default function CaseStudies() {
   const hiddenCards = caseStudies.slice(2);
 
   return (
-    <section data-aos="fade-up" data-aos-duration="1500" className="bg-[#111216] py-24">
+    <section className="bg-[#111216] py-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-14">
@@ -127,8 +127,7 @@ function Card({ item }) {
   return (
     <div className="group">
       <div className="relative overflow-hidden rounded-2xl bg-[#1A1A1A]">
-        <img
-          src={item.image}
+        <img loading="lazy" decoding="async"           src={item.image}
           alt={item.title}
           className="
             w-full

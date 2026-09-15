@@ -1,26 +1,27 @@
 "use client";
 
+import dynamic from 'next/dynamic';
 import React from 'react'
 import ExcellenceHero from '../components/performancemarketing/ExcellenceHero'
-import LogoCarousel from '../components/home/Logo'
-import ServiceCards from '../components/services/servicecards'
-import WhyChooseUs from '../components/performancemarketing/WhyChooseUs'
-import HowWeWork from '../components/performancemarketing/HowWeWork'
+const LogoCarousel = dynamic(() => import('../components/home/Logo'));
+const ServiceCards = dynamic(() => import('../components/services/servicecards'));
+const WhyChooseUs = dynamic(() => import('../components/performancemarketing/WhyChooseUs'));
+const HowWeWork = dynamic(() => import('../components/performancemarketing/HowWeWork'));
 // import CaseStudies from '../components/performancemarketing/caseStudies'
-import FAQSection from '../components/performancemarketing/FAQSection'
-import CTASection from '../components/common/CTASection'
+const FAQSection = dynamic(() => import('../components/performancemarketing/FAQSection'));
+const CTASection = dynamic(() => import('../components/common/CTASection'));
 
 const PerformanceMarketingAgency = () => {
     return (
         <div className="bg-black min-h-screen">
-            <ExcellenceHero />
+            {/* <ExcellenceHero />
             <WhyChooseUs />
-            <HowWeWork />
+            <HowWeWork /> */}
             {/* <CaseStudies /> */}
-            <ServiceCards />
+            {/* <ServiceCards />
             <LogoCarousel />
             <FAQSection />
-            <CTASection />
+            <CTASection /> */}
         </div>
 
 

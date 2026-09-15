@@ -37,8 +37,7 @@ const GridItem = memo(({ item, globalIndex }) => {
                     <div className="absolute inset-0 bg-linear-to-br from-neutral-800 to-neutral-700 animate-pulse" />
                 )}
 
-                <img
-                    ref={imgRef}
+                <img loading="lazy" decoding="async"                     ref={imgRef}
                     src={item.image}
                     alt={item.title || "Social Media Content"}
                     onLoad={() => setIsImageLoaded(true)}

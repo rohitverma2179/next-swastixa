@@ -108,8 +108,7 @@ const ExcellenceHero = () => {
                   shadow-[0_20px_80px_rgba(255,255,255,0.04)]
                 "
               >
-                <img
-                  src="https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-all-eight-pages-images/swastixa-service-video-production.webp"
+                <img loading="lazy" decoding="async"                   src="https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-all-eight-pages-images/swastixa-service-video-production.webp"
                   alt="Team Meeting"
                   className="
                     w-full

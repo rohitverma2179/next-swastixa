@@ -38,22 +38,21 @@ const ProductionHouse = () => {
 
   return (
     <main className="bg-black min-h-screen text-white">
-      <div className="pt-24 md:pt-40 px-4">
+      {/* <div className="pt-24 md:pt-40 px-4">
         <h1 className="text-center text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter uppercase">
           Production
         </h1>
         <p className="text-center text-gray-400 mt-4 max-w-2xl mx-auto text-lg md:text-xl">
           Crafting cinematic experiences and high impact visual stories for global brands.
-          {/* Crafting cinematic experiences and high-impact visual stories for brands. */}
         </p>
-      </div>
+      </div> */}
 
-      <div className="mt-10 md:mt-20">
+      {/* <div className="mt-10 md:mt-20">
         <WorkHero />
-      </div>
+      </div> */}
 
       {/* Tab Navigation */}
-      <div className="flex justify-start xl:ml-36 items-center gap-6 mt-0 mb-0 px-4">
+      {/* <div className="flex justify-start xl:ml-36 items-center gap-6 mt-0 mb-0 px-4">
         <button
           onClick={() => navigate("/work/video-production/films")}
           className={`px-10 py-3 rounded-sm text-sm  tracking-wider font-semibold transition-all duration-300 ${activeTab === "filmes"
@@ -72,16 +71,16 @@ const ProductionHouse = () => {
         >
           Constructions
         </button>
-      </div>
+      </div> */}
 
       {/* Tab Content */}
-      <div className="mt-10 min-h-[50vh]">
+      {/* <div className="mt-10 min-h-[50vh]">
         {activeTab === "filmes" ? (
           <VirtualVideoList key="filmes" />
         ) : (
           <VirtualVideoList key="construction" videos={constructionVideos} />
         )}
-      </div>                                          
+      </div>                                           */}
     </main>
   );
 };

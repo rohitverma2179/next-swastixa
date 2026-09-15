@@ -1,9 +1,32 @@
 import "../src/index.css";
 import "../src/App.css";
-import "aos/dist/aos.css";
 import Providers from "./providers";
 import StyledComponentsRegistry from "./styled-components-registry";
 import Script from "next/script";
+import localFont from "next/font/local";
+
+const rajdhani = localFont({
+  src: "../public/fonts/Rajdhani-Variable.woff2",
+  variable: "--font-rajdhani",
+  display: "swap",
+});
+
+const chakraPetch = localFont({
+  src: [
+    { path: "../public/chakra-petch/ChakraPetch-Light.woff2", weight: "300", style: "normal" },
+    { path: "../public/chakra-petch/ChakraPetch-LightItalic.woff2", weight: "300", style: "italic" },
+    { path: "../public/chakra-petch/ChakraPetch-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../public/chakra-petch/ChakraPetch-Italic.woff2", weight: "400", style: "italic" },
+    { path: "../public/chakra-petch/ChakraPetch-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../public/chakra-petch/ChakraPetch-MediumItalic.woff2", weight: "500", style: "italic" },
+    { path: "../public/chakra-petch/ChakraPetch-SemiBold.woff2", weight: "600", style: "normal" },
+    { path: "../public/chakra-petch/ChakraPetch-SemiBoldItalic.woff2", weight: "600", style: "italic" },
+    { path: "../public/chakra-petch/ChakraPetch-Bold.woff2", weight: "700", style: "normal" },
+    { path: "../public/chakra-petch/ChakraPetch-BoldItalic.woff2", weight: "700", style: "italic" },
+  ],
+  variable: "--font-chakra-petch",
+  display: "swap",
+});
 
 export const metadata = {
   metadataBase: new URL("https://swastixa.com"),
@@ -44,7 +67,7 @@ const websiteSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={`${rajdhani.variable} ${chakraPetch.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <script
           type="application/ld+json"
@@ -53,18 +76,6 @@ export default function RootLayout({ children }) {
         <StyledComponentsRegistry>
           <Providers>{children}</Providers>
         </StyledComponentsRegistry>
-
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-WVTSGD09TS"
-          strategy="afterInteractive"
-        />
-        <Script id="ga-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-WVTSGD09TS');`}
-        </Script>
 
         {/* Google Tag Manager */}
         <Script id="gtm" strategy="afterInteractive">
