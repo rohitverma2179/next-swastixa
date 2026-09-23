@@ -411,13 +411,12 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/mthreem.jpeg`, text: 'M3M' },
-      { image: `https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/Swastixa%20-%20WORK/social/tirasya1.jpg`, text: 'Tirasya' },
-      { image: `https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-posts-swastixa/kloy.jpeg`, text: 'Kloy' },
-      { image: `https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/bestmate.jpeg`, text: 'Bestmate' },
-      // { image: `https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/rki-thinklong-edm.jpg`, text: 'Team RKI' },
-      { image: `https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/kevvali-edm.jpeg`, text: 'Kevvali' },
-      { image: `https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/mrg-did-you-know.jpeg`, text: 'MRG' },
+      { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/mthreem.jpeg`, text: 'M3M' },
+      { image: `https://cdn.swastixa.com/Swastixa%20-%20WORK/social/tirasya1.jpg`, text: 'Tirasya' },
+      { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/kloy.jpeg`, text: 'Kloy' },
+      { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/bestmate.jpeg`, text: 'Bestmate' },
+      { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/kevvali-edm.jpeg`, text: 'Kevvali' },
+      { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/mrg-did-you-know.jpeg`, text: 'MRG' },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

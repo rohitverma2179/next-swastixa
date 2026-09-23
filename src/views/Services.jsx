@@ -13,9 +13,9 @@ const Services = () => {
     return (
         <div className="bg-black min-h-screen ">
             <div style={{ width: '100%', height: '650px', position: 'relative' }}>
-                <LightRays
+                 <LightRays
                     raysOrigin="top-center"
-                    raysColor="#ffffff"
+                    raysColor="#ffffff" 
                     raysSpeed={1}
                     lightSpread={0.5}
                     rayLength={3}
@@ -67,6 +67,7 @@ const Services = () => {
                     </p>
                 </div>
             </div>
+            
 
 
          <ServiceCards />

@@ -1,5 +1,599 @@
 export const blogs = [
 
+
+  {
+    id: 21,
+    slug: "how-to-recover-a-hacked-instagram-account",
+    hero: {
+      metaTitle: "How to Recover a Hacked Instagram Account (Step-by-Step)",
+      description:
+        "Instagram account hacked? Follow this step-by-step guide to recover access, verify your identity, and secure your profile against future breaches.",
+      image:
+        // "https://cdn.swastixa.com/swastixablog/hacked-instagram.webp",
+        "https://cdn.swastixa.com/swastixablog/hacked-instagram.webp",
+    },
+    content: [
+      {
+        type: "heading",
+        text: "Recover a Hacked Instagram Account with This Step by Step Guide",
+      },
+      {
+        type: "paragraph",
+        text: "Waking up to find your digital life locked away is an incredibly stressful experience. You might feel a sudden wave of panic when your login credentials no longer work. Please know that you are not alone in this frustration.",
+      },
+      {
+        type: "paragraph",
+        text: "Losing access to your profile feels like losing a piece of your personal history. Whether you use the platform for business or to stay connected with friends, regaining control is your top priority. We are here to help you regain your digital presence with ease.",
+      },
+      {
+        type: "paragraph",
+        text: "Our team has designed this simple path to help you recover a hacked Instagram account quickly. By following these manageable steps, you can navigate the recovery process with total confidence. Let us walk through the solution together so you can get back to what matters most.",
+      },
+      {
+        type: "subHeading",
+        text: "Key Takeaways",
+      },
+      {
+        type: "list",
+        items: [
+          "Stay calm and act quickly to secure your digital identity.",
+          "Check your email for official security alerts from the platform.",
+          "Use the built-in identity verification tools provided by the app.",
+          "Enable two-factor authentication once you regain access.",
+          "Update your passwords across all linked services for better safety.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Identifying Signs of a Compromised Instagram Profile",
+      },
+      {
+        type: "paragraph",
+        text: "Spotting the signs of a hacked account early can make recovery easier. Being alert helps you catch intruders before they harm your online image.",
+      },
+      {
+        type: "subHeading",
+        text: "Recognizing Unusual Account Activity",
+      },
+      {
+        type: "paragraph",
+        text: "Look out for activity you don't recognize. Check for posts, stories, or reels you didn't make. Pay close attention to direct messages too. Hackers often send spam or phishing links to your friends through these messages.",
+      },
+      {
+        type: "paragraph",
+        text: "Security is not just about passwords; it is about constant awareness of how your digital presence behaves in real-time.",
+      },
+      {
+        type: "subHeading",
+        text: "Checking for Unauthorized Login Alerts",
+      },
+      {
+        type: "paragraph",
+        text: "Instagram alerts you when someone logs in from a new place. If you get a notification from a place or device you don't know, it's a big warning sign. Don't ignore these alerts, as they help in quick hacked instagram account recovery.",
+      },
+      {
+        type: "table",
+        headers: ["Activity Type", "Normal Behavior", "Suspicious Sign"],
+        rows: [
+          ["Login Location", "Your usual city", "Unknown country or state"],
+          ["Direct Messages", "Conversations you started", "Spam links sent to contacts"],
+          ["Profile Bio", "Your personal details", "Links to unknown websites"],
+        ],
+      },
+      {
+        type: "subHeading",
+        text: "Verifying Changes to Your Profile Information",
+      },
+      {
+        type: "paragraph",
+        text: "Thieves might change your account settings to keep you out. Check your bio, phone number, and email to make sure they're the same. If they've been changed, start the hacked instagram account recovery process right away to get back your identity.",
+      },
+      {
+        type: "heading",
+        text: "Immediate Actions to Take When You Suspect a Breach",
+      },
+      {
+        type: "paragraph",
+        text: "When you think your instagram account breach is happening, time is of the essence. Quick action can stop hackers from getting into your messages or changing your settings. Staying calm is key as you start to fix things.",
+      },
+      {
+        type: "subHeading",
+        text: "Checking Your Linked Email for Security Notifications",
+      },
+      {
+        type: "paragraph",
+        text: "Start by checking the email linked to your profile. Meta often sends alerts if someone logs in from a new place. Look in your inbox and spam for messages about:",
+      },
+      {
+        type: "list",
+        items: [
+          "Password reset requests you didn't ask for.",
+          "Notifications about a new login from somewhere else.",
+          "Alerts about changes to your main email.",
+        ],
+      },
+      {
+        type: "subHeading",
+        text: "Attempting to Log In with Your Current Credentials",
+      },
+      {
+        type: "paragraph",
+        text: "Wonder if hackers have locked you out? Try logging in with your usual username and password. If it works, change your password right away to keep your account safe.",
+      },
+      {
+        type: "paragraph",
+        text: "If you can't log in, don't worry. This is a sign of a instagram account breach. It means you need to take the next steps. Keep your phone close, as you might need to get verification codes.",
+      },
+      {
+        type: "subHeading",
+        text: "Monitoring Your Connected Facebook Account",
+      },
+      {
+        type: "paragraph",
+        text: "Many people link their Instagram and Facebook accounts. But this can be a weak spot for hackers. If your accounts are connected, check your Facebook security logs for anything odd. Hackers might use your Facebook to keep getting into your Instagram.",
+      },
+      {
+        type: "paragraph",
+        text: "Look at your linked accounts in the settings menu. Make sure no unknown apps have access. Removing unauthorized access is critical to stop the breach from getting worse.",
+      },
+      {
+        type: "heading",
+        text: "How to Recover a Hacked Instagram Account Using Official Tools",
+      },
+      {
+        type: "paragraph",
+        text: "Losing access to your social media can be stressful. But, you can regain control of your Instagram account by following official recovery steps. Instagram's built-in security features are the safest way to handle unauthorized access. These tools help verify your identity and block intruders.",
+      },
+      {
+        type: "subHeading",
+        text: "Accessing the Instagram Login Help Page",
+      },
+      {
+        type: "paragraph",
+        text: "To start, go to the official login help page. On the Instagram app, tap \"Get help logging in\" on Android or \"Forgot password?\" on iOS. This page is your main way to recover a hacked Instagram account when you can't log in.",
+      },
+      {
+        type: "paragraph",
+        text: "Once there, enter your username, email, or phone number linked to your profile. If the hacker changed these, look for the \"Need more help?\" link at the bottom. It will lead you to more advanced recovery options from Meta.",
+      },
+      {
+        type: "subHeading",
+        text: "Requesting a Security Code via Email or SMS",
+      },
+      {
+        type: "paragraph",
+        text: "After identifying your account, you'll get a chance to send a security code to your contact info. This is key to recover a compromised Instagram account. If you can access your email or phone, choose to get the code via SMS or email.",
+      },
+      {
+        type: "paragraph",
+        text: "Enter the code right away to prove you're the account owner. If the hacker changed your contact details, you'll need to go to the identity verification stage instead.",
+      },
+      {
+        type: "subHeading",
+        text: "Utilizing the Instagram Identity Verification Process",
+      },
+      {
+        type: "paragraph",
+        text: "If standard recovery doesn't work, use the official identity verification process. This requires proving you own the account to the support team. You might need to send a video selfie or other documents to confirm your identity.",
+      },
+      {
+        type: "paragraph",
+        text: "Make sure to follow the instructions carefully. This step is critical to regain control of your Instagram account. It helps the support team process your request quickly and correctly.",
+      },
+      {
+        type: "table",
+        headers: ["Recovery Method", "Primary Requirement", "Success Rate"],
+        rows: [
+          ["Email/SMS Code", "Access to registered contact", "High"],
+          ["Identity Verification", "Government ID or Video Selfie", "Medium"],
+          ["Support Request", "Proof of account ownership", "Moderate"],
+        ],
+      },
+      {
+        type: "heading",
+        text: "Handling Situations Where the Hacker Changed Your Password and Email",
+      },
+      {
+        type: "paragraph",
+        text: "When your instagram account is hacked and password changed, you need to take action. It's normal to feel upset when an instagram hacker changes password details. But, staying calm is key to effectively recovering your account.",
+      },
+      {
+        type: "video",
+        url: "https://www.youtube.com/watch?v=6YNnCImjFVE",
+        title: "Instagram Account Recovery Guide",
+      },
+      {
+        type: "subHeading",
+        text: "Navigating the Need Help Logging In Menu",
+      },
+      {
+        type: "paragraph",
+        text: "Start by opening the Instagram app on your phone. On the login screen, tap \"Get help logging in\" or \"Forgot password?\" to access support.",
+      },
+      {
+        type: "paragraph",
+        text: "This menu is for users who can't log in. By choosing you can't access your email or phone, you start the automated security workflow for hacked profiles.",
+      },
+      {
+        type: "subHeading",
+        text: "Requesting Support from Instagram for Account Hijacking",
+      },
+      {
+        type: "paragraph",
+        text: "In the support menu, you must clearly report an instagram account hack to Instagram. The platform has a special process for instagram account breach cases.",
+      },
+      {
+        type: "list",
+        items: [
+          "Select \"My account was hacked\" when asked.",
+          "Follow the instructions to verify your identity.",
+          "Have a secure email ready for Meta to contact you.",
+        ],
+      },
+      {
+        type: "subHeading",
+        text: "Providing Proof of Ownership to Meta Support",
+      },
+      {
+        type: "paragraph",
+        text: "If your instagram id hacked password and email, Meta will ask for proof you own the account. Giving accurate info is vital to get your case looked at first.",
+      },
+      {
+        type: "paragraph",
+        text: "Be ready to share your original email or phone number. Clear and consistent information helps your chances of a successful recovery.",
+      },
+      {
+        type: "heading",
+        text: "The Role of Video Selfies in Account Retrieval",
+      },
+      {
+        type: "paragraph",
+        text: "If you're locked out, a simple video selfie could be the solution to regain control of your Instagram account. When SMS or email codes don't work, this visual check is your best bet.",
+      },
+      {
+        type: "subHeading",
+        text: "Understanding the Video Verification Requirement",
+      },
+      {
+        type: "paragraph",
+        text: "Instagram uses video selfies to make sure you're really the account owner. This step helps spot real users from bots or hackers.",
+      },
+      {
+        type: "paragraph",
+        text: "By matching your face in the video to your profile photos, the system checks your identity. This is a crucial security layer to keep your account safe.",
+      },
+      {
+        type: "subHeading",
+        text: "Tips for Recording a Successful Verification Video",
+      },
+      {
+        type: "paragraph",
+        text: "To recover a compromised Instagram account, you need a clear, high-quality video. Here are some tips to help you:",
+      },
+      {
+        type: "list",
+        items: [
+          "Find bright, natural lighting: Good lighting helps the system see your face clearly.",
+          "Keep the camera at eye level: Hold your phone steady and look straight into the lens.",
+          "Follow the prompts: The app will guide you to turn your head; move slowly and smoothly.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "\"Video verification acts as a digital fingerprint, providing a secure and reliable way to confirm identity when traditional credentials are no longer accessible.\" — {{link:Swastixa Digital|https://swastixa.com/}}",
+      },
+      {
+        type: "subHeading",
+        text: "What to Expect After Submitting Your Identity Proof",
+      },
+      {
+        type: "paragraph",
+        text: "After you send your video, the Meta support team checks it against your account history. If your Instagram ID has a hacked password and email, this is your last step to get back in.",
+      },
+      {
+        type: "paragraph",
+        text: "You might wait a few hours to a few days for a response. Keep an eye on your secondary email for updates from support.",
+      },
+      {
+        type: "table",
+        headers: ["Recovery Method", "Reliability", "Processing Time"],
+        rows: [
+          ["Email/SMS Code", "High", "Instant"],
+          ["Facebook Linked Login", "Medium", "Fast"],
+          ["Video Selfie Verification", "Very High", "24-48 Hours"],
+        ],
+      },
+      {
+        type: "heading",
+        text: "Securing Your Digital Footprint After Regaining Access",
+      },
+      {
+        type: "paragraph",
+        text: "Now that you're back in your account, it's time to strengthen your defenses. These steps will help you secure hacked instagram account settings. This way, you can keep unauthorized users out for good. Keeping your online presence safe is all about being consistent.",
+      },
+      {
+        type: "imageRightText",
+        image:
+          "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/hacked-Instagramtwo.webp",
+        alt: "Securing Digital Footprint",
+      },
+      {
+        type: "subHeading",
+        text: "Changing Your Password to a Strong Unique String",
+      },
+      {
+        type: "paragraph",
+        text: "The first thing to do is change your password right away. Make a strong password with uppercase letters, numbers, and symbols.",
+      },
+      {
+        type: "paragraph",
+        text: "Don't use passwords from other websites or apps. A unique string is a strong defense against hackers.",
+      },
+      {
+        type: "subHeading",
+        text: "Revoking Access for Suspicious Third-Party Apps",
+      },
+      {
+        type: "paragraph",
+        text: "Hackers often use third-party apps to access your data. Go to your account settings to see all authorized apps.",
+      },
+      {
+        type: "paragraph",
+        text: "If you see apps you don't know or don't use, remove them right away. This stops hackers from getting around your security.",
+      },
+      {
+        type: "subHeading",
+        text: "Reviewing Your Recent Login Activity Logs",
+      },
+      {
+        type: "paragraph",
+        text: "Looking at your login history helps you see who accessed your account. If you find a location or device you don't recognize, log out from there.",
+      },
+      {
+        type: "paragraph",
+        text: "By keeping an eye on these logs, you stay in control of your profile. Use the table below to track your security efforts.",
+      },
+      {
+        type: "table",
+        headers: ["Security Action", "Frequency", "Priority Level"],
+        rows: [
+          ["Update Password", "Every 3 Months", "Critical"],
+          ["Audit Linked Apps", "Monthly", "High"],
+          ["Check Login Logs", "Weekly", "Medium"],
+        ],
+      },
+      {
+        type: "heading",
+        text: "Strengthening Your Instagram Account Security for the Future",
+      },
+      {
+        type: "paragraph",
+        text: "Protecting your digital safety today can save you from a lot of trouble tomorrow. By being proactive, you can greatly enhance your instagram account security. This way, you can keep your personal data safe from unwanted access.",
+      },
+      {
+        type: "subHeading",
+        text: "Enabling Two-Factor Authentication via Authenticator Apps",
+      },
+      {
+        type: "paragraph",
+        text: "Using only SMS codes for login is not safe anymore. Hackers can get your text messages through SIM swapping, putting your account at risk.",
+      },
+      {
+        type: "paragraph",
+        text: "Instead, use apps like Google Authenticator or Microsoft Authenticator. These apps give you time-sensitive codes right on your device. This adds a strong layer of protection to your instagram account security.",
+      },
+      {
+        type: "subHeading",
+        text: "Updating Your Recovery Phone Number and Email Address",
+      },
+      {
+        type: "paragraph",
+        text: "If you lose access to your profile, your recovery info is key. Make sure your phone number and email are up to date and only you have access to them.",
+      },
+      {
+        type: "paragraph",
+        text: "Checking these details regularly is important for secure hacked instagram account situations. If your contact info has changed, update your settings right away. This way, you won't get locked out in an emergency.",
+      },
+      {
+        type: "subHeading",
+        text: "Recognizing Phishing Attempts and Suspicious Links",
+      },
+      {
+        type: "paragraph",
+        text: "Cybercriminals use fake emails or messages to steal your login info. They might send a link that looks like an official instagram hacked password change notice to trick you.",
+      },
+      {
+        type: "paragraph",
+        text: "Always check the sender's email and look at links before clicking. Here are some tips to stay safe:",
+      },
+      {
+        type: "list",
+        items: [
+          "Don't enter your password on sites that don't have \"instagram.com\" in the URL.",
+          "Be cautious of urgent messages that ask for quick action or threaten to delete your account.",
+          "Turn on login alerts so you know right away if someone tries to log in from a new device.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Specific Considerations for Instagram Users in India",
+      },
+      {
+        type: "paragraph",
+        text: "Recovering an Instagram account in India requires knowing platform tools and local safety resources. Users often face unique challenges, like network delays or needing to involve national authorities. It's key to stay calm and follow a structured approach to get back your profile.",
+
+      },
+      {
+        type: "imageRightText",
+        image:
+          "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/hacked-Instagramthree.webp",
+        alt: "Securing Digital Footprint",
+      },
+      {
+        type: "subHeading",
+        text: "Dealing with Localized Cybercrime Reporting",
+      },
+      {
+        type: "paragraph",
+        text: "If your account was hacked and used for illegal activities, act fast. You must report instagram account hack to the National Cyber Crime Reporting Portal. This is important to protect yourself from legal trouble.",
+      },
+      {
+        type: "paragraph",
+        text: "When you report, make sure to include clear evidence, like screenshots of unauthorized messages. Documenting every detail helps authorities track the breach. Reporting the incident creates a record that aids in your recovery.",
+      },
+      {
+        type: "subHeading",
+        text: "Utilizing Indian Telecom Services for OTP Recovery",
+      },
+      {
+        type: "paragraph",
+        text: "Many in India face delays in getting One-Time Passwords (OTPs) due to network issues or DND settings. Check if your mobile number is on the DND list, as it can block messages. Contact your telecom provider to ensure SMS services are working.",
+      },
+      {
+        type: "paragraph",
+        text: "If you can't get the code, try getting it via email instead of SMS. Reliable communication is key to a successful recovery. Make sure your email is secure and accessible. If issues continue, try using a different network or wait for less busy times.",
+      },
+      {
+        type: "subHeading",
+        text: "Connecting with Local Digital Support Channels",
+      },
+      {
+        type: "paragraph",
+        text: "There are local digital support channels beyond Meta's tools for international account recovery. Cyber-cells in major Indian cities can help with reporting instagram account hack cases. They can guide you on how to present your case to Meta's support team.",
+      },
+      {
+        type: "paragraph",
+        text: "The table below shows the main differences between standard recovery and specialized reporting for Indian users:",
+      },
+      {
+        type: "table",
+        headers: ["Recovery Method", "Primary Goal", "Best For"],
+        rows: [
+          ["Standard Login Help", "Password Reset", "Simple account lockouts"],
+          ["National Cyber Portal", "Legal Protection", "Illegal activity on account"],
+          ["Telecom Support", "OTP Delivery", "Network-related delays"],
+          ["Meta Support Form", "Identity Verification", "Total account takeover"],
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Always use unique passwords and enable two-factor authentication after regaining access. Staying vigilant is the best way to prevent future unauthorized access to your digital footprint.",
+      },
+      {
+        type: "heading",
+        text: "Common Mistakes to Avoid During the Recovery Process",
+      },
+      {
+        type: "paragraph",
+        text: "When your account gets hacked, the road to getting it back is tricky. Many people, eager to fix the problem, fall into scams that promise quick fixes. To safely recover your account, stay focused on official channels and keep your data secure.",
+      },
+      {
+        type: "subHeading",
+        text: "Avoiding Third-Party Recovery Scams",
+      },
+      {
+        type: "paragraph",
+        text: "You might meet people or websites claiming they can fix your account fast. These scams pretend to be real hacked social media account retrieval experts. But, they're usually phishing scams trying to steal your info or money.",
+      },
+      {
+        type: "paragraph",
+        text: "Remember, no third-party can magically get into Meta's systems. If someone asks for your password or money to \"unlock\" your account, leave right away. Trusting these scams can lead to more problems, not solutions.",
+      },
+      {
+        type: "subHeading",
+        text: "Why You Should Never Pay for Account Retrieval",
+      },
+      {
+        type: "paragraph",
+        text: "The official instagram hacked password change free process is free from Meta. Any service asking for money to fix your account is breaking rules and is likely a scam. Paying them won't help you faster; it will just cost you money.",
+      },
+      {
+        type: "paragraph",
+        text: "Meta's support team will never ask for money to check your identity or get back into your account. Staying within official channels keeps you safe from scams. Stay vigilant and only use the app's tools.",
+      },
+      {
+        type: "subHeading",
+        text: "Maintaining Patience During the Meta Review Period",
+      },
+      {
+        type: "paragraph",
+        text: "After you send your identity info, you might feel impatient, even if an instagram hacker changed password and locked you out. But, sending many requests can slow down the review process. It's better to wait for the official response from support.",
+      },
+      {
+        type: "paragraph",
+        text: "The review time lets Meta check your ownership and protect your data. While waiting, make sure your email and other linked services are secure. Being patient is key when dealing with a instagram account hacked and password changed situation.",
+      },
+      {
+        type: "table",
+        headers: ["Feature", "Official Meta Support", "Third-Party Scams"],
+        rows: [
+          ["Cost", "Completely Free", "Requires Payment"],
+          ["Security", "Encrypted Verification", "High Risk of Data Theft"],
+          ["Outcome", "Account Restoration", "Further Compromise"],
+          ["Reliability", "Verified Process", "Unreliable Promises"],
+        ],
+      },
+      {
+        type: "heading",
+        text: "Conclusion",
+      },
+      {
+        type: "paragraph",
+        text: "Getting back control of your profile is a big win after a security breach. You now know how to handle the tough steps of recovering a hacked social media account with confidence.",
+      },
+      {
+        type: "paragraph",
+        text: "Keeping your Instagram account safe is key to avoiding future problems. Always watch out for anything strange to catch issues early.",
+      },
+      {
+        type: "paragraph",
+        text: "Be careful of online scams that promise to change your Instagram password for free. These scams are traps that can steal your information or money. Always use Meta's official support for help.",
+      },
+      {
+        type: "paragraph",
+        text: "Your online identity is precious and worth protecting. Stay ahead by updating your security and checking your login history often. These simple actions today will make your online space safer for everyone tomorrow.",
+      },
+    ],
+    faq: [
+      {
+        question: "How can I tell if I need to recover a hacked instagram account?",
+        answer:
+          "Look for signs like posts or stories you didn't make. Also, check for messages sent to friends without your okay. Often, the first sign is an email from Meta about a login from a strange device or place. If you can't log in, start the hacked instagram account recovery right away.",
+      },
+      {
+        question: "What should I do if my instagram account hacked and password changed?",
+        answer:
+          "If your password was changed, check your email for a message from security@mail.instagram.com. This message might have a link to \"secure my account.\" This link can help you change the instagram hacked password change back. If the link is gone, use the \"Need More Help\" option on the Instagram login screen to report instagram account hack.",
+      },
+      {
+        question: "Can I stil regain control of instagram account if the intruder changed my recovery email?",
+        answer:
+          "Yes, you can. Even if the instagram id hacked password and email were changed, Instagram has ways to help. Choose \"Try another way\" during login help. This might lead to proving you're the real owner through a video selfie or other Meta security steps.",
+      },
+      {
+        question: "Are there any services that offer instagram hacked password change free of charge?",
+        answer:
+          "Always use Instagram's official tools, which are free. Be careful of people on X or Discord who want money for help. These are often scams trying to steal more from you. Real hacked instagram account recovery comes from Meta support.",
+      },
+      {
+        question: "How does a video selfie help to secure hacked instagram account retrieval?",
+        answer:
+          "When you report instagram account hack on a mobile, Instagram might ask for a video. This video should show you turning your head. It helps Instagram confirm you're real and match the photos on your profile. This is a good way to recover a hacked instagram account when other methods fail.",
+      },
+      {
+        question: "What steps should I take to improve my instagram account security after I get back in?",
+        answer:
+          "After getting back in, make your account secure by enabling Two-Factor Authentication (2FA). Use an app like Google Authenticator or Duo Mobile instead of SMS. Also, check \"Login Activity\" and log out of unknown devices to keep your instagram account security strong.",
+      },
+      {
+        question: "I am a user in India; is there a specific way to report an instagram account breach?",
+        answer:
+          "Users in India can report to the National Cyber Crime Reporting Portal for criminal use. When trying to recover compromised instagram account access, make sure your carrier isn't blocking short-code SMS. This way, you can get your OTP (One-Time Password) during the hacked instagram account recovery process.",
+      },
+    ],
+  },
+  
+
   {
     id: 1,
     slug: "digital-marketing-strategy-smes-budget",
@@ -8,7 +602,7 @@ export const blogs = [
       description:
         "Learn how Indian SMEs can build a complete 360° digital marketing strategy on a limited budget. Practical steps, tools, and proven tactics inside.",
       image:
-        "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-1.jpg",
+        "https://cdn.swastixa.com/swastixablog/digital-marketing.jpg",
     },
 
     content: [
@@ -89,21 +683,6 @@ export const blogs = [
         ]
       },
 
-
-     
-
-
-      // {
-      //   type: "listbold",
-      //   items: [
-      //     { text: "A High-Converting Website — Your digital storefront and primary lead capture tool." },
-      //     { text: "Search Engine Visibility (SEO) — So customers can find you when they search for what you offer." },
-      //     { text: "Social Media Presence — To build trust, engage audiences, and stay top-of-mind." },
-      //     { text: "Paid Advertising — For fast, targeted reach when organic efforts need a boost." },
-      //     { text: "Content & Messaging — Clear, helpful content that educates and converts at every stage." }
-      //   ]
-      // },
-
       {
         type: "paragraph",
         text: "When these five pillars work together, every rupee you spend on marketing delivers better results. Your ads drive traffic to an optimized website. Your SEO brings organic leads. Your social media builds trust that closes deals."
@@ -134,19 +713,6 @@ export const blogs = [
          
         ]
       },
-
-
-
-
-      // {
-      //   type: "list",
-      //   items: [
-      //     { text: "What do you want to achieve? (More leads? Brand awareness? Direct sales?)" },
-      //     { text: "Who are you trying to reach? (Business owners? Homeowners? Corporate buyers?)" }
-      //   ]
-      // },
-
-
 
       {
         type: "paragraph",
@@ -195,7 +761,7 @@ export const blogs = [
 
        {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog1-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/digital-marketing-goals.jpg",
         alt: "One-page customer avatar exercise for SME marketing planning"
       },
 
@@ -205,129 +771,7 @@ export const blogs = [
         src: "ADD_IMAGE_HERE",
         alt: "One-page customer avatar exercise for SME marketing planning"
       },
-      
-
-
-      // {
-      //   type: "paragraph",
-      //   text: "Running a small or medium business in India today means competing with brands that have bigger budgets, larger teams, and years of digital experience. But here's the truth: you don't need a massive budget to build a strong online presence."
-      // },
-      // {
-      //   type: "paragraph",
-      //   text: "What you need is a 360° digital marketing strategy — a complete, connected approach that covers all the right channels without wasting money on tactics that don't work for your business type."
-      // },
-      // {
-      //   type: "paragraph",
-      //   text: "In this guide, we'll walk you through a practical, step-by-step roadmap to build your digital marketing strategy from scratch. Whether you're a local service provider, a B2B supplier, or a retail business, these steps will help you get real results without burning through your budget."
-      // },
-
-      // {
-      //   type: "paragraph",
-      //   text: "Shape"
-      // },
-
-      // {
-      //   type: "heading",
-      //   text: "Why Most SMEs Struggle With Digital Marketing (And What Changes in 2025)"
-      // },
-      // {
-      //   type: "paragraph",
-      //   text: "Most small businesses jump into digital marketing without a plan. They try a bit of social media, maybe run a few ads, and hope something sticks. The result? Inconsistent posting, scattered efforts, and little to show for the money spent."
-      // },
-      // {
-      //   type: "paragraph",
-      //   text: "Here's what's changing in 2025. Customers expect businesses to be findable, credible, and responsive across multiple touchpoints. They search on Google, check your Instagram, read reviews, and compare options before making a decision."
-      // },
-      // {
-      //   type: "paragraph",
-      //   text: "If your brand isn't showing up at every stage of that journey, you're losing customers to competitors who are. The good news? You don't need to be everywhere at once. You just need to be smart about where you show up and how you connect those dots."
-      // },
-
-      // {
-      //   type: "paragraph",
-      //   text: "Shape"
-      // },
-
-      // {
-      //   type: "heading",
-      //   text: "What Does a \"360° Digital Marketing Strategy\" Actually Mean?"
-      // },
-      // {
-      //   type: "paragraph",
-      //   text: "A 360° strategy means your business is visible and consistent across all the digital channels that matter to your customers. It's not about doing everything — it's about doing the right things in a way that supports each other."
-      // },
-
-      // {
-      //   type: "subHeading",
-      //   text: "The 5 Core Pillars Every SME Needs"
-      // },
-      // {
-      //   type: "list",
-      //   items: [
-      //     { text: "A High-Converting Website — Your digital storefront and primary lead capture tool." },
-      //     { text: "Search Engine Visibility (SEO) — So customers can find you when they search for what you offer." },
-      //     { text: "Social Media Presence — To build trust, engage audiences, and stay top-of-mind." },
-      //     { text: "Paid Advertising — For fast, targeted reach when organic efforts need a boost." },
-      //     { text: "Content & Messaging — Clear, helpful content that educates and converts at every stage." }
-      //   ]
-      // },
-      // {
-      //   type: "paragraph",
-      //   text: "When these five pillars work together, every rupee you spend on marketing delivers better results. Your ads drive traffic to an optimized website. Your SEO brings organic leads. Your social media builds trust that closes deals."
-      // },
-
-      // {
-      //   type: "paragraph",
-      //   text: "Shape"
-      // },
-
-      // {
-      //   type: "heading",
-      //   text: "Step 1 – Define Your Business Goals and Target Audience"
-      // },
-      // {
-      //   type: "paragraph",
-      //   text: "Before spending a single rupee on ads or content, answer two questions:"
-      // },
-      // {
-      //   type: "list",
-      //   items: [
-      //     { text: "What do you want to achieve? (More leads? Brand awareness? Direct sales?)" },
-      //     { text: "Who are you trying to reach? (Business owners? Homeowners? Corporate buyers?)" }
-      //   ]
-      // },
-      // {
-      //   type: "paragraph",
-      //   text: "Too many SMEs skip this step and end up speaking to everyone, which means they connect with no one."
-      // },
-
-      // {
-      //   type: "subHeading",
-      //   text: "Quick Exercise: The One-Page Customer Avatar"
-      // },
-      // {
-      //   type: "paragraph",
-      //   text: "Take 10 minutes and write down:"
-      // },
-
-      // {
-      //   type: "list",
-      //   items: [
-      //     { text: "Age range and location of your ideal customer" },
-      //     { text: "Main problem they're trying to solve" },
-      //     { text: "Where they spend time online (Facebook groups? LinkedIn? Google searches?)" },
-      //     { text: "What objections or doubts they have before buying" }
-      //   ]
-      // },
-      // {
-      //   type: "paragraph",
-      //   text: "This simple exercise will guide every piece of content you create and every ad you run. If you're not sure where to start, look at your best existing customers and describe them."
-      // },
-
-      
-
-     
-
+  
       {
         type: "heading",
         text: "Step 2 – Build Your Digital Foundation (Website + Social Presence)"
@@ -368,21 +812,6 @@ export const blogs = [
          
         ]
       },
-
-
-
-      // {
-      //   type: "list",
-      //   items: [
-      //     { text: "Mobile-friendly — Over 70% of Indian users browse on mobile." },
-      //     { text: "Fast-loading — Slow sites lose visitors in seconds." },
-      //     { text: "Clear on what you do — Visitors should understand your offer within 5 seconds." },
-      //     { text: "Easy to contact — Phone number, WhatsApp button, and contact form visible on every page." },
-      //     { text: "Optimized for local search — Include your city, services, and business name clearly." }
-      //   ]
-      // },
-
-
 
 
 
@@ -542,7 +971,7 @@ export const blogs = [
 
         {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog1-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/digital-marketing-plan.jpg",
         alt: "30-day content calendar example using 70-20-10 rule for SME social media"
       },
 
@@ -690,7 +1119,7 @@ export const blogs = [
 
 {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog1-3.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/digital-marketing-tracking.jpg",
         alt: "Website traffic growth example using budget digital marketing tactics",
         alt: "Website traffic growth example using budget digital marketing tactics",
       },
@@ -908,7 +1337,7 @@ export const blogs = [
       description:
         "Complete step-by-step guide for traditional businesses to transition from offline to online. Practical digital transformation strategies for Indian SMEs.",
       image:
-        "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-2.jpg",
+        "https://cdn.swastixa.com/swastixablog/digital-transformation.jpg",
     },
 
     content: [
@@ -1051,7 +1480,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog2-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/digital-transformation-media.jpg",
         // text: ""
         alt: "Digital footprint audit checklist for traditional businesses going online"
       },
@@ -1242,7 +1671,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog2-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/digital-transformation-roadmap.jpg",
         // text: "Using data and analytics, companies can improve {{link:conversion rates|/blog/conversion-rate}} effectively."
       },
 
@@ -1465,7 +1894,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog2-3.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/digital-transformation-tracking.jpg",
         // text: "Using data and analytics, companies can improve {{link:conversion rates|/blog/conversion-rate}} effectively."
       },
 
@@ -1727,7 +2156,7 @@ export const blogs = [
       description:
         "Complete 2025 social media playbook for Indian local businesses. Learn platform selection, content planning, posting schedule, and growth tactics that work.",
       image:
-        "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-3.jpg",
+        "https://cdn.swastixa.com/swastixablog/social-media.jpg",
     },
 
     content: [
@@ -1911,7 +2340,7 @@ export const blogs = [
 
        {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog3-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/social-media-content.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -2126,7 +2555,7 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog3-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/social-media-emoji.jpg",
         text: "Using data and analytics, companies can improve {{link:conversion rates|/blog/conversion-rate}} effectively."
       },
 
@@ -2476,7 +2905,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog3-3.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/social-media-planning.jpg",
         text: "Using data and analytics, companies can improve {{link:conversion rates|/blog/conversion-rate}} effectively."
       },
 
@@ -2977,7 +3406,7 @@ export const blogs = [
       description:
         "Learn essential on-page SEO basics every business owner should know before hiring an agency. Understand what matters, avoid getting fooled, and ask the right questions.",
       image:
-        "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-4.jpg",
+        "https://cdn.swastixa.com/swastixablog/on-page.jpg",
     },
 
     content: [
@@ -3319,7 +3748,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog4-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/on-page-seo.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -3590,7 +4019,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog4-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/on-page-work.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -3816,7 +4245,7 @@ export const blogs = [
     hero: {
       metaTitle: "High-Converting Website Design for Service Businesses | Swastixa",
       description: "Learn what makes a website actually convert visitors into customers for Indian service businesses. Real examples, must-have elements, and conversion psychology.",
-      image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-5.jpg",
+      image: "https://cdn.swastixa.com/swastixablog/high-converting.jpg",
     },
 
 
@@ -4053,7 +4482,7 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog5-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/high-converting-layout.jpg",
         alt: "Mobile website design comparison showing poor versus high-converting service business layout"
       },
 
@@ -4341,7 +4770,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog5-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/high-converting-wireframe.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -4685,7 +5114,7 @@ export const blogs = [
     hero: {
       metaTitle: "SEO vs SCO: What Your Business Needs in 2025 | Swastixa Digital",
       description: " Understand the difference between SEO and SCO (Search Content Optimization) and discover which approach delivers better results for your business in 2025.",
-      image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-6.jpg",
+      image: "https://cdn.swastixa.com/swastixablog/seo-sco.jpg",
     },
     content: [
 
@@ -5107,7 +5536,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog6-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/seo-sco-business.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
       {
@@ -5444,7 +5873,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog6-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/seo-sco-content.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -5834,7 +6263,7 @@ export const blogs = [
       description:
         "Compare Google Ads vs Meta Ads for your business. Learn which platform delivers better ROI based on your business type, budget, and goals.",
       image:
-        "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-7.jpg",
+        "https://cdn.swastixa.com/swastixablog/google-meta.jpg",
     },
 
     content: [
@@ -6151,7 +6580,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog7.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/google-ads-meta-ads.jpg",
         alt: "Google Ads vs Meta Ads decision matrix by business type and customer journey stage"
       },
 
@@ -6682,7 +7111,7 @@ export const blogs = [
       description:
         "Complete local SEO guide for service businesses. Learn how to rank in Google Maps and local search results to get found by customers in your city.",
       image:
-        "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-8.jpg",
+        "https://cdn.swastixa.com/swastixablog/local-seo.jpg",
     },
 
     content: [
@@ -6958,7 +7387,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog8-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/local-seo-guide.jpg",
         alt: "Optimized Google Business Profile example showing complete sections for local SEO"
       },
 
@@ -7141,7 +7570,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog8-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/local-seo-service.jpg",
         alt: "Optimized Google Business Profile example showing complete sections for local SEO"
       },
 
@@ -7906,7 +8335,7 @@ export const blogs = [
     hero: {
       metaTitle: "Explainer Videos vs Reels vs Carousels | Swastixa Digital",
       description: "Learn which content format—explainer videos, reels, or carousels—works best for your brand story, business type, and marketing goals.",
-      image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-9.jpg",
+      image: "https://cdn.swastixa.com/swastixablog/explainer-videos.jpg",
     },
     content: [
       {
@@ -8189,7 +8618,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog9-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/explainer-videos-reels.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -8520,7 +8949,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog9-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/explainer-videos-swastixa.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -8901,7 +9330,7 @@ export const blogs = [
     hero: {
       metaTitle: "Data-Driven Marketing for Small Brands | Swastixa Digital",
       description: "Learn simple data-driven marketing tactics for small businesses. Use analytics to improve results without needing a data team or expensive tools.",
-      image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-10.jpg",
+      image: "https://cdn.swastixa.com/swastixablog/data-driven.jpg",
     },
     content: [
 
@@ -9202,7 +9631,7 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog10-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/data-driven-brands.jfif",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -9589,7 +10018,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog10-2.JPG",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/data-driven-marketing.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -9871,7 +10300,7 @@ export const blogs = [
     hero: {
       metaTitle: "7 Paid Ads Mistakes Businesses Make | Swastixa Digital ",
       description: "Discover the 7 most common paid advertising mistakes Indian businesses make and learn how to fix them for better ROI and lower cost per lead.",
-      image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-11.jpg",
+      image: "https://cdn.swastixa.com/swastixablog/paid-ads.jpg",
     },
     content: [
       {
@@ -9982,7 +10411,7 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog11-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/paid-ads-businesses.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -10209,7 +10638,7 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog11-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/paid-ads-mistakes.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -10408,7 +10837,7 @@ export const blogs = [
     hero: {
       metaTitle: "10 Website Design Mistakes Killing Your Leads | Swastixa ",
       description: "Discover 10 critical website design mistakes that cost you leads daily. Learn how to fix them and turn your website into a lead-generating machine. ",
-      image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-12.jpg",
+      image: "https://cdn.swastixa.com/swastixablog/website-design.jpg",
     },
     content: [
       { type: "heading", text: "10 Website Design Mistakes That Are Silently Killing Your Leads" },
@@ -10508,7 +10937,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog12-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/website-design-killing.jpg",
         alt: "Alt text: Website loading speed impact on conversion rates for Indian businesses"
       },
       // {
@@ -10760,7 +11189,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog12-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/website-design-swastixa.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
       {
@@ -11088,7 +11517,7 @@ export const blogs = [
       description:
         " Learn how to create a 30-day content calendar in just 2 hours. Proven framework for high-engagement social media posts without daily stress.",
       image:
-        "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-13.jpg",
+        "https://cdn.swastixa.com/swastixablog/content-calendar.jpg",
     },
 
     content: [
@@ -11268,7 +11697,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog13.1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/content-calendar-framework.jpg",
         text: "Using data and analytics, companies can improve {{link:conversion rates|/blog/conversion-rate}} effectively."
       },
 
@@ -11514,7 +11943,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog13.2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/content-calendar-template.jpg",
         text: "Using data and analytics, companies can improve {{link:conversion rates|/blog/conversion-rate}} effectively."
       },
 
@@ -11670,1145 +12099,6 @@ export const blogs = [
         text: "{{link:Power of In-House Production: Why Consistent Visual Content Wins on Social Media|in-house-production-visual-content-social-media}}"
       },
 
-
-
-
-    //   {
-    //     type: "boldList",
-    //     items: [
-    //       {
-    //         bold: "Regular SEO:",
-    //         text: "Tries to rank for broad searches like \"best interior designer\" or \"plumbing services\"."
-    //       },
-    //       {
-    //         bold: "Local SEO:",
-    //         text: "Targets location-specific searches like \"interior designer Pune\" or \"plumber near me\"."
-    //       }
-    //     ]
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "For service businesses operating in specific areas, local SEO delivers better results faster because:"
-    //   },
-
-    //   {
-    //     type: "unorderedBoldListdecimal",
-    //     items: [
-    //       {
-    //         bold: "Less competition:",
-    //         text: "Competing against businesses in your city, not the entire country."
-    //       },
-    //       {
-    //         bold: "Higher intent:",
-    //         text: "Someone searching locally is ready to hire, not just browsing."
-    //       },
-    //       {
-    //         bold: "Faster results:",
-    //         text: "Local SEO improvements can show results in 4–8 weeks vs 4–6 months for regular SEO."
-    //       },
-    //       {
-    //         bold: "Lower cost:",
-    //         text: "Many local SEO tactics are free or low-cost."
-    //       }
-    //     ]
-    //   },
-
-
-    //   {
-    //     type: "subHeading",
-    //     text: "The prize"
-    //   },
-
-
-    //   {
-    //     type: "paragraph",
-    //     text: "For broader strategy context, revisit our guide on {{link:building a 360° digital marketing strategy|digital-marketing-strategy-smes-budget}}."
-    //   },
-
-    //   {
-    //     type: "heading",
-    //     text: "The 3 Core Ranking Factors for Local SEO"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Google uses three main factors to determine local rankings:"
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "1. Relevance (How Well You Match the Search)"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Does your business actually offer what the searcher wants? Google determines this from your business description, categories, and website content."
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "2. Distance (How Close You Are to the Searcher)"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "When someone searches \"plumber near me,\" Google prioritizes businesses physically closer to their location."
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "You can't change your location, but you can:"
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Clearly list your service areas",
-    //       "Create separate pages for each area you serve",
-    //       "Include location names throughout your website"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "3. Prominence (How Well-Known and Trusted You Are)"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Google measures prominence through:"
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Number and quality of Google reviews",
-    //       "Quantity and consistency of online citations (directory listings)",
-    //       "Website authority and backlinks",
-    //       "Engagement with your Google Business Profile"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "The winning formula"
-    //   },
-
-
-
-    //   {
-    //     type: "heading",
-    //     text: "Step 1: Optimize Your Google Business Profile (The Foundation)"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Your Google Business Profile (formerly Google My Business) is the single most important local SEO factor. Here's how to optimize it completely:"
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Claim and Verify Your Profile"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Search your business name on Google. If you see your business already listed but marked \"Own this business?\" you need to claim it. Google will send a verification postcard to your address."
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "If not listed, create your profile at at google.com/business"
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Complete Every Section 100%"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Google rewards complete profiles. Fill out:"
-    //   },
-
-    //   {
-    //     type: "boldList",
-    //     items: [
-    //       { bold: "Business name:", text: "Use your actual business name (don't add keywords)" },
-    //       { bold: "Category:", text: "Choose the most specific primary category, add 2–3 secondary categories" },
-    //       { bold: "Address:", text: "Exact, consistent address (matches what's on your website)" },
-    //       { bold: "Phone number:", text: "Local number, not toll-free (same everywhere online)" },
-    //       { bold: "Website URL:", text: "Link to your homepage or location-specific page" },
-    //       { bold: "Hours:", text: "Accurate hours including special holiday hours" },
-    //       { bold: "Service areas:", text: "List all cities or neighborhoods you serve" },
-    //       { bold: "Business description:", text: "750 characters describing what you do, include location mentions naturally" }
-    //     ]
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Add High-Quality Photos"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: " Profiles with photos get 42% more direction requests and 35% more clicks to websites."
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: " Upload at least:"
-    //   },
-
-
-    //   {
-    //     type: "list",
-    //     variant: "Upload at least:",
-    //     items: [
-    //       "3 exterior photos",
-    //       "5 interior photos",
-    //       "10 photos of your work or products",
-    //       "Team photos",
-    //       "Logo (square format, 720×720px minimum)"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Update photos monthly to signal active business management."
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Create Regular Posts"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Google Business Posts appear in your profile and signal active management. Post 2–3 times weekly:"
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Service updates",
-    //       "Special offers",
-    //       "Before/after photos",
-    //       "Helpful tips",
-    //       "Event announcements"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Posts expire after 7 days, so consistency matters."
-    //   },
-
-    //   {
-    //     type: "imageRightText",
-    //     image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/Swastixa%20-%20BLOG/BLOG%20-%20-%20%20%20Local%20SEO%20Guide%20.jpeg",
-    //     alt: "Optimized Google Business Profile example showing complete sections for local SEO"
-    //   },
-
-
-
-
-    //   {
-    //     type: "heading",
-    //     text: "Step 2: Build and Manage Reviews (The Trust Factor)"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Reviews are the second most important local ranking factor and the primary decision factor for customers."
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "The Review Game Plan"
-    //   },
-
-    //   {
-    //     type: "unorderedBoldListdecimal",
-    //     items: [
-    //       { bold: "Target:", text: "50+ reviews with 4.5+ average rating within 6 months" }
-    //     ]
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "How to get there:"
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Ask every satisfied customer for a review",
-    //       "Make it easy with direct review link",
-    //       "Follow up with reminder after 3–5 days",
-    //       "Incentivize internally (team contests for most reviews generated)"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "How to ask"
-    //   },
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\nWe'd really appreciate if you could share your experience on Google. Here's the direct link: [your review link]"
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Never"
-    //   },
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\nOffer discounts or payments for reviews (violates Google policies)"
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Responding to Reviews (Essential)"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Respond to every review—positive and negative—within 48 hours."
-    //   },
-    //   {
-    //     type: "subHeading",
-    //     text: "Positive review response"
-    //   },
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\nThank you for the kind words, [Name]! We're thrilled you're happy with [specific service mentioned]. Looking forward to working with you again."
-    //   },
-    //   {
-    //     type: "subHeading",
-    //     text: "Negative review response"
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\nWe're sorry to hear about your experience, [Name]. We'd like to make this right. Please call us at [number] so we can resolve this. – [Your name]"
-    //   },
-
-    //   {
-    //     type: "heading",
-    //     text: "Step 1: Optimize Your Google Business Profile (The Foundation)"
-    //   },
-    //   {
-    //     type: "paragraph",
-    //     text: "Your Google Business Profile (formerly Google My Business) is the single most important local SEO factor. Here's how to optimize it completely:"
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Claim and Verify Your Profile"
-    //   },
-    //   {
-    //     type: "paragraph",
-    //     text: "Search your business name on Google. If you see your business already listed but marked \"Own this business?\" you need to claim it. Google will send a verification postcard to your address."
-    //   },
-    //   {
-    //     type: "paragraph",
-    //     text: "If not listed, create your profile at {{link:google.com/business|https://www.google.com/business}}."
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Complete Every Section 100%"
-    //   },
-    //   {
-    //     type: "paragraph",
-    //     text: "Google rewards complete profiles. Fill out:"
-    //   },
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Business name: Use your actual business name (don't add keywords)",
-    //       "Category: Choose the most specific primary category, add 2–3 secondary categories",
-    //       "Address: Exact, consistent address (matches your website)",
-    //       "Phone number: Local number, not toll-free (same everywhere online)",
-    //       "Website URL: Homepage or location-specific page",
-    //       "Hours: Accurate hours including holidays",
-    //       "Service areas: All cities/neighborhoods you serve",
-    //       "Business description: 750 characters with natural location mentions"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Add High-Quality Photos"
-    //   },
-    //   {
-    //     type: "paragraph",
-    //     text: "Profiles with photos get 42% more direction requests and 35% more website clicks."
-    //   },
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "3 exterior photos",
-    //       "5 interior photos",
-    //       "10 photos of your work or products",
-    //       "Team photos",
-    //       "Logo (square, minimum 720×720px)"
-    //     ]
-    //   },
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **Pro Tip** Update photos monthly to signal active business management."
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Create Regular Posts"
-    //   },
-    //   {
-    //     type: "paragraph",
-    //     text: "Google Business Posts signal activity. Post 2–3 times weekly:"
-    //   },
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Service updates",
-    //       "Special offers",
-    //       "Before/after photos",
-    //       "Helpful tips",
-    //       "Event announcements"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "imageRightText",
-    //     image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/Swastixa%20-%20BLOG/BLOG%20-%20-%20%20%20Local%20SEO%20Guide%20.jpeg",
-    //     alt: "Optimized Google Business Profile example showing complete sections for local SEO"
-    //   },
-
-    //   // STEP 2
-    //   {
-    //     type: "heading",
-    //     text: "Step 2: Build and Manage Reviews (The Trust Factor)"
-    //   },
-    //   {
-    //     type: "paragraph",
-    //     text: "Reviews are the second most important local ranking factor and the primary decision factor for customers."
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "The Review Game Plan"
-    //   },
-    //   {
-    //     type: "boldList",
-    //     items: [
-    //       { bold: "Target:", text: "50+ reviews with 4.5+ rating within 6 months" },
-    //       { bold: "Ask:", text: "Every satisfied customer" },
-    //       { bold: "Follow up:", text: "After 3–5 days" }
-    //     ]
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Never offer discounts or payments for reviews. This violates Google policies."
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Responding to Reviews (Essential)"
-    //   },
-    //   {
-    //     type: "paragraph",
-    //     text: "Respond to every review—positive or negative—within 48 hours. "
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Positive review response:"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Thank you for the kind words, [Name]! We're thrilled you're happy with [specific service mentioned]. Looking forward to working with you again.",
-    //   },
-
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Negative review response:"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "We're sorry to hear about your experience, [Name]. We'd like to make this right. Please call us at [number] so we can resolve this. - [Your name]",
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Businesses that respond to reviews rank higher and convert better. It signals active management and care.",
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Dealing With Fake Negative Reviews"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "If you receive a fake review, flag it through Google Business Profile. If Google doesn't remove it, respond professionally pointing out the facts without being defensive.",
-    //   },
-
-
-    //   // STEP 3
-    //   {
-    //     type: "heading",
-    //     text: "Step 3: Build Consistent NAP Citations"
-    //   },
-    //   {
-    //     type: "paragraph",
-    //     text: "NAP stands for Name, Address, Phone number. Google cross-references your business information across the web. Consistency matters enormously."
-    //   },
-
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Where to List Your Business"
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Start with these essential directories:",
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **National directories **",
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Justdial",
-    //       "Sulekha",
-    //       "IndiaMART",
-    //       "MouthShut",
-    //       "AskLaila",
-    //     ]
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **Google-owned: **",
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Google Maps (via Business Profile)",
-    //       "YouTube (create channel with NAP in description)",
-
-    //     ]
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **Social platforms:**",
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Facebook business page",
-    //       "Instagram business profile",
-    //       "LinkedIn company page",
-
-    //     ]
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **Industry-specific directories:**",
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "UrbanClap (for home services)",
-    //       "Practo (healthcare)",
-    //       "Zomato (restaurants)",
-    //       "99acres (real estate)",
-
-    //     ]
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "The Consistency Rule",
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **Your NAP must be EXACTLY the same everywhere:**",
-    //   },
-
-    //   {
-    //     type: "heading",
-    //     text: "Correct"
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **ABC Interiors**",
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **123 MG Road, Bangalore 560001**",
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **+91-98765-43210**",
-    //   },
-
-    //   {
-    //     type: "heading",
-    //     text: "Incorrect variations:"
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **+91-98765-43210**",
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **ABC Interior Designers (different name)**",
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **123, MG Rd, Blr 560001 (inconsistent format)**",
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **9876543210 (missing country code)**",
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Even small differences confuse Google and hurt rankings.",
-    //   },
-
-
-
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Step 4: Optimize Your Website for Local Search",
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Your website needs location signals throughout. Here's how:.",
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Location-Specific Pages",
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "If you serve multiple areas, create separate pages for each major location:",
-    //   },
-
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **Each page should have:**",
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Unique content (not duplicate)",
-    //       "Location name in title tag, H1, URL",
-    //       "Service details specific to that area",
-    //       "Local testimonials if available",
-    //       "Embedded Google Map for the area",
-
-    //     ]
-    //   },
-
-
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Include location names naturally in:",
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Homepage title and description",
-    //       "Service page headings",
-    //       "About page content",
-    //       "Footer (full address)",
-    //       "Image alt text",
-
-    //     ]
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **Example:**",
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Professional interior design services in Koramangala, Bangalore. We transform  2BHK and 3BHK apartments across South Bangalore including Indiranagar, HSR Layout, and BTM.",
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Contact Page Optimization",
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Your contact page should include:",
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Full address",
-    //       "Embedded Google Map",
-    //       "Phone number (click-to-call)",
-    //       "WhatsApp link",
-    //       "Business hours",
-    //       "Service area list",
-
-    //     ]
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "For broader website conversion optimization, check our guide on  {{link: high-converting website design|high-converting-website-service-businesses}}."
-    //   },
-
-
-
-
-
-
-
-    //   // STEP 4
-    //   {
-    //     type: "heading",
-    //     text: "Correct:"
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Location-Specific Pages"
-    //   },
-    //   {
-    //     type: "paragraph",
-    //     text: "If you serve multiple areas, create separate pages for each location."
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Unique content per location",
-    //       "Location name in URL, title, H1",
-    //       "Service details for that area",
-    //       "Local testimonials",
-    //       "Embedded Google Map"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Contact Page Optimization"
-    //   },
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Full address",
-    //       "Embedded Google Map",
-    //       "Click-to-call phone number",
-    //       "WhatsApp link",
-    //       "Business hours",
-    //       "Service area list"
-    //     ]
-    //   },
-
-
-
-
-
-
-    //   // STEP 5
-    //   {
-    //     type: "heading",
-    //     text: "Step 5: Create Location-Focused Content"
-    //   },
-    //   {
-    //     type: "paragraph",
-    //     text: "Content targeting local searches helps you rank for informational queries that lead to service inquiries."
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Blog Post Ideas"
-    //   },
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Top 10 [Your City] Neighborhoods for [Your Service]",
-    //       "Cost of [Your Service] in [City]: 2025 Pricing Guide",
-    //       "Before & After: [Your Service] Projects in [City]",
-    //       "How to choose [Your Service] in [City]: Complete Guide"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "paragraphbold",
-    //     text: "\n **These posts:**",
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Rank for near me and location searches",
-    //       "Build topical authority in your area",
-    //       "Provide content to share on social media"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Case Studies With Location Details"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Create detailed case studies mentioning."
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Client location (with permission)",
-    //       "Local challenges addressed",
-    //       "Provide content to share on social media",
-    //       "Results with photos",
-
-    //     ]
-    //   },
-
-
-    //   {
-    //     type: "paragraph",
-    //     text: "These build trust while reinforcing local relevance."
-    //   },
-
-    //   {
-    //     type: "image",
-    //     src: "/images/local-seo-checklist.png",
-    //     alt: "Local SEO optimization checklist for service businesses to rank in Google Maps"
-    //   },
-
-
-
-
-
-
-
-
-
-
-
-
-    //   {
-    //     type: "heading",
-    //     text: "Step 6: Build Local Backlinks"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Links from local websites signal geographical relevance to Google."
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "How to Get Local Links"
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "ordered",
-    //     items: [
-    //       "Local media: Pitch stories to city news websites and blogs",
-    //       "Chamber of Commerce: Join and get listed on their directory",
-    //       "Local business associations: Industry-specific local groups",
-    //       "Sponsor local events: Get link from event websites",
-    //       "Partner businesses: Exchange links with complementary local businesses",
-    //       "Local bloggers: Collaborate with city lifestyle/review bloggers"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "boldListpara",
-    //     items: [
-    //       {
-    //         bold: "Pro Tip:",
-    //         text: "One quality local link beats ten generic directory links for local SEO purposes."
-    //       }
-    //     ]
-    //   },
-
-    //   {
-    //     type: "heading",
-    //     text: "Common Local SEO Mistakes to Avoid"
-    //   },
-
-    //   {
-    //     type: "boldListpara",
-    //     items: [
-    //       {
-    //         bold: "Mistake 1: Using PO Box or Virtual Office",
-    //         text: "Google penalizes businesses without real physical addresses. Use your actual office or home address."
-    //       }
-    //     ]
-    //   },
-
-    //   {
-    //     type: "boldListpara",
-    //     items: [
-    //       {
-    //         bold: "Mistake 2: Keyword Stuffing Business Name",
-    //         text: "Don't rename your business \"ABC Plumbing | Best Plumber Bangalore | Emergency Plumbing Services.\" Use your real business name only."
-    //       }
-    //     ]
-    //   },
-
-    //   {
-    //     type: "boldListpara",
-    //     items: [
-    //       {
-    //         bold: "Mistake 3: Wrong Business Category",
-    //         text: "Choosing a broad category like \"Service\" instead of specific \"Interior Designer\" hurts relevance. Pick the most specific category possible."
-    //       }
-    //     ]
-    //   },
-
-    //   {
-    //     type: "boldListpara",
-    //     items: [
-    //       {
-    //         bold: "Mistake 4: Ignoring Questions Section",
-    //         text: "Google Business Profiles have a Q&A section. Proactively add and answer common questions before others ask random ones."
-    //       }
-    //     ]
-    //   },
-
-    //   {
-    //     type: "boldListpara",
-    //     items: [
-    //       {
-    //         bold: "Mistake 5: Deleting and Recreating Profile",
-    //         text: "This resets all reviews and rankings. Never delete your profile. Update or correct it instead."
-    //       }
-    //     ]
-    //   },
-
-    //   {
-    //     type: "heading",
-    //     text: "Timeline: When to Expect Results"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Local SEO delivers results faster than regular SEO, but it's not overnight:"
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Week 1–2: Profile optimization shows increased visibility",
-    //       "Week 3–4: First reviews start appearing, profile engagement increases",
-    //       "Week 5–8: Start appearing in map pack for some searches",
-    //       "Week 9–12: Consistent map pack appearances, increased calls/directions",
-    //       "Month 4–6: Top 3 positions for primary keywords in your area"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "boldListpara",
-    //     items: [
-    //       {
-    //         bold: "Key Insight:",
-    //         text: "Consistency is key. Businesses that maintain optimization efforts long-term dominate local search."
-    //       }
-    //     ]
-    //   },
-
-
-    //   {
-    //     type: "heading",
-    //     text: "Measuring Local SEO Success"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Track these metrics monthly:"
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Google Business Profile Insights"
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Total views (search + maps)",
-    //       "Direction requests",
-    //       "Phone calls",
-    //       "Website clicks"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Search Rankings"
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Position in map pack for target keywords",
-    //       "Number of keywords you rank for locally"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "subHeading",
-    //     text: "Business Results"
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "Monthly inquiries from Google",
-    //       "Cost per lead (₹0 for organic!)",
-    //       "Conversion rate from inquiry to customer"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "boldListpara",
-    //     items: [
-    //       {
-    //         bold: "Why Local SEO Wins:",
-    //         text: "Local SEO is one of the few marketing channels with zero ongoing cost once optimized—just time investment."
-    //       }
-    //     ]
-    //   },
-
-    //   {
-    //     type: "heading",
-    //     text: "Conclusion"
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Local SEO isn't complicated, but it requires systematic execution. Follow these six steps:"
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "ordered",
-    //     items: [
-    //       "Fully optimize Google Business Profile",
-    //       "Build 50+ authentic reviews with active responses",
-    //       "Create consistent NAP citations across directories",
-    //       "Add location signals throughout your website",
-    //       "Create location-focused content regularly",
-    //       "Build local backlinks from relevant sources"
-    //     ]
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Most service businesses ignore local SEO completely, which means small efforts create big competitive advantages."
-    //   },
-
-    //   {
-    //     type: "paragraph",
-    //     text: "Start with Google Business Profile optimization this week. Add weekly review requests. Build citations monthly. Create location content quarterly. Within 3–6 months, you'll dominate local search in your area."
-    //   },
-
-    //   {
-    //     type: "boldListpara",
-    //     items: [
-    //       {
-    //         bold: "Ready to dominate local search?",
-    //         text: "Swastixa Digital implements complete local SEO strategies that get service businesses found by customers actively searching in their area. Let's get you ranking in the map pack. {{link:Contact us|/contact}}"
-    //       }
-    //     ]
-    //   },
-
-    //   {
-    //     type: "heading",
-    //     text: "You May Also Like"
-    //   },
-
-    //   {
-    //     type: "list",
-    //     variant: "unordered",
-    //     items: [
-    //       "{{link:On-Page SEO Basics Every Business Owner Should Understand Before Hiring an Agency|/on-page-seo-basics}}",
-    //       "{{link:SEO vs SCO: What Your Business Actually Needs in 2025|/seo-vs-sco-2025}}",
-    //       "{{link:How Indian SMEs Can Build a 360° Digital Marketing Strategy With Limited Budget|/360-digital-marketing-strategy-india}}"
-    //     ]
-    //   }
-
-
-
-
-
     ],
 
      faq: [
@@ -12855,7 +12145,7 @@ export const blogs = [
     hero: {
       metaTitle: "Retargeting Ads Guide: Convert Lost Visitors | Swastixa Digital",
       description: "Learn how retargeting ads turn website visitors who didn't convert into paying customers. Complete guide with strategies, budgets, and real examples.",
-      image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-14.jpg",
+      image: "https://cdn.swastixa.com/swastixablog/retargeting-ads.jpg",
     },
     content: [
       { type: "heading", text: "Retargeting Ads Explained: Turning Lost Visitors Into Paying Customers" },
@@ -13014,7 +12304,7 @@ export const blogs = [
       },
      {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog14-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/retargeting-ads-guide.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
       {
@@ -13249,7 +12539,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog14-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/retargeting-ads-visitors.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -13491,7 +12781,7 @@ export const blogs = [
     hero: {
       metaTitle: "In-House Content Production for Social Media | Swastixa Digital ",
       description: " Discover why businesses with in-house content production consistently outperform competitors on social media. Learn the real advantages beyond cost savings.",
-      image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-15.jpg",
+      image: "https://cdn.swastixa.com/swastixablog/in-house.jpg",
     },
     content: [
       { type: "heading", text: "Power of In-House Production: Why Consistent Visual Content Wins on Social Media" },
@@ -13622,7 +12912,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog15-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/in-house-content.jfif",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -13848,7 +13138,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog15-2.JPG",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/in-house-production.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
       {
@@ -14090,7 +13380,7 @@ export const blogs = [
     hero: {
       metaTitle: "How Graphic Design Builds Trust & Conversions | Swastixa Digital ",
       description: "Discover how professional graphic design builds instant trust and drives conversions in just 5 seconds. Learn the psychology behind design that sells.",
-      image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-16.jpg",
+      image: "https://cdn.swastixa.com/swastixablog/how-graphic.jpg",
     },
     content: [
       { type: "heading", text: "How Good Graphic Design Builds Trust and Conversions in the First 5 Seconds" },
@@ -14257,7 +13547,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog16-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/how-graphic-builds.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -14459,7 +13749,7 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog16-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/how-graphic-design.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -14725,7 +14015,7 @@ export const blogs = [
     hero: {
       metaTitle: "Build Your Brand Using Instagram & Facebook Reels | Swastixa",
       description: "Learn how service businesses can build authentic brands using Instagram and Facebook Reels. Practical strategies, content ideas, and proven formats inside.",
-      image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-17.jpg",
+      image: "https://cdn.swastixa.com/swastixablog/build-your.jpg",
     },
     content: [{ type: "heading", text: "Building a Brand on Instagram and Facebook Reels: Practical Tips for Service Businesses" },
     {
@@ -14912,7 +14202,7 @@ export const blogs = [
     },
     {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog17-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/build-your-builds.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -15085,7 +14375,7 @@ export const blogs = [
     },
    {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog17-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/build-your-instagram.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -15342,7 +14632,7 @@ export const blogs = [
     hero: {
       metaTitle: "Choose the Right Digital Marketing Partner | Swastixa Digital",
       description: "Learn how to evaluate and choose the right digital marketing agency for your business. Complete checklist, red flags, and questions to ask before signing.",
-      image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-18.jpg",
+      image: "https://cdn.swastixa.com/swastixablog/choose.jpg",
     },
     content: [
       { type: "heading", text: "How to Choose the Right Digital Marketing Partner: Checklist and Red Flags for Businesses" },
@@ -15647,7 +14937,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog18-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/choose-swastixa-digital.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -15951,7 +15241,7 @@ export const blogs = [
     hero: {
       metaTitle: "Full-Stack Digital Marketing Approach | Swastixa Digital ",
       description: "Discover how Swastixa Digital's integrated full-stack approach delivers better results than working with multiple vendors. One team, complete strategy, consistent execution. ",
-      image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-19.jpg",
+      image: "https://cdn.swastixa.com/swastixablog/full-stack.jpg",
     },
     content: [{ type: "heading", text: "Swastixa Digital's Full-Stack Approach: When One Team Handles Strategy, Content, Ads, and Production Together" },
 
@@ -16084,7 +15374,7 @@ export const blogs = [
     },
     {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog19-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/full-stack-digital.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -16368,7 +15658,7 @@ export const blogs = [
     },
     {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog19-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/full-stack-marketing.jpg",
         alt: "Cost comparison full-stack digital marketing versus multiple vendor approach with time investment"
       },
     {
@@ -16582,7 +15872,7 @@ export const blogs = [
     hero: {
       metaTitle: " Swastixa's Client Success Blueprint | Digital Growth Process",
       description: "Discover Swastixa Digital's proven process for taking businesses from zero online presence to consistent digital growth. Complete roadmap with real results.",
-      image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog1/blog-20.jpg",
+      image: "https://cdn.swastixa.com/swastixablog/swastixa-client.jpg",
     },
     content: [
       { type: "heading", text: "Success Blueprint: How Swastixa Digital Takes Clients From Zero Presence to Consistent Online Growth" },
@@ -16774,9 +16064,11 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog20-1.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/swastixa-client-blueprint.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
+
+      
 
       {
         type: "heading",
@@ -16996,7 +16288,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/blog1/blog2inner/blog-imges/blog20-2.jpg",
+        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/swastixa-client-success.jpg",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 

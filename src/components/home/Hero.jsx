@@ -104,7 +104,7 @@ const Hero = () => {
 
         <div className="mt-8 w-full flex justify-center relative z-10">
           <OptimizedVideo
-            src="https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-hero-video/swastixa-top.mp4"
+            src="https://cdn.swastixa.com/swastixadigital/swastixa-hero-video/swastixa-top.mp4"
             poster="/posters/swastixa-hero-poster.jpg"
             autoPlay={true}
             muted={true}

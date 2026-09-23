@@ -15,14 +15,14 @@ const CTASection = dynamic(() => import('../components/common/CTASection'));
 const ContentMarketingAgency = () => {
     return (
         <div className="bg-black min-h-screen">
-          <ExcellenceHero />
+          {/* <ExcellenceHero />
             <WhyChooseUs />
-            <HowWeWork />  
+            <HowWeWork />   */}
             {/* <CaseStudies /> */}
-            <ServiceCards />
+            {/* <ServiceCards />
             <LogoCarousel />
             <FAQSection />
-            <CTASection /> 
+            <CTASection />  */}
         </div>  
     )
 }   

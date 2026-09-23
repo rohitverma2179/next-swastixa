@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import styled from 'styled-components';
 import { FaLinkedinIn } from "react-icons/fa";
 
 const ManaginDiroctor = () => {
@@ -24,126 +23,36 @@ const ManaginDiroctor = () => {
             role: "Tech Lead",
             image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1000"
         },      
-        
     ];
 
     return (
       <>
         <h2 className='text-5xl font-bold text-white text-center sm:text-left sm:pl-36 mt-20 tracking-tight'>Managing Director</h2>
-          <StyledWrapper>
-            <div className="cards-container">
+        <div className="py-16 px-4 flex justify-center bg-transparent">
+            <div className="flex flex-wrap gap-8 justify-center items-center">
                 {teamMembers.map((member) => (
-                    <div className="card" key={member.id}>
-                        <img loading="lazy" decoding="async"                             src={member.image}
+                    <div 
+                        className="w-[22rem] h-[27rem] bg-[#313131] rounded-[20px] flex flex-col items-center justify-center text-white transition-all duration-200 ease-in-out relative cursor-pointer overflow-hidden hover:scale-[1.04] hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] group"
+                        key={member.id}
+                    >
+                        <img 
+                            loading="lazy" 
+                            decoding="async"
+                            src={member.image}
                             alt={member.name}
-                            className="img"
+                            className="h-full w-full object-cover absolute transition-all duration-200 ease-in-out z-1 group-hover:blur-[3px]"
                         />
-                        <div className="textBox">
-                            <p className="head">{member.name}</p>
-                            <p className="discription">{member.role}</p>
-                            <p className="price"><FaLinkedinIn /></p>
+                        <div className="opacity-0 group-hover:opacity-100 flex flex-col items-start justify-end w-full h-full p-4 z-10 transition-all duration-200 ease-in-out bg-gradient-to-t from-black/80 to-transparent group-hover:gap-2">
+                            <p className="text-[1.2em] font-bold text-white">{member.name}</p>
+                            <p className="text-[0.9em] text-[#ccc] font-light">{member.role}</p>
+                            <p className="text-[1.2em] font-bold text-white mt-[5px]"><FaLinkedinIn /></p>
                         </div>
                     </div>
                 ))}
             </div>
-        </StyledWrapper>
-    </>
+        </div>
+      </>
     );
 }
-
-const StyledWrapper = styled.div`
-  padding: 4rem 1rem;
-  display: flex;
-  justify-content: center;
-  background-color: transparent;
-
-  .cards-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      align-items: center;
-    }
-
-  .card {
-      width: 22rem;
-      height: 27rem;
-      background: #313131;
-      border-radius: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      transition: 0.2s ease-in-out;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-  }
-
-  .img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    transition: 0.2s ease-in-out;
-    z-index: 1;
-  }
-
-  .textBox {
-      opacity: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      justify-content: end;
-      width: 100%;
-      height: 100%;
-      gap: 0em;
-      padding: 1em;
-      z-index: 5;
-      transition: 0.2s ease-in-out;
-      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    }
-
-  .textBox > .head {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #fff;
-    }
-
-  .textBox > .price {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #fff;
-      margin-top: 5px;
-    }
-
-  .textBox > .discription {
-      font-size: 0.9em;
-      color: #ccc;
-      font-weight: light;
-    }
-
-  .card:hover > .textBox {
-      opacity: 1;
-      gap: 0.5em;
-    }
-
-  .card:hover > .img {
-      filter: blur(3px);
-      animation: anim 1s infinite ease-in-out;
-    }
-
-  @keyframes anim {
-      50% {
-          transform: scale() translateY(-10%) rotate(1deg);
-        }
-    }
-
-  .card:hover {
-      transform: scale(1.04);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
-`;
 
 export default ManaginDiroctor;

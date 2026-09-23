@@ -7,97 +7,97 @@ const portfolioData = [
   {
     id: 2,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/bestmate-hero-design.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/bestmate-hero-design.png",
     tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
     link: "https://bestmate.bexex.in/",
   },
   {
     id: 15,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/three-dlf-work.jpeg",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/three-dlf-work.jpeg",
     tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
     link: "https://bexex.in/360/",
   },
   {
     id: 4,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/yashvi-hero-design.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/yashvi-hero-design.png",
     tags: ["Branding", "UI/UX", "Web Design"],
   },
   {
     id: 3,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/bexexglobal.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/bexexglobal.png",
     tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
     link: "https://bexexglobal.com/",
   },
   {
     id: 5,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/birla-hero-design.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/birla-hero-design.png",
     tags: ["Branding", "UI/UX", "Web Design"],
   },
   {
     id: 6,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/eazzy-hero-design.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/eazzy-hero-design.png",
     tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
     link: "https://eazzy.bexex.in/",
   },
   {
     id: 7,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/elaboratecapital.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/elaboratecapital.png",
     tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
     link: "https://elaboratecapital.bexex.in/",
   },
   {
     id: 8,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/elan-design-hero.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/elan-design-hero.png",
     tags: ["Branding", "UI/UX", "Web Design"],
   },
   {
     id: 9,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/gandhi-hero-design.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/gandhi-hero-design.png",
     tags: ["Branding", "UI/UX", "Web Design"],
   },
   {
     id: 14,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/project-one.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/project-one.png",
     tags: ["Branding", "UI/UX", "Web Design"],
   },
   {
     id: 10,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/graceaesthetic-design-hero.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/graceaesthetic-design-hero.png",
     tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
     link: "https://graceaesthetic.in/",
   },
   {
     id: 11,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/elan-hero-design.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/elan-hero-design.png",
     tags: ["Branding", "UI/UX", "Web Design"],
   },
   {
     id: 12,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/project-two.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/project-two.png",
     tags: ["Branding", "UI/UX", "Web Design"],
   },
   {
     id: 13,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/project-three.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/project-three.png",
     tags: ["Branding", "UI/UX", "Web Design"],
   },
   {
     id: 1,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/asva-hero-design.png",
+      "https://cdn.swastixa.com/swastixaservice/service-web-page-images/asva-hero-design.png",
     tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
     link: "https://asvawater.com/",
   },

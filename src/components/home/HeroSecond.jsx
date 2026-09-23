@@ -3,7 +3,7 @@
 import TextWriteAnimation from "./TextWriteAnimation";
 import OptimizedVideo from "../common/OptimizedVideo";
 
-const VIDEO_URL = "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/Swastixa%20-%20HOME/Hero-2nd-video.mp4";
+const VIDEO_URL = "https://cdn.swastixa.com/swastixadigital/swastixa-hero-video/swastixa-second.mp4";
 
 export default function HeroSection() {
   return (

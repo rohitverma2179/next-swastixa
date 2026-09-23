@@ -7,49 +7,49 @@ const portfolioData = [
   {
     id: 1,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-eazzy.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-eazzy.webp",
     link: "https://swastixa.com/work/social-media-management",
   },
   {
     id: 2,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-fat-tiger.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-fat-tiger.webp",
     link: "https://swastixa.com/work/social-media-management",
   },
   {
     id: 3,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-kloy.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-kloy.webp",
     link: "https://swastixa.com/work/social-media-management",
   },
   {
     id: 4,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-mmm.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-mmm.webp",
     link: "https://swastixa.com/work/social-media-management",
   },
   {
     id: 5,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-mrg.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-mrg.webp",
     link: "https://swastixa.com/work/social-media-management",
   },
   {
     id: 6,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-ross.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-ross.webp",
     link: "https://swastixa.com/work/social-media-management",
   },
   {
     id: 7,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-tirasya.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-tirasya.webp",
     link: "https://swastixa.com/work/social-media-management",
   },
   {
     id: 8,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-washguys.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-washguys.webp",
     link: "https://swastixa.com/work/social-media-management",
   },
 ];

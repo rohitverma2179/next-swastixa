@@ -7,50 +7,50 @@ const portfolioData = [
   {
     id: 4,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-arica.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-arica.webp",
     // link: "https://swastixa.com/work/social-media-management",
   },
   {
     id: 1,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-bestmate.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-bestmate.webp",
     // link: "https://swastixa.com/work/social-media-management",
   },
   {
     id: 2,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-kevvali-movie.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-kevvali-movie.webp",
     // link: "https://swastixa.com/work/social-media-management",
   },
   {
     id: 3,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-kevvali.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-kevvali.webp",
     // link: "https://swastixa.com/work/social-media-management",
   },
   {
     id: 5,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-mrg.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-mrg.webp",
     // link: "https://swastixa.com/work/social-media-management",
   },
   
   {
     id: 7,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-wash-guys.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-wash-guys.webp",
     // link: "https://swastixa.com/work/social-media-management",
   },
   {
     id: 8,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-washguys.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-packaging%20%26%20design-images/swastixa-service-packaging%26design-washguys.webp",
     // link: "https://swastixa.com/work/social-media-management",
   },
   {
     id: 6,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-packaging%20%26%20design-images/swastixa-services-packaging%26design-arica.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-packaging%20%26%20design-images/swastixa-services-packaging%26design-arica.webp",
     // link: "https://swastixa.com/work/social-media-management",
   },
 ];

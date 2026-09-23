@@ -494,7 +494,7 @@ const MagicBento = ({
 
   return (
     <>
-      <style>
+      <style suppressHydrationWarning>
         {`
           .bento-section {
             --glow-x: 50%;

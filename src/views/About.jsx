@@ -22,26 +22,26 @@ const About = () => {
             id: 1,
             title: "Social Media Management",
             description: "Strategic content and consistent management that turns followers into loyal audiences.",
-            image: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixabout/about-more-website-design-swastixa.jpeg"
+            image: "https://cdn.swastixa.com/swastixabout/about-more-website-design-swastixa.jpeg"
         },
         {
             id: 2,
             title: "Production House",
             description: "High-impact videos, ads, and visual stories crafted to connect and inspire.",
-            image: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixabout/about-website-films-swastixa.jpeg"
+            image: "https://cdn.swastixa.com/swastixabout/about-website-films-swastixa.jpeg"
         },
         {
             id: 3,
             title: "Website Development",
             description: "Clean, responsive, and scalable websites built for speed, experience, and conversion.",
             // image: "https://swastixa.b-cdn.net/About%20-%204%20-%20%20(2).png"
-            image: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixabout/about-design-meeting-swastixa.jpeg"
+            image: "https://cdn.swastixa.com/swastixabout/about-design-meeting-swastixa.jpeg"
         },
         {
             id: 4,
             title: "Digital Marketing",
             description: "Performance-driven campaigns designed to increase reach, engagement, and measurable growth.",
-            image: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixabout/about-website-design-swastixa.jpeg"
+            image: "https://cdn.swastixa.com/swastixabout/about-website-design-swastixa.jpeg"
             // image: "https://swastixa.b-cdn.net/About%20-%204%20-%20%20(1).png"
         },
     ];
@@ -53,7 +53,7 @@ const About = () => {
                 <div className='relative w-full '>  {/* fixed background  paralex background */}
                     {/* <AboutHero /> */}
 
-                    <div className="relative w-full h-[90vh] min-h-[600px] 2xl:min-h-[500px]">
+                    {/* <div className="relative w-full h-[90vh] min-h-[600px] 2xl:min-h-[500px]">
                           <CardSwap
                             cardDistance={60}
                             verticalDistance={70}
@@ -63,7 +63,7 @@ const About = () => {
                             {cardData.map((card) => (
                                 <Card key={card.id} customClass="overflow-hidden group">
                                     <div className="absolute inset-0 w-full h-full">
-                                        <img
+                                        <img loading="lazy" decoding="async" 
                                         
                                             src={card.image}
                                             alt={card.title}
@@ -78,7 +78,7 @@ const About = () => {
                                 </Card>
                             ))}
                         </CardSwap>  
-                    </div>
+                    </div> */}
                 </div>
 
 
@@ -88,15 +88,17 @@ const About = () => {
                     mb-24 lg:mb-32 2xl:mb-40
                     px-4
                 '>
-                    <ScrollReveal
+                    {/* <ScrollReveal
                         baseOpacity={0.1}
                         enableBlur={true}
                         baseRotation={0}
                         blurStrength={10}
                     >
                         For us, creativity is a refined and strategic flow where deep understanding shapes ideas, thoughtful design creates balance, and digital innovation transforms vision into powerful and scalable solutions, delivered with clarity, consistency, and measurable performance across every stage of the brand journey.
-                    </ScrollReveal>
+                    </ScrollReveal> */}
                 </div>
+
+                
                 {/* <ScrollFillText /> */}
 
 
@@ -104,10 +106,10 @@ const About = () => {
  
               
                 {/* <ScrollFillText /> */}
-                <DigitalEraSection />
+                {/* <DigitalEraSection />
                 <ApproachSection />
                 <LogoCarousel />  
-                <CTASection />
+                <CTASection /> */}
                 {/* <ManaginDiroctor />
                 <OurTeam /> */}
             </div>

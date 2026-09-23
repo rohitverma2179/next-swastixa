@@ -4,7 +4,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-const VideoCard = ({ src }) => {
+const VideoCard = ({ src, poster }) => {
   const containerRef = useRef(null);
   const videoRef = useRef(null);
 
@@ -75,6 +75,7 @@ const VideoCard = ({ src }) => {
           loop
           playsInline
           controls
+          poster={poster || "/posters/default-poster.jpg"}
           preload="metadata"
           className="w-full h-full object-cover"
           onCanPlay={() => {

@@ -9,7 +9,7 @@ const ServiceCards = dynamic(() => import('../components/services/servicecards')
 // import PortfolioCarousel from '../components/videoproductionhouse/portfolioData'
 const WhyChooseUs = dynamic(() => import('../components/videoproductionhouse/WhyChooseUs'));
 const HowWeWork = dynamic(() => import('../components/videoproductionhouse/HowWeWork'));
-// import CaseStudies from '../components/videoproductionhouse/caseStudies'
+const CaseStudies = dynamic(() => import('../components/videoproductionhouse/caseStudies'));
 const FAQSection = dynamic(() => import('../components/videoproductionhouse/FAQSection'));
 const CTASection = dynamic(() => import('../components/common/CTASection'));
 const VideoportfolioCoursal = dynamic(() => import('../components/videoproductionhouse/VideoportfolioCoursal'));
@@ -17,7 +17,7 @@ const VideoportfolioCoursal = dynamic(() => import('../components/videoproductio
 const VideoProductionHouse = () => {
     return (
         <div className="bg-black min-h-screen">
-            <ExcellenceHero />
+            {/* <ExcellenceHero />
             <WhyChooseUs />    
             <HowWeWork />
             <CaseStudies />
@@ -25,7 +25,7 @@ const VideoProductionHouse = () => {
             <VideoportfolioCoursal />
             <LogoCarousel />
             <FAQSection />
-            <CTASection /> 
+            <CTASection />  */}
         </div>
 
 

@@ -27,7 +27,7 @@ const CTASection = () => {
     relative
   "
                   style={{
-                     backgroundImage: "url('https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-ad-section-bg-images/swastixa-ad-bg-image.jpeg')",
+                     backgroundImage: "url('https://cdn.swastixa.com/swastixadigital/swastixa-ad-section-bg-images/swastixa-ad-bg-image.jpeg')",
                      backgroundSize: "cover",
                      backgroundPosition: "center",
                      backgroundRepeat: "no-repeat",

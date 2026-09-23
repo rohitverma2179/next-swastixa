@@ -91,10 +91,10 @@ const HomeAbout = () => {
   };
 
   const imagesList = [
-    "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-about-page-images/two-website-design-swastixa.jpg",
-    "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-about-page-images/three-website-design-swastixa.jpg",
-    "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-about-page-images/one-website-design-swastixa.jpg",
-    "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-about-page-images/four-website-design-swastixa.jpg",
+    "https://cdn.swastixa.com/swastixadigital/swastixa-about-page-images/two-website-design-swastixa.jpg",
+    "https://cdn.swastixa.com/swastixadigital/swastixa-about-page-images/three-website-design-swastixa.jpg",
+    "https://cdn.swastixa.com/swastixadigital/swastixa-about-page-images/one-website-design-swastixa.jpg",
+    "https://cdn.swastixa.com/swastixadigital/swastixa-about-page-images/four-website-design-swastixa.jpg",
   ];
   return (
     <section
@@ -242,7 +242,8 @@ const HomeAbout = () => {
                       textShadow: "0 1px 2px rgba(0,0,0,0.5)",
                     }}
                   >
-                    <Link to="/about">About Us</Link>
+                    {/* <Link to="/about">About Us</Link> */}
+                    <a href="#">About Us</a>
                   </p>
                 </div>
               </div>

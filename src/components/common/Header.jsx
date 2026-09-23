@@ -1,7 +1,5 @@
 "use client";
 
-
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation, useNavigate } from "@/lib/router";
@@ -57,6 +55,8 @@ export default function Navbar() {
 
     if (item === "CONTACT") {
       navigate("/#contact");
+    } else if (item === "WORK") {
+      navigate("/work/video-production");
     } else {
       navigate(`/${item.toLowerCase()}`);
     }
@@ -117,7 +117,7 @@ export default function Navbar() {
       >
         <img loading="lazy" decoding="async" src={
           isHome
-            ? "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/swastixa/swastixa.png"
+            ? "https://cdn.swastixa.com/logo.png"
             : swastixawhite?.src || swastixawhite
         }
           alt="Logo"
@@ -192,56 +192,41 @@ export default function Navbar() {
                 initial="hidden"
                 animate="show"
               >
-                <motion.li
+                
+                {/* <motion.li
                   variants={itemVariants}
-                  className="text-3xl sm:text-[42px] font-extrabold cursor-pointer"
+                  className="text-3xl sm:text-[42px] font-extrabold cursor-not-allowed group relative flex justify-center w-fit mx-auto"
                 >
-                  <div
-                    onClick={() => setIsWorkOpen(!isWorkOpen)}
-                    className="flex justify-center items-center gap-2"
-                  >
+                  <div className="flex justify-center items-center gap-2">
                     <AnimatedText text="WORK" />
-                    <span>{isWorkOpen ? "−" : "+"}</span>
+                    <span>+</span>
                   </div>
+                  <span className="absolute top-1/2 left-full -translate-y-1/2 ml-4 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black text-white text-[10px] sm:text-xs px-3 py-1 rounded-md shadow-lg pointer-events-none whitespace-nowrap z-50 font-sans tracking-widest">
+                    COMING SOON
+                  </span>
+                </motion.li> */}
 
-                  <AnimatePresence>
-                    {isWorkOpen && (
-                      <motion.ul
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="mt-4 space-y-3 text-xl font-medium"
+                {menuItems.map((item, i) => {
+                    const isClickable = item === "WORK" ||  item === "BLOG"   ;
+                    return (
+                      <motion.li
+                        key={i}
+                        variants={itemVariants}
+                        onClick={isClickable ? () => handleMenuClick(item) : undefined}
+                        className={`text-3xl sm:text-[42px] font-extrabold group relative flex justify-center w-fit mx-auto ${
+                          isClickable ? "cursor-pointer" : "cursor-not-allowed"
+                        }`}
                       >
-                        {workItems.map((work, i) => (
-                          <li
-                            key={i}
-                            className="cursor-pointer hover:text-blue-600"
-                            onClick={() => {
-                              setIsOpen(false);
-                              setIsWorkOpen(false);
-                              navigate(work.path);
-                            }}
-                          >
-                            {work.label}
-                          </li>
-                        ))}
-                      </motion.ul>
-                    )}
-                  </AnimatePresence>
-                </motion.li>
-
-                {menuItems
-                  .filter((item) => item !== "WORK")
-                  .map((item, i) => (
-                    <motion.li
-                      key={i}
-                      variants={itemVariants}
-                      className="text-3xl sm:text-[42px] font-extrabold cursor-pointer"
-                      onClick={() => handleMenuClick(item)}
-                    >
-                      <AnimatedText text={item} />
-                    </motion.li>
-                  ))}
+                        <AnimatedText text={item} />
+                        {/* Tooltip */}
+                        {!isClickable && (
+                          <span className="absolute top-1/2 left-full -translate-y-1/2 ml-4 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black text-white text-[10px] sm:text-xs px-3 py-1 rounded-md shadow-lg pointer-events-none whitespace-nowrap z-50 font-sans tracking-widest">
+                            COMING SOON
+                          </span>
+                        )}
+                      </motion.li>
+                    );
+                  })}
               </motion.ul>
 
               {/* Social Icons */}
@@ -272,4 +257,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

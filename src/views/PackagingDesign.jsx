@@ -16,14 +16,14 @@ const PackagingDesign = () => {
     return (
         <div className="bg-black min-h-screen">
          <ExcellenceHero />
-            <WhyChooseUs />
-            <HowWeWork />  
+            {/* <WhyChooseUs />
+            <HowWeWork />   */}
             {/* <CaseStudies /> */}
-            <ServiceCards />
+            {/* <ServiceCards />
             <PortfolioCarousel />
             <LogoCarousel />
             <FAQSection />
-            <CTASection /> 
+            <CTASection />  */}
         </div>
 
 

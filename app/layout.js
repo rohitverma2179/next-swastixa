@@ -1,7 +1,6 @@
 import "../src/index.css";
 import "../src/App.css";
 import Providers from "./providers";
-import StyledComponentsRegistry from "./styled-components-registry";
 import Script from "next/script";
 import localFont from "next/font/local";
 
@@ -73,9 +72,7 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
-        <StyledComponentsRegistry>
-          <Providers>{children}</Providers>
-        </StyledComponentsRegistry>
+        <Providers>{children}</Providers>
 
         {/* Google Tag Manager */}
         <Script id="gtm" strategy="afterInteractive">

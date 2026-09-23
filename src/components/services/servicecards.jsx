@@ -9,51 +9,59 @@ const serviceList = [
     number: '01',
     title: 'Social Media Marketing',
     description: 'As a social media marketing agency, we manage your brand presence across platforms with strategic content that builds engagement, recall, and growth.',
-    path: '/services/social-media-marketing'
+    // path: '/services/social-media-marketing'
+    path: '#'
   },
   {
     number: '02',
     title: 'Website Development',
     description: 'Create modern, responsive websites with a website designing company in India that delivers seamless performance and strong user experiences.',
-    path: '/services/website-development'
+    // path: '/services/website-development'
+    path: '#'
   },
   {
     number: '03',
     title: 'Performance Marketing',
     description: 'Achieve faster growth with conversion-focused marketing campaigns built for measurable business outcomes.',
-    path: '/services/performance-marketing'
+    // path: '/services/performance-marketing'
+    path: '#'
   },
   {
     number: '04',
     title: 'Influencer Marketing',
     description: 'Leverage the power of trusted influencers to amplify your brand message, increase visibility, and drive meaningful customer engagement.',
-    path: '/services/influencer-marketing'
+    // path: '/services/influencer-marketing'
+    path: '#'
   },
   {
     number: '05',
     title: 'Content Marketing',
     description: 'Turn ideas into impactful content that connects with your audience and drives meaningful engagement.',
-    path: '/services/content-marketing'
+    // path: '/services/content-marketing'
+    path: '#'
   },
   {
     number: '06',
     title: 'SEO Agency',
     description: 'Turn search traffic into business growth with proven SEO strategies that improve visibility and bring the right audience to your brand.',
-    path: '/services/seo-agency'
+    // path: '/services/seo-agency'
+    path: '#'
   },
 
   {
     number: '07',
     title: 'Video Production House',
     description: 'As a video production house, we produce compelling videos that bring your brand message to life and connect with your audience.',
-    path: '/services/video-production-house'
+    // path: '/services/video-production-house'
+    path: '#'
   },
 
   {
     number: '08',
     title: 'Packaging & Design',
     description: 'Creative packaging and design solutions that enhance product appeal, strengthen brand identity, and leave a lasting impression on customers.',
-    path: '/services/packaging-design'
+    // path: '/services/packaging-design'
+    path: '#'
   },
 
 ];

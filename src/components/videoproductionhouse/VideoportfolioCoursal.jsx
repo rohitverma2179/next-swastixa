@@ -8,23 +8,23 @@ const portfolioData = [
   {
     id: 1,
     thumbnail:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-main-page/swastixa-service-creative-performance.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-main-page/swastixa-service-creative-performance.webp",
     video:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
+      "https://cdn.swastixa.com/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
   },
   {
     id: 2,
     thumbnail:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-main-page/swastixa-service-creative-performance.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-main-page/swastixa-service-creative-performance.webp",
     video:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
+      "https://cdn.swastixa.com/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
   },
   {
     id: 3,
     thumbnail:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-main-page/swastixa-service-creative-performance.webp",
+      "https://cdn.swastixa.com/swastixaservice/service-main-page/swastixa-service-creative-performance.webp",
     video:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
+      "https://cdn.swastixa.com/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
   },
  
 ];
@@ -95,6 +95,7 @@ const HoverPreviewVideo = ({ item }) => {
       <video
         ref={videoRef}
         src={item.video}
+        poster={item.thumbnail}
         aria-label={`Portfolio project ${item.id}`}
         muted
         playsInline

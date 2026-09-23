@@ -15,13 +15,13 @@ const PerformanceMarketingAgency = () => {
     return (
         <div className="bg-black min-h-screen">
          <ExcellenceHero />
-            <WhyChooseUs />
-            <HowWeWork /> 
+            {/* <WhyChooseUs />
+            <HowWeWork />  */}
             {/* <CaseStudies /> */}
-         <ServiceCards />
+         {/* <ServiceCards />
             <LogoCarousel />
             <FAQSection />
-            <CTASection />  
+            <CTASection />   */}
         </div>
 
 

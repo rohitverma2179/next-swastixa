@@ -21,7 +21,7 @@ const LazyAutoplayVideo = ({ src }) => {
 };
 
 const ForthSection = () => {
-  const videoData = ["https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-four-videos-contact-image/swastixa-panasonic.mp4", "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-four-videos-contact-image/swastixa-fybros-good.mp4", "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-four-videos-contact-image/swastixa-digital.mp4", "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-four-videos-contact-image/swastixa-fybros.mp4"];
+  const videoData = ["https://cdn.swastixa.com/swastixadigital/swastixa-four-videos-contact-image/swastixa-panasonic.mp4", "https://cdn.swastixa.com/swastixadigital/swastixa-four-videos-contact-image/swastixa-fybros-good.mp4", "https://cdn.swastixa.com/swastixadigital/swastixa-four-videos-contact-image/swastixa-digital.mp4", "https://cdn.swastixa.com/swastixadigital/swastixa-four-videos-contact-image/swastixa-fybros.mp4"];
 
   useEffect(() => {
     if (window.innerWidth <= 426) return;

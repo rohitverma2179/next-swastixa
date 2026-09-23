@@ -3,109 +3,109 @@
 import React, { useState, useEffect, useMemo } from "react";
 const ICONS = [
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/dlf-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/dlf-logo.png",
     alt: "dlf-logo",
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/emaar-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/emaar-logo.png",
     alt: "Munchon",
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/mthreem-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/mthreem-logo.png",
     alt: "Munchon",
   },
   // m3m
 
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/mrg-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/mrg-logo.png",
     alt: "Munchon",
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/signature-global-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/signature-global-logo.png",
     alt: "Signature Global",
     // link: "https://signatureglobal.in" 
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/ganga-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/ganga-logo.png",
     alt: "Munchon",
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/aarize-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/aarize-logo.png",
     alt: "Mahagun",
     // link: "https://mahagunindia.com"
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/iris-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/iris-logo.png",
     alt: "Munchon",
   },
 
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/tirasya-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/tirasya-logo.png",
     alt: "Munchon",
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/bestmate-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/bestmate-logo.png",
     alt: "Paramount",
     // link: "https://paramountgroup.co.in"
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/smart-world-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/smart-world-logo.png",
     alt: "Munchon",
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/sare-logo.png",
-    alt: "Munchon",
-  },
-
-  {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/panasonic-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/sare-logo.png",
     alt: "Munchon",
   },
 
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/paramount-logo.png",
-    alt: "Munchon",
-  },
-  {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/rki-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/panasonic-logo.png",
     alt: "Munchon",
   },
 
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/egrowthindia-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/paramount-logo.png",
     alt: "Munchon",
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/bexex-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/rki-logo.png",
+    alt: "Munchon",
+  },
+
+  {
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/egrowthindia-logo.png",
+    alt: "Munchon",
+  },
+  {
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/bexex-logo.png",
     alt: "Ministry of Information and Broadcasting",
   },
 
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/kevvali-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/kevvali-logo.png",
     alt: "Munchon",
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/grace-aesthetic-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/grace-aesthetic-logo.png",
     alt: "Munchon",
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/ishaadrii-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/ishaadrii-logo.png",
     alt: "Munchon",
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/swadeshi-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/swadeshi-logo.png",
     alt: "Munchon",
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/washguys-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/washguys-logo.png",
     alt: "Munchon",
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/kloy-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/kloy-logo.png",
     alt: "Munchon",
   },
   {
-    url: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-clients-logos/one-group-logo.png",
+    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/one-group-logo.png",
     alt: "Munchon",
   },
 

@@ -20,44 +20,44 @@ const Branding = () => {
         {
             id: 1,
             title: "Bestmate",
-            pdf: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/bestmate-brand-guidlines.pdf",
-            thumbnail: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-bestmate.webp"
+            pdf: "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/bestmate-brand-guidlines.pdf",
+            thumbnail: "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-bestmate.webp"
         },
         {
             id: 2,
             title: "Grace Aesthetic",
-            pdf: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/grace-aesthetic-brand-guidlines.pdf",
-            thumbnail:  "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-graceaesthetic.webp"
+            pdf: "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/grace-aesthetic-brand-guidlines.pdf",
+            thumbnail:  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-graceaesthetic.webp"
         },
         {
             id: 3,
             title: "ishaadrii",
-            pdf: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/ishaadrii-four.pdf",
-            thumbnail:  "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-ishaadrii.webp"
+            pdf: "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/ishaadrii-four.pdf",
+            thumbnail:  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-ishaadrii.webp"
         },
         {
             id: 4,
             title: "oxfordrealtor",
-            pdf: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/two-org-logo.pdf",
-            thumbnail:  "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-oxfordrealtor.webp"
+            pdf: "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/two-org-logo.pdf",
+            thumbnail:  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-oxfordrealtor.webp"
         },
         {
             id: 5,
             title: "kebab",
-            pdf: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/kebab-e-awadh.pdf",
-            thumbnail:  "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-kebab.webp"
+            pdf: "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/kebab-e-awadh.pdf",
+            thumbnail:  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-kebab.webp"
         },
         {
             id: 6,
             title: "tirasya",
-            pdf: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/tirasya.pdf",
-            thumbnail:  "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-tirasya.webp"
+            pdf: "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/tirasya.pdf",
+            thumbnail:  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-tirasya.webp"
         },
         {
             id: 7,
             title: "designbygayatri",
-            pdf: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/design-by-gayatri-brand-guidlines.pdf",
-            thumbnail:  "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-designbygayatri.webp"
+            pdf: "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/design-by-gayatri-brand-guidlines.pdf",
+            thumbnail:  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-branding-pdf/a-thumbnail/thumbnail-designbygayatri.webp"
         }
     ];
 

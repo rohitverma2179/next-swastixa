@@ -53,7 +53,7 @@ const TorchlightTextReveal = () => {
 
     return (
         <>
-            <style>
+            <style suppressHydrationWarning>
                 {`
           .torch-text span {
             position: relative;

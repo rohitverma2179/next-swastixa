@@ -103,8 +103,8 @@ const PDFCard = ({ pdfUrl, thumbnail, imageUrl, title, onClick, customAspectRati
 
     // Local proxy mapper
     const getLocalProxyUrl = (url) => {
-      if (url && url.startsWith('https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev')) {
-        return url.replace('https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev', '/pdf-proxy');
+      if (url && url.startsWith('https://cdn.swastixa.com')) {
+        return url.replace('https://cdn.swastixa.com', '/pdf-proxy');
       }
       return url;
     };
