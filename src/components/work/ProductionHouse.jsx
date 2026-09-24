@@ -47,9 +47,9 @@ const ProductionHouse = () => {
         </p>
       </div>  
 
-    <div className="mt-10 md:mt-20">
+     <div className="mt-10 md:mt-20">
         <WorkHero />
-      </div>  
+      </div> 
 
       <div className="flex justify-start xl:ml-36 items-center gap-6 mt-0 mb-0 px-4">
         <button

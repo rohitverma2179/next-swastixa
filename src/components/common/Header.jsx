@@ -24,7 +24,8 @@ export default function Navbar() {
 
   const workItems = [
     { label: "Production ", path: "/work/video-production" },
-    { label: "Social Media ", path: "/work/social-media-management" },
+    // { label: "Social Media ", path: "/work/social-media-management" },
+
     // { label: "Website Development", path: "/work/website-development" },
     // { label: "Digital Marketing", path:   "/work/digital-marketing" },
   ];
@@ -51,12 +52,14 @@ export default function Navbar() {
 
 
   const handleMenuClick = (item) => {
+    if (item === "WORK") {
+      setIsWorkOpen((prev) => !prev);
+      return;
+    }
     setIsOpen(false);
 
     if (item === "CONTACT") {
       navigate("/#contact");
-    } else if (item === "WORK") {
-      navigate("/work/video-production");
     } else {
       navigate(`/${item.toLowerCase()}`);
     }
@@ -161,9 +164,10 @@ export default function Navbar() {
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
             />
+            
 
             <motion.div
-              className="fixed top-0 right-0 w-[70%] sm:w-[60%] md:w-[26%] h-full bg-white/55 backdrop-blur text-[#243E84] z-50 flex flex-col justify-between p-8 pr-7 pt-6"
+              className="fixed top-0 right-0 w-[70%] sm:w-[60%] md:w-[26%] h-full bg-white/55 backdrop-blur text-[#243E84] z-50 flex flex-col justify-between p-8 pr-7 pt-6 overflow-y-auto"
               variants={sidebarVariants}
               initial="hidden"
               animate="visible"
@@ -188,26 +192,59 @@ export default function Navbar() {
               </button>
 
               <motion.ul
-                className="space-y-6 text-center mt-10"
+                className="space-y-6 text-center mt-6"
                 initial="hidden"
                 animate="show"
               >
-                
-                {/* <motion.li
-                  variants={itemVariants}
-                  className="text-3xl sm:text-[42px] font-extrabold cursor-not-allowed group relative flex justify-center w-fit mx-auto"
-                >
-                  <div className="flex justify-center items-center gap-2">
-                    <AnimatedText text="WORK" />
-                    <span>+</span>
-                  </div>
-                  <span className="absolute top-1/2 left-full -translate-y-1/2 ml-4 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black text-white text-[10px] sm:text-xs px-3 py-1 rounded-md shadow-lg pointer-events-none whitespace-nowrap z-50 font-sans tracking-widest">
-                    COMING SOON
-                  </span>
-                </motion.li> */}
-
                 {menuItems.map((item, i) => {
-                    const isClickable = item === "WORK" ||  item === "BLOG"   ;
+                    const isClickable = item === "WORK" || item === "BLOG" || item === "SERVICES" || item === "CONTACT";
+                    
+                    if (item === "WORK") {
+                      return (
+                        <motion.li
+                          key={i}
+                          variants={itemVariants}
+                          className="text-3xl sm:text-[42px] font-extrabold group relative flex flex-col items-center w-fit mx-auto cursor-pointer"
+                        >
+                          <div
+                            className="flex justify-center items-center gap-2"
+                            onClick={() => setIsWorkOpen(!isWorkOpen)}
+                          >
+                            <AnimatedText text="WORK" />
+                            <span className="text-2xl font-normal transition-transform duration-300">
+                              {isWorkOpen ? "−" : "+"}
+                            </span>
+                          </div>
+
+                          <AnimatePresence>
+                            {isWorkOpen && (
+                              <motion.ul
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="mt-2 space-y-2 text-center overflow-hidden"
+                              >
+                                {workItems.map((subItem, idx) => (
+                                  <motion.li
+                                    key={idx}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      setIsOpen(false);
+                                      navigate(subItem.path);
+                                    }}
+                                    className="text-base sm:text-lg font-semibold text-[#243E84]/80 hover:text-[#3a6cf4] cursor-pointer transition-colors py-1"
+                                  >
+                                    {subItem.label}
+                                  </motion.li>
+                                ))}
+                              </motion.ul>
+                            )}
+                          </AnimatePresence>
+                        </motion.li>
+                      );
+                    }
+
                     return (
                       <motion.li
                         key={i}

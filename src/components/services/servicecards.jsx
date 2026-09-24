@@ -9,16 +9,14 @@ const serviceList = [
     number: '01',
     title: 'Social Media Marketing',
     description: 'As a social media marketing agency, we manage your brand presence across platforms with strategic content that builds engagement, recall, and growth.',
-    // path: '/services/social-media-marketing'
-    path: '#'
+    path: '/services/social-media-marketing'
   },
   {
     number: '02',
     title: 'Website Development',
     description: 'Create modern, responsive websites with a website designing company in India that delivers seamless performance and strong user experiences.',
-    // path: '/services/website-development'
-    path: '#'
-  },
+    path: '/services/website-development'
+  },  
   {
     number: '03',
     title: 'Performance Marketing',
