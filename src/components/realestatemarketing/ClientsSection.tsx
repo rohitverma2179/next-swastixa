@@ -64,56 +64,17 @@ const realEstateLogos = [
     alt: "Mahagun",
     // link: "https://mahagunindia.com"
   },
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/iris-logo.png",
-    alt: "Munchon",
-  },
 
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/tirasya-logo.png",
-    alt: "Munchon",
-  },
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/bestmate-logo.png",
-    alt: "Paramount",
-    // link: "https://paramountgroup.co.in"
-  },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/smart-world-logo.png",
     alt: "Munchon",
   },
+  
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/sare-logo.png",
     alt: "Munchon",
   },
-
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/panasonic-logo.png",
-    alt: "Munchon",
-  },
-
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/paramount-logo.png",
-    alt: "Munchon",
-  },
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/rki-logo.png",
-    alt: "Munchon",
-  },
-
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/egrowthindia-logo.png",
-    alt: "Munchon",
-  },
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/bexex-logo.png",
-    alt: "Ministry of Information and Broadcasting",
-  },
-
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/kevvali-logo.png",
-    alt: "Munchon",
-  },
+ 
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/grace-aesthetic-logo.png",
     alt: "Munchon",
@@ -122,18 +83,18 @@ const realEstateLogos = [
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/ishaadrii-logo.png",
     alt: "Munchon",
   },
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/swadeshi-logo.png",
-    alt: "Munchon",
-  },
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/washguys-logo.png",
-    alt: "Munchon",
-  },
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/kloy-logo.png",
-    alt: "Munchon",
-  },
+  // {
+  //   url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/swadeshi-logo.png",
+  //   alt: "Munchon",
+  // },
+  // {
+  //   url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/washguys-logo.png",
+  //   alt: "Munchon",
+  // },
+  // {
+  //   url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/kloy-logo.png",
+  //   alt: "Munchon",
+  // },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/one-group-logo.png",
     alt: "Munchon",

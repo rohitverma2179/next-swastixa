@@ -3,6 +3,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import HeroSection from "@/components/realestatemarketing/HeroSection";
+import HeroSecond from "@/components/realestatemarketing/HeroSecond";
 import AboutSection from "@/components/realestatemarketing/AboutSection";
 import WhyChooseUsSection from "@/components/realestatemarketing/WhyChooseUsSection";
 import ServicesSection from "@/components/realestatemarketing/ServicesSection";
@@ -110,6 +111,7 @@ export default function RealEstateMarketingAgencyInGurugram() {
 
       {/* Sections */}
       <HeroSection />
+      <HeroSecond />
       <AboutSection />
       <WhyChooseUsSection />
       <ServicesSection />

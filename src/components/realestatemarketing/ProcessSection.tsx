@@ -73,7 +73,7 @@ export default function ProcessSection() {
         </div>
 
         {/* Outro statement */}
-        <div className="max-w-4xl mx-auto text-center p-6 rounded-xl border border-white/10 bg-white/[0.02]">
+        <div className="max-w-4xl mx-auto text-center p-6 ">
           <p className="text-[#CECECE] text-[16px] sm:text-[18px] leading-relaxed font-normal">
             This is how a real estate lead generation agency in Gurgaon should work: clear steps, shared goals and regular reviews.
           </p>
