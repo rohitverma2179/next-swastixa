@@ -1,16 +1,28 @@
 "use client";
 
 import React from "react";
+import { GlimmerWrap } from "@/components/ui/glimmer-wrap";
 
 export default function AboutSection() {
   return (
     <section className="py-20 lg:py-28 bg-black relative overflow-hidden border-t border-white/5">
+      {/* Glimmer Wrap - Drifting fine glints & flashing lens flares */}
+      <GlimmerWrap
+        className="absolute inset-0 pointer-events-none z-0"
+        glintCount={120}
+        speed={0.55}
+        maxSize={2.4}
+        flareSize={42}
+        flashFrequency={0.01}
+        enableParallax={true}
+      />
+
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-blue-500/5 blur-[160px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-amber-500/5 blur-[170px] pointer-events-none rounded-full" />
 
-      {/* Subtle grid pattern overlay */}
-      <div
+        {/* Subtle grid pattern overlay */}
+        <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage:

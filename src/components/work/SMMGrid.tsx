@@ -49,7 +49,7 @@ const GridItem = memo(({ item, globalIndex }: any) => {
                 />
             </div>
 
-            {(item.title || item.category) && (
+            {/* {(item.title || item.category) && (
                 <div className="absolute inset-0   
                 opacity-0 group-hover:opacity-100 transition-all duration-500
                 flex flex-col justify-end p-6">
@@ -59,7 +59,7 @@ const GridItem = memo(({ item, globalIndex }: any) => {
                         </span>
                     )}
                 </div>
-            )}
+            )} */}
         </motion.div>
     );
 });
