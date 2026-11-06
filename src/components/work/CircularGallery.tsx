@@ -420,6 +420,16 @@ class App {
       { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/bestmate.jpeg`, text: 'Bestmate' },
       { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/kevvali-edm.jpeg`, text: 'Kevvali' },
       { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/mrg-did-you-know.jpeg`, text: 'MRG' },
+      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/Emaar-serenty-hills-edm.jpg`, text: 'M3M' },
+      // // { image: `https://cdn.swastixa.com/Swastixa%20-%20WORK/social/tirasya1.jpg`, text: 'Tirasya' },
+      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/asva-coming.jpg`, text: 'Kloy' },
+      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/bestmate-mutual-fund-edm.jpg`, text: 'Bestmate' },
+      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/kevvali-edm.jpg`, text: 'Kevvali' },
+      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/mrg-did-you-know.jpeg`, text: 'MRG' },
+      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/mthreem-theline-edm.jpeg`, text: 'MRG' },
+      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/rki-thinklong-edm.jpg`, text: 'MRG' },
+      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/swastixa-kloy.jpeg`, text: 'MRG' },
+      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/tirasya-effortless-static.jpg`, text: 'MRG' },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);
