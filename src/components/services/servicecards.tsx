@@ -57,7 +57,6 @@ const serviceList = [
     title: 'Packaging & Design',
     description: 'Creative packaging and design solutions that enhance product appeal, strengthen brand identity, and leave a lasting impression on customers.',
     path: '/services/packaging-design'
-    
   },
 
 ];

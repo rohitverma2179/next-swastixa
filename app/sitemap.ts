@@ -23,9 +23,9 @@ const staticRoutes = [
   "/work",
   "/work/reels",
   "/work/branding",
-  "/work/print",
+  "/work/print",        
   "/work/video-production",
-  "/work/social-media-management",
+  "/work/social-media-management",  
   "/work/website-development",
   "/work/digital-marketing",
 ];
