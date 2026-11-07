@@ -1,7 +1,8 @@
 "use client";
 
 import React from 'react';
-import { useNavigate, useLocation } from "@/lib/router";
+import Link from "next/link";
+import { useLocation } from "@/lib/router";
 import PixelCard from './PixelCard';
 
 const serviceList = [
@@ -49,7 +50,6 @@ const serviceList = [
     title: 'Video Production House',
     description: 'As a video production house, we produce compelling videos that bring your brand message to life and connect with your audience.',
     path: '/services/video-production-house'
-    
   },
 
   {
@@ -62,7 +62,6 @@ const serviceList = [
 ];
 
 const ServiceCards = () => {
-  const navigate = useNavigate();
   const location = useLocation();
   const filteredServices = serviceList.filter(service => service.path !== location.pathname);
 
@@ -83,12 +82,12 @@ const ServiceCards = () => {
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
+
         {filteredServices.map((service, index) => (
+          <Link key={index} href={service.path} className="block">
           <PixelCard
-            key={index}
             variant="blue"
-            className="flex flex-col justify-between p-6 rounded-[12px] bg-[#121214] border border-[#232326] hover:border-[#38383c] hover:bg-[#151518] hover:-translate-y-1 transition-all duration-300 min-h-[190px] group cursor-pointer shadow-[0_4px_25px_rgba(0,0,0,0.35)]"
-            onClick={() => service.path && navigate(service.path)}
+            className="h-full flex flex-col justify-between p-6 rounded-[12px] bg-[#121214] border border-[#232326] hover:border-[#38383c] hover:bg-[#151518] hover:-translate-y-1 transition-all duration-300 min-h-[190px] group cursor-pointer shadow-[0_4px_25px_rgba(0,0,0,0.35)]"
           >
           
             {/* Number */}
@@ -107,6 +106,7 @@ const ServiceCards = () => {
 
             {/* Title */}
           </PixelCard>
+          </Link>
         ))}
       </div>
     </section>
