@@ -7,9 +7,9 @@ const BASE = "https://swastixa.com";
 const staticRoutes = [
   "/",
   "/about",
-  "/awards",
   "/careers",
   "/blog",
+  "/real-estate-marketing-agency-in-gurugram",
   "/privacy-policy",
   "/services",
   "/services/website-development",
@@ -19,15 +19,14 @@ const staticRoutes = [
   "/services/performance-marketing",
   "/services/video-production-house",
   "/services/influencer-marketing",
-  "/services/packaging-design",
-  "/work",
+  "/services/packaging-design",   
   "/work/reels",
   "/work/branding",
   "/work/print",        
   "/work/video-production",
   "/work/social-media-management",  
-  "/work/website-development",
-  "/work/digital-marketing",
+  "/work/video-production/construction",  
+  "/work/video-production/films",  
 ];
 
 export default function sitemap() {
