@@ -154,4 +154,10 @@ export const seoData = {
     description:
       "Swastixa Digital is a real estate marketing agency in Gurgaon that helps developers and brokers get qualified buyer leads. Book your free strategy call today.",
   },
+
+  "/video-production-house-in-gurugram": {
+    title: "Video Production House In Gurugram | By Swastixa Digital",
+    description:
+      "Swastixa Digital is a video production company in Gurugram making brand films, ads and corporate videos for every industry. Book your free strategy call today.",
+  },
 };

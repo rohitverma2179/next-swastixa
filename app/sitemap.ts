@@ -10,6 +10,7 @@ const staticRoutes = [
   "/careers",
   "/blog",
   "/real-estate-marketing-agency-in-gurugram",
+  "/video-production-house-in-gurugram",
   "/privacy-policy",
   "/services",
   "/services/website-development",
