@@ -35,6 +35,28 @@ export default function HeroSecond() {
 
       <div className="max-w-[1350px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+          {/* Right Column: Glass Frame Visual */}
+          <div className="lg:col-span-5 flex justify-center items-center">
+            <div className="relative w-full max-w-[520px] group">
+              <div className="absolute -inset-2 bg-gradient-to-tr from-blue-600/25 via-indigo-500/20 to-sky-400/25 rounded-3xl blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+
+              <div className="relative rounded-2xl sm:rounded-3xl border border-white/15 bg-gradient-to-b from-[#181820]/90 to-[#0A0A0E]/95 p-3 sm:p-4 backdrop-blur-md shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85)] overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent" />
+
+                <div className="relative rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-950 border border-white/10">
+                  <img
+                    src="https://cdn.swastixa.com/video-production-house/swastixa-digital-video-production-company-gurugram.png"
+                    alt="Swastixa Digital - Video Production House In Gurugram"
+                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Left Column: Exact Narrative Content */}
           <div className="lg:col-span-7 flex flex-col justify-center">
             <p className="text-[#D4D4D8] text-[17px] sm:text-[19px] lg:text-[21px] leading-[1.8] font-normal">
@@ -73,26 +95,7 @@ export default function HeroSecond() {
             </div>
           </div>
 
-          {/* Right Column: Glass Frame Visual */}
-          <div className="lg:col-span-5 flex justify-center items-center">
-            <div className="relative w-full max-w-[520px] group">
-              <div className="absolute -inset-2 bg-gradient-to-tr from-blue-600/25 via-indigo-500/20 to-sky-400/25 rounded-3xl blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
-
-              <div className="relative rounded-2xl sm:rounded-3xl border border-white/15 bg-gradient-to-b from-[#181820]/90 to-[#0A0A0E]/95 p-3 sm:p-4 backdrop-blur-md shadow-[0_25px_60px_-15px_rgba(0,0,0,0.85)] overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent" />
-
-                <div className="relative rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-950 border border-white/10">
-                  <img
-                    src="https://cdn.swastixa.com/swastixaservice/service-all-eight-pages-images/swastixa-service-video-production.webp"
-                    alt="Swastixa Digital - Video Production House In Gurugram"
-                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>

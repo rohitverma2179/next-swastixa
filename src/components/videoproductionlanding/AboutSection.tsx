@@ -33,6 +33,9 @@ export default function AboutSection() {
 
       <div className="max-w-[1350px] mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+            
+          
           {/* Left Side: Location 3D Map Pin Graphic */}
           <div className="lg:col-span-5 flex justify-center items-center order-2 lg:order-1">
             <div className="relative w-full max-w-[480px] group">
@@ -43,7 +46,7 @@ export default function AboutSection() {
 
                 <div className="relative rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-950 border border-white/10">
                   <img
-                    src="/assets/location.webp"
+                    src="https://cdn.swastixa.com/video-production-house/about-swastixa-digital-video-production-house-gurugram.jpeg"
                     alt="About Swastixa Digital, a Video Production House In Gurugram"
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                     loading="lazy"
@@ -53,6 +56,7 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
+
 
           {/* Right Side: Heading & Content */}
           <div className="lg:col-span-7 flex flex-col justify-center order-1 lg:order-2">
@@ -79,4 +83,3 @@ export default function AboutSection() {
     </section>
   );
 }
-

@@ -12,7 +12,7 @@ export default function StrategyCallSection() {
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <OptimizedVideo
-          src="/conversion-centered.mp4"
+          src="https://cdn.swastixa.com/video-production-house/video-production-animation.mp4"
           autoPlay
           loop
           muted
@@ -55,4 +55,3 @@ export default function StrategyCallSection() {
     </section>
   );
 }
-

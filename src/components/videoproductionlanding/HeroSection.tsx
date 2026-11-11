@@ -1,20 +1,20 @@
 "use client";
 
 import React from "react";
-import CursorGrid from "@/components/realestatemarketing/CursorGrid";
+import CursorGridupdate from "@/components/videoproductionlanding/CursorGridupdate";
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-[85vh] lg:min-h-screen pt-28 sm:pt-32 pb-16 overflow-hidden flex items-center justify-center bg-black">
       {/* Background Cursor Grid */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-        <CursorGrid
-          cellSize={70}
+        <CursorGridupdate
+          cellSize={40}
           color="#ffffff"
           highlight="area"
           gridStyle="lines"
           radius={100}
-          holdTime={150}
+          holdTime={200}
           fadeDuration={800}
           fillOpacity={0.06}
           gridOpacity={0.08}
@@ -42,7 +42,7 @@ export default function HeroSection() {
 
         {/* CTA Link */}
         <div className="text-center mb-8 sm:mb-16">
-          <div className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-2.5 rounded-2xl  backdrop-blur-md px-5 sm:px-7 py-3.5 sm:py-4 shadow-[0_10px_35px_rgba(0,0,0,0.45)] max-w-full">
+          <div className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-2.5  px-5 sm:px-7 py-3.5 sm:py-4  max-w-full">
             {/* <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center px-2"> */}
               <a
                 href="https://swastixa.com/"

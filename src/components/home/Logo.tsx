@@ -185,7 +185,7 @@ export default function LogoCarousel() {
           {currentIcons.map((icon, idx) => (
             <a
               key={`${icon.url}_${idx}_${page}`}
-              href={(icon as any).link || icon.url}
+              // href={(icon as any).link || icon.url}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-end justify-center group transition-transform duration-300 hover:scale-110"
