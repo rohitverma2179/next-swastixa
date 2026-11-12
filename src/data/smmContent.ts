@@ -1,30 +1,29 @@
 // List of raw URLs for social media post images
 const rawUrls = [
-  
   // ==========================================
   // LATEST POSTS (JULY - OCTOBER 2026)
   // ==========================================
-    // july to octuber start 2026
+  // july to octuber start 2026
 
-     "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mthreem-fall-in-love-edm.webp",
-     
-     "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mmthreem-independence-editionn-edm.webp",
-     
-     "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mmthreem-shopping-plaza-edm.webp",
-     
-     "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-badminton-court-edm.webp",
-     
-     "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-banquet-edm.webp",
-     
-     "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-budhhapurnima-story.webp",
-     
-     "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-comiing-edm.webp",
-     
-     "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-coming-edm.webp",
-     
-     "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-comingg-edm.webp",
-     
-     "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-destination-ownership-edm.webp",
+  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mthreem-fall-in-love-edm.webp",
+
+  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mmthreem-independence-editionn-edm.webp",
+
+  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mmthreem-shopping-plaza-edm.webp",
+
+  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-badminton-court-edm.webp",
+
+  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-banquet-edm.webp",
+
+  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-budhhapurnima-story.webp",
+
+  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-comiing-edm.webp",
+
+  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-coming-edm.webp",
+
+  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-comingg-edm.webp",
+
+  "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-destination-ownership-edm.webp",
 
   "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mrg-drkalam.story.webp",
 
@@ -65,7 +64,7 @@ const rawUrls = [
   "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mthreem-a-limited-opportunity.webp",
 
   "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mthreem-alimited-time-edm.webp",
-  
+
   "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/kloy-children-static.webp",
   "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mthreem-an-exclusive-preview-edm.webp",
 
@@ -86,8 +85,6 @@ const rawUrls = [
   "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mthreem-eminence-static.webp",
 
   "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mthreem-experience-edm.webp",
-
- 
 
   "https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/july-oct/mthreem-festive-discount-edm.webp",
 
@@ -445,7 +442,9 @@ while (true) {
 
   // Every 4th item during recent phase, rotate in another client brand for visual variety
   const shouldInterleaveOther = round % 4 === 3;
-  const otherCandidates = candidates.filter((k) => k !== "mthreem" && k !== "mrg");
+  const otherCandidates = candidates.filter(
+    (k) => k !== "mthreem" && k !== "mrg",
+  );
 
   if (shouldInterleaveOther && otherCandidates.length > 0) {
     let found = false;
@@ -489,9 +488,8 @@ while (true) {
   if (round % 8 === 0) {
     const activeOthers = nonMainClients.filter((k) => getRemaining(k) > 0);
     const reshuffled = shuffleRandom(activeOthers);
-    otherRRIndex = reshuffled.length > 0
-      ? nonMainClients.indexOf(reshuffled[0])
-      : 0;
+    otherRRIndex =
+      reshuffled.length > 0 ? nonMainClients.indexOf(reshuffled[0]) : 0;
   }
 }
 

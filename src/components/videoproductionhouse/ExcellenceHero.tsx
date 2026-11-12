@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useNavigate } from "@/lib/router";
+import Link from "next/link";
 
 const ExcellenceHero = () => {
   const navigate = useNavigate();
@@ -72,27 +73,49 @@ const ExcellenceHero = () => {
               From brand films and product videos to reels, corporate videos, social media videos, testimonials, and campaign films, we create videos that are planned for the platform, audience, and communication objective. We help bring your brand message to life with strong storytelling and visual quality.
             </p>
 
-            <button
-              className="
-                mt-10
-                bg-[#1F1F22]
-                text-white
-                font-medium
-                px-10
-                py-5
-                rounded-xl
-                transition-all
-                duration-300
-                hover:bg-[#2A2A2E]
-                hover:scale-[1.02]
-                cursor-pointer
-              "
-              onClick={() => {
-                navigate("/#contact");
-              }}
-            >
-              Start Our Project
-            </button>
+            <div className="mt-10 flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                className="
+                  bg-[#1F1F22]
+                  text-white
+                  font-medium
+                  px-10
+                  py-5
+                  rounded-xl
+                  transition-all
+                  duration-300
+                  hover:bg-[#2A2A2E]
+                  hover:scale-[1.02]
+                  cursor-pointer
+                "
+                onClick={() => {
+                  navigate("/#contact");
+                }}
+              >
+                Start Our Project
+              </button>
+
+              <Link
+                href="/video-production-house-in-gurugram"
+                className="
+                  inline-block
+                  bg-[#1F1F22]
+                  text-white
+                  font-medium
+                  px-10
+                  py-5
+                  rounded-xl
+                  transition-all
+                  duration-300
+                  hover:bg-[#2A2A2E]
+                  hover:scale-[1.02]
+                  cursor-pointer
+                "
+              >
+                Know More
+              </Link>
+            </div>
 
           </div>
 

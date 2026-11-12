@@ -186,45 +186,7 @@ export default function ContactSection() {
                 </p>
               </div>
 
-              <div className="mt-4">
-                <div className="flex justify-end gap-3">
-                  <a
-                    href="https://www.facebook.com/share/1BavrtTDFV/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-full border border-white/20 bg-white/5 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300"
-                  >
-                    <FaFacebookF size={18} />
-                  </a>
-
-                  <a
-                    href="https://www.instagram.com/swastixadigital?igsh=ZHQwMmthamV3a3Vu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-full border border-white/20 bg-white/5 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300"
-                  >
-                    <FaInstagram size={18} />
-                  </a>
-
-                  <a
-                    href="https://www.linkedin.com/company/swastixa/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-full border border-white/20 bg-white/5 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300"
-                  >
-                    <FaLinkedinIn size={18} />
-                  </a>
-
-                  <a
-                    href="https://youtube.com/@swastixadigital?si=Pfy9tRbjKuLInRJE"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-full border border-white/20 bg-white/5 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300"
-                  >
-                    <FaYoutube size={18} />
-                  </a>
-                </div>
-              </div>
+            
             </div>
           </div>
         </div>

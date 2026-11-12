@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Link, useLocation, useNavigate } from "@/lib/router";
-import swastixawhite from "../../assets/Swastixa_white.png";
+// import swastixawhite from "../../assets/Swastixa_white.png";
 import {
   FaFacebookF,
   FaInstagram,
@@ -75,6 +75,8 @@ export default function Navbar() {
     },
   };
 
+  
+
   // === Animated Text Hover === //
   const AnimatedText = ({ text }) => (
     <motion.span
@@ -106,27 +108,15 @@ export default function Navbar() {
   );
 
   return (
-    <nav
-      className={`top-0 left-0 w-full flex justify-between items-center px-6 py-4 z-50 transition-all duration-300 ${
-        isHome ? "bg-white" : "bg-black relative"
-      }`}
-    >
-      {/* ===== Logo ===== */}
-      {/* <Link
-        to="/"
-        onClick={() => setIsOpen(false)}
-        className="flex items-center h-10 space-x-2"
-      >
-        <img loading="lazy" decoding="async" src={
+    <>
+      <nav
+        className={`sticky top-0 left-0 w-full flex justify-between items-center px-6 py-0 z-50 transition-all duration-300 ${
           isHome
-            ? "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/swastixa/swastixa.png"
-            : swastixawhite?.src || swastixawhite
-        }
-          alt="Logo"
-          className="w-55 h-20 object-contain"
-        />
-      </Link> */}
-
+            ? "bg-white backdrop-blur-md "
+            : "bg-black backdrop-blur-md "
+        }`}
+      >
+        
       <Link
         to="/"
         onClick={() => setIsOpen(false)}
@@ -138,7 +128,7 @@ export default function Navbar() {
           src={
             isHome
               ? "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/swastixa/swastixa.png"
-              : swastixawhite.src
+              : "https://cdn.swastixa.com/Swastixa_white.png"
           }
           alt="Logo"
           className="w-55 h-20 object-contain"
@@ -171,13 +161,14 @@ export default function Navbar() {
           />
         </div>
       </button>
+      </nav>
 
       {/* ===== Sidebar (Menu) ===== */}
       <AnimatePresence>
         {isOpen && (
           <>
             <motion.div
-              className="fixed inset-0 border-none z-40"
+              className="fixed inset-0 border-none z-[60]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -185,7 +176,7 @@ export default function Navbar() {
             />
 
             <motion.div
-              className="fixed top-0 right-0 w-[70%] sm:w-[60%] md:w-[26%] h-full bg-white/55 backdrop-blur text-[#243E84] z-50 flex flex-col justify-between p-8 pr-7 pt-6"
+              className="fixed top-0 right-0 w-[70%] sm:w-[60%] md:w-[26%] h-full bg-white/55 backdrop-blur text-[#243E84] z-[70] flex flex-col justify-between p-8 pr-7 pt-6"
               variants={sidebarVariants}
               initial="hidden"
               animate="visible"
@@ -291,6 +282,6 @@ export default function Navbar() {
           </>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 }

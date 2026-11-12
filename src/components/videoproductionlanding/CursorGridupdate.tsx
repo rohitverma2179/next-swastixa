@@ -292,12 +292,19 @@ const CursorGridupdate = ({
     };
 
     // WebGL2 Cinema Light Ribbons Renderer
-    if (gl) {
+    if (gl && !gl.isContextLost()) {
       const shader = link(gl);
       if (!shader) return undefined;
       const u = shader.uniforms;
       const vao = gl.createVertexArray();
       const pulseBuffer = new Float32Array(16);
+
+      const onContextLost = (e: Event) => {
+        e.preventDefault();
+        cancelAnimationFrame(raf);
+        raf = 0;
+      };
+      canvas.addEventListener('webglcontextlost', onContextLost, false);
 
       const drawWebGL = () => {
         const s = settingsRef.current;
@@ -431,9 +438,9 @@ const CursorGridupdate = ({
         window.removeEventListener('pointerdown', onPointerDown);
         document.documentElement.removeEventListener('pointerleave', onPointerLeave);
         document.removeEventListener('visibilitychange', onVisibility);
+        canvas.removeEventListener('webglcontextlost', onContextLost);
         gl.deleteVertexArray(vao);
         gl.deleteProgram(shader.program);
-        gl.getExtension('WEBGL_lose_context')?.loseContext();
       };
     }
 
