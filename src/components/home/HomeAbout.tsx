@@ -146,11 +146,11 @@ const HomeAbout = () => {
         <div className="w-full md:w-[35%] h-auto  md:h-full flex justify-center items-center max-sm:mt-10 text-white p-4 md:p-10">
           <div
             className="left-para max-w-[450px] text-left rounded-2xl p-4 md:p-10 text-center md:text-left"
-            style={{
-              background: "#0c0c0c00",
-              backdropFilter: "blur(15px)",
-              boxShadow: "rgb(110 109 109 / 25%) 1.5px 1px 2.8px inset",
-            }}
+            // style={{
+            //   background: "#0c0c0c00",
+            //   backdropFilter: "blur(15px)",
+            //   boxShadow: "rgb(110 109 109 / 25%) 1.5px 1px 2.8px inset",
+            // }}
           >
             <h1 className="text-3xl md:text-5xl   font-bold mb-8 sm:mb-10">
               Our Philosophy <span className="text-blue-500">Rooted</span>  in Culture

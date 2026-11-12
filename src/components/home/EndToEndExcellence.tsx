@@ -31,11 +31,11 @@ const EndToEndExcellence = () => {
         {/* === CONTENT BOX === */}
         <div
           className="relative w-full h-full p-10 text-center"
-          style={{
-            background: "rgba(12, 12, 12, 0.0)", // Transparent background
-            backdropFilter: "blur(15px)",        // Blur effect
-            boxShadow: "rgb(110 109 109 / 25%) 1.5px 1px 2.8px inset", // Inner shadow
-          }}
+          // style={{
+          //   background: "rgba(12, 12, 12, 0.0)", // Transparent background
+          //   backdropFilter: "blur(15px)",        // Blur effect
+          //   boxShadow: "rgb(110 109 109 / 25%) 1.5px 1px 2.8px inset", // Inner shadow
+          // }}
         >
           <h1 className="text-white text-[29px] md:text-7xl font-bold">
             Excellence <span className="text-blue-500">Through</span> Flow
