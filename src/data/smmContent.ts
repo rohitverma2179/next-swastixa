@@ -354,22 +354,34 @@ const getClientInfo = (url: string) => {
   return { clientKey, category, title };
 };
 
-interface Item {
-  id?: number;
+export interface SMMItem {
+  id: number;
   title: string;
   category: string;
   image: string;
+  isTall: boolean;
+  heightFactor: number;
 }
 
+type DraftItem = Omit<SMMItem, "id">;
+
 // Group items by client, prioritizing recent (July-Oct 2026) posts
-const clientGroups: Record<string, { recent: Item[]; older: Item[] }> = {};
+const clientGroups: Record<string, { recent: DraftItem[]; older: DraftItem[] }> = {};
 rawUrls.forEach((url) => {
   const { clientKey, category, title } = getClientInfo(url);
-  const isRecent = url.includes("july-oct");
+  const lowerUrl = url.toLowerCase();
+  const isRecent = lowerUrl.includes("july-oct");
+  const isTall =
+    lowerUrl.includes("edm") ||
+    lowerUrl.includes("story") ||
+    lowerUrl.includes("line-avenue") ||
+    lowerUrl.includes("line-suite");
+  const heightFactor = isTall ? 1.77 : 1.0;
+
   if (!clientGroups[clientKey]) {
     clientGroups[clientKey] = { recent: [], older: [] };
   }
-  const item: Item = { title, category, image: url };
+  const item: DraftItem = { title, category, image: url, isTall, heightFactor };
   if (isRecent) {
     clientGroups[clientKey].recent.push(item);
   } else {
@@ -377,27 +389,39 @@ rawUrls.forEach((url) => {
   }
 });
 
-// Fisher-Yates shuffle using Math.random() — completely random on every page reload
-const shuffleRandom = <T>(array: T[]): T[] => {
+// Deterministic seeded PRNG (mulberry32) — prevents SSR/Client hydration mismatch and duplicate image fetches
+const createSeededRng = (seed: number) => {
+  let a = seed >>> 0;
+  return () => {
+    a |= 0;
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+};
+
+const rng = createSeededRng(20261112);
+
+const shuffleSeeded = <T>(array: T[]): T[] => {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(rng() * (i + 1));
     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
   return shuffled;
 };
 
-// Order items for each client: recent (July-Oct) posts first (shuffled randomly), then older archive
-const orderedGroups: Record<string, Item[]> = {};
+// Order items for each client: recent (July-Oct) posts first, then older archive
+const orderedGroups: Record<string, DraftItem[]> = {};
 Object.keys(clientGroups).forEach((key) => {
-  const shuffledRecent = shuffleRandom(clientGroups[key].recent);
-  const shuffledOlder = shuffleRandom(clientGroups[key].older);
+  const shuffledRecent = shuffleSeeded(clientGroups[key].recent);
+  const shuffledOlder = shuffleSeeded(clientGroups[key].older);
   orderedGroups[key] = [...shuffledRecent, ...shuffledOlder];
 });
 
 // Arrange in alternating sequence using round-robin distribution
-// Recent July-Oct posts are placed predominantly at the top while maintaining brand diversity
-const smmContent: Item[] = [];
+const draftContent: DraftItem[] = [];
 const clientKeys = Object.keys(orderedGroups);
 const pointers: Record<string, number> = {};
 clientKeys.forEach((key) => {
@@ -407,7 +431,7 @@ clientKeys.forEach((key) => {
 let lastKey: string | null = null;
 const pushItem = (key: string): boolean => {
   if (orderedGroups[key] && pointers[key] < orderedGroups[key].length) {
-    smmContent.push(orderedGroups[key][pointers[key]++]);
+    draftContent.push(orderedGroups[key][pointers[key]++]);
     lastKey = key;
     return true;
   }
@@ -417,7 +441,6 @@ const pushItem = (key: string): boolean => {
 const getRemaining = (key: string) =>
   (orderedGroups[key]?.length || 0) - (pointers[key] || 0);
 
-// Round-robin rotation for other clients to maintain portfolio diversity
 const nonMainClients = clientKeys.filter((k) => k !== "mthreem" && k !== "mrg");
 let otherRRIndex = 0;
 
@@ -440,7 +463,6 @@ while (true) {
     return pointers[k] < (clientGroups[k]?.recent.length || 0);
   });
 
-  // Every 4th item during recent phase, rotate in another client brand for visual variety
   const shouldInterleaveOther = round % 4 === 3;
   const otherCandidates = candidates.filter(
     (k) => k !== "mthreem" && k !== "mrg",
@@ -460,10 +482,7 @@ while (true) {
     }
     if (!found) chosenKey = otherCandidates[0];
   } else if ((hasRecentM3M || hasRecentMRG) && recentCandidates.length > 0) {
-    // Randomly pick from all recent candidates (M3M, MRG, Kloy, Ross, etc.)
-    // so no brand is stuck at a fixed position
-    const shuffledRecent = shuffleRandom(recentCandidates);
-    // Prefer alternating between M3M and MRG, but allow others in between randomly
+    const shuffledRecent = shuffleSeeded(recentCandidates);
     if (
       shuffledRecent.includes("mrg") &&
       (lastKey === "mthreem" || !shuffledRecent.includes("mthreem"))
@@ -475,7 +494,6 @@ while (true) {
       chosenKey = shuffledRecent[0];
     }
   } else {
-    // Pick candidate with most remaining items to balance the tail and prevent ending repeats
     candidates.sort((a, b) => getRemaining(b) - getRemaining(a));
     chosenKey = candidates[0];
   }
@@ -483,19 +501,17 @@ while (true) {
   pushItem(chosenKey);
   round++;
 
-  // Every 8 items, randomly reshuffle the remaining active non-main candidates
-  // to break any predictable interleaving pattern
   if (round % 8 === 0) {
     const activeOthers = nonMainClients.filter((k) => getRemaining(k) > 0);
-    const reshuffled = shuffleRandom(activeOthers);
+    const reshuffled = shuffleSeeded(activeOthers);
     otherRRIndex =
       reshuffled.length > 0 ? nonMainClients.indexOf(reshuffled[0]) : 0;
   }
 }
 
-// Attach unique index-based IDs to each item in the sorted alternating list
-smmContent.forEach((item, index) => {
-  item.id = index + 1;
-});
+const smmContent: SMMItem[] = draftContent.map((item, index) => ({
+  ...item,
+  id: index + 1,
+}));
 
 export default smmContent;

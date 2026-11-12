@@ -1,192 +1,212 @@
 "use client";
 
-import React, { memo, useState, useEffect, useRef, useCallback, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, {
+  memo,
+  useState,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useCallback,
+  useMemo,
+} from "react";
+import { preconnect } from "react-dom";
+import type { SMMItem } from "@/data/smmContent";
 
-const GridItem = memo(({ item, globalIndex }: any) => {
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
-    const imgRef = useRef(null);
+const INITIAL_BATCH = 12;
+const LOAD_STEP = 8;
 
-    // Robust check for image loading (handles cached images)
-    useEffect(() => {
-        if (imgRef.current && (imgRef.current as HTMLImageElement).complete) {
-            setIsImageLoaded(true);
-        }
-    }, []);
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
-    // The first 8 images should appear immediately without waiting for scroll trigger
-    const isInitialBatch = globalIndex < 8;
+const getColumnCount = () => {
+  if (typeof window === "undefined") return 3;
+  const w = window.innerWidth;
+  if (w >= 1536) return 4;
+  if (w >= 1024) return 3;
+  if (w >= 640) return 2;
+  return 1;
+};
 
-    return (
-        <motion.div
-            initial={isInitialBatch ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            animate={isInitialBatch ? { opacity: 1, y: 0 } : undefined}
-            whileInView={!isInitialBatch ? { opacity: 1, y: 0 } : undefined}
-            viewport={{ once: true, margin: "50px" }}
-            transition={{
-                duration: 0.5,
-                ease: [0.215, 0.61, 0.355, 1],
-                delay: isInitialBatch ? (globalIndex % 4) * 0.05 : 0.05
-            }}
-            whileHover={{ y: -6, transition: { duration: 0.2 } }}
-            className="w-full mb-6 relative rounded-2xl overflow-hidden cursor-pointer bg-neutral-900 group shadow-2xl"
-        >
-            <div className="relative w-full overflow-hidden bg-neutral-800">
-                {/* Fallback skeleton while image loads */}
-                {!isImageLoaded && (
-                    <div className="absolute inset-0 bg-linear-to-br from-neutral-800 to-neutral-700 animate-pulse" />
-                )}
+interface GridItemProps {
+  item: SMMItem;
+  globalIndex: number;
+}
 
-                <img
-                    ref={imgRef}
-                    src={item.image}
-                    alt={item.title || "Social Media Content"}
-                    onLoad={() => setIsImageLoaded(true)}
-                    className={`w-full h-auto object-cover transition-opacity duration-500 group-hover:scale-105
-                        ${isImageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
-                    loading={isInitialBatch ? "eager" : "lazy"}
-                    decoding="async"
-                />
-            </div>
+const GridItem = memo(({ item, globalIndex }: GridItemProps) => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
 
-            {/* {(item.title || item.category) && (
-                <div className="absolute inset-0   
-                opacity-0 group-hover:opacity-100 transition-all duration-500
-                flex flex-col justify-end p-6">
-                    {item.category && (
-                        <span className="text-blue-400 text-[10px] font-black tracking-[0.2em] uppercase mb-2">
-                            {item.category}
-                        </span>
-                    )}
-                </div>
-            )} */}
-        </motion.div>
-    );
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img && img.complete && img.naturalWidth > 0) {
+      setIsImageLoaded(true);
+    }
+  }, []);
+
+  const isTopPriority = globalIndex < 4;
+  const isInitialBatch = globalIndex < 8;
+
+  return (
+    <div
+      style={{
+        contentVisibility: "auto",
+        containIntrinsicSize: item.isTall ? "auto 520px" : "auto 360px",
+      }}
+      className="w-full mb-5 sm:mb-6 relative rounded-2xl overflow-hidden bg-neutral-900 group shadow-2xl transform-gpu transition-transform duration-300 ease-out hover:-translate-y-1.5"
+    >
+      <div
+        className={`relative w-full overflow-hidden bg-neutral-900 ${
+          isImageLoaded
+            ? "min-h-0"
+            : item.isTall
+            ? "min-h-[340px] sm:min-h-[420px]"
+            : "min-h-[240px] sm:min-h-[280px]"
+        }`}
+      >
+        {!isImageLoaded && (
+          <div className="absolute inset-0 bg-gradient-to-br from-neutral-800/80 via-neutral-800/50 to-neutral-900 animate-pulse" />
+        )}
+
+        <img
+          ref={imgRef}
+          src={item.image}
+          alt={item.title || "Social Media Content"}
+          onLoad={() => setIsImageLoaded(true)}
+          onError={() => setIsImageLoaded(true)}
+          loading={isInitialBatch ? "eager" : "lazy"}
+          decoding="async"
+          fetchPriority={isTopPriority ? "high" : isInitialBatch ? "auto" : "low"}
+          className={`w-full h-auto block object-cover transition-[opacity,transform] duration-500 ease-out group-hover:scale-[1.03] ${
+            isImageLoaded ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      </div>
+    </div>
+  );
 });
 
-const SMMGrid = ({ smmContent }: any) => {
-    // Starting with 16 images to fill grid layout nicely
-    const [visibleCount, setVisibleCount] = useState(16);
-    const [isMoreLoading, setIsMoreLoading] = useState(false);
-    const isMoreLoadingRef = useRef(false);
-    const loaderRef = useRef(null);
-    const [columns, setColumns] = useState(1);
+GridItem.displayName = "GridItem";
 
-    const totalCount = smmContent ? smmContent.length : 0;
+interface SMMGridProps {
+  smmContent: SMMItem[];
+}
 
-    // Responsive Column Count Logic
-    useEffect(() => {
-        const updateColumns = () => {
-            const width = window.innerWidth;
-            if (width >= 1536) setColumns(4);
-            else if (width >= 1024) setColumns(3);
-            else if (width >= 640) setColumns(2);
-            else setColumns(1);
-        };
+const SMMGrid = ({ smmContent }: SMMGridProps) => {
+  preconnect("https://cdn.swastixa.com", { crossOrigin: "anonymous" });
 
-        updateColumns();
-        window.addEventListener('resize', updateColumns);
-        return () => window.removeEventListener('resize', updateColumns);
-    }, []);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH);
+  const [columns, setColumns] = useState<number>(3);
+  const [isLayoutReady, setIsLayoutReady] = useState(false);
+  const isMoreLoadingRef = useRef(false);
+  const loaderRef = useRef<HTMLDivElement>(null);
 
-    const loadMore = useCallback(() => {
-        if (isMoreLoadingRef.current) return;
-        setVisibleCount(prev => {
-            if (prev >= totalCount) return prev;
-            isMoreLoadingRef.current = true;
-            setIsMoreLoading(true);
-            setTimeout(() => {
-                isMoreLoadingRef.current = false;
-                setIsMoreLoading(false);
-            }, 300);
-            return Math.min(prev + 12, totalCount);
-        });
-    }, [totalCount]);
+  const totalCount = smmContent ? smmContent.length : 0;
 
-    useEffect(() => {
-        if (visibleCount >= totalCount) return;
+  // Sync column count before paint via matchMedia breakpoints (no per-pixel resize churn)
+  useIsomorphicLayoutEffect(() => {
+    const syncCols = () => setColumns(getColumnCount());
+    syncCols();
+    setIsLayoutReady(true);
 
-        const observer = new IntersectionObserver(
-            entries => {
-                if (entries[0].isIntersecting) {
-                    loadMore();
-                }
-            },
-            { threshold: 0.1, rootMargin: '200px' }
-        );
+    const queries = [
+      window.matchMedia("(min-width: 1536px)"),
+      window.matchMedia("(min-width: 1024px)"),
+      window.matchMedia("(min-width: 640px)"),
+    ];
+    queries.forEach((mq) => mq.addEventListener("change", syncCols));
+    return () => {
+      queries.forEach((mq) => mq.removeEventListener("change", syncCols));
+    };
+  }, []);
 
-        const currentLoader = loaderRef.current;
-        if (currentLoader) observer.observe(currentLoader);
+  const loadMore = useCallback(() => {
+    if (isMoreLoadingRef.current) return;
+    isMoreLoadingRef.current = true;
+    setVisibleCount((prev) => Math.min(prev + LOAD_STEP, totalCount));
+    requestAnimationFrame(() => {
+      isMoreLoadingRef.current = false;
+    });
+  }, [totalCount]);
 
-        return () => {
-            if (currentLoader) observer.unobserve(currentLoader);
-            observer.disconnect();
-        };
-    }, [loadMore, visibleCount, totalCount]);
+  useEffect(() => {
+    if (!isLayoutReady || visibleCount >= totalCount) return;
 
-    // Distribute items into lanes based on height estimation to keep column heights balanced and prevent shifting
-    const lanes = useMemo(() => {
-        if (!smmContent) return [];
-        const items = smmContent.slice(0, visibleCount);
-        const result = Array.from({ length: columns }, () => []);
-        const heights = Array(columns).fill(0);
-
-        items.forEach((item, index) => {
-            // Estimate height factor: edm/avenue/suite are tall (1.77), statics are square/landscape (1.0)
-            const url = item.image ? item.image.toLowerCase() : '';
-            const isTall = url.includes('edm') || url.includes('line-avenue') || url.includes('line-suite');
-            const heightFactor = isTall ? 1.77 : 1.0;
-
-            // Find the shortest column
-            let minColIdx = 0;
-            let minHeight = heights[0];
-            for (let c = 1; c < columns; c++) {
-                if (heights[c] < minHeight) {
-                    minHeight = heights[c];
-                    minColIdx = c;
-                }
-            }
-
-            result[minColIdx].push({ item, globalIndex: index });
-            heights[minColIdx] += heightFactor;
-        });
-        return result;
-    }, [visibleCount, smmContent, columns]);
-
-    if (!smmContent || smmContent.length === 0) return null;
-
-    return (
-        <section className="w-full min-h-screen bg-black px-4 py-20">
-            <div className="max-w-[2500px] mx-auto flex flex-row gap-4 sm:gap-6">
-                {lanes.map((laneItems, laneIdx) => (
-                    <div key={`lane-${laneIdx}`} className="flex-1 flex flex-col">
-                        {laneItems.map(({ item, globalIndex }) => (
-                            <GridItem key={item.id} item={item} globalIndex={globalIndex} />
-                        ))}
-                    </div>
-                ))}
-            </div>
-
-            <div
-                ref={loaderRef}
-                className={`w-full flex flex-col items-center justify-center bg-black transition-all duration-300
-                    ${visibleCount < smmContent.length ? 'h-40 mt-12' : 'h-0 mt-0 overflow-hidden'}`}
-            >
-                {visibleCount < smmContent.length && (
-                    <div className="flex flex-col items-center gap-4">
-                        <motion.div
-                            animate={{ rotate: 360 }}
-                            transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-                            className="w-10 h-10 border-t-2 border-blue-500 rounded-full"
-                        />
-                        <span className="text-blue-500/50 text-[10px] font-black tracking-[0.3em] uppercase">
-                            Loading More
-                        </span>
-                    </div>
-                )}
-            </div>
-        </section>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          loadMore();
+        }
+      },
+      { threshold: 0.01, rootMargin: "500px 0px" }
     );
+
+    const currentLoader = loaderRef.current;
+    if (currentLoader) observer.observe(currentLoader);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [loadMore, visibleCount, totalCount, isLayoutReady]);
+
+  // Distribute items into balanced masonry lanes using precomputed heightFactor
+  const lanes = useMemo(() => {
+    if (!smmContent || smmContent.length === 0) return [];
+    const items = smmContent.slice(0, visibleCount);
+    const result: { item: SMMItem; globalIndex: number }[][] = Array.from(
+      { length: columns },
+      () => []
+    );
+    const heights = new Array(columns).fill(0);
+
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      let minColIdx = 0;
+      let minHeight = heights[0];
+      for (let c = 1; c < columns; c++) {
+        if (heights[c] < minHeight) {
+          minHeight = heights[c];
+          minColIdx = c;
+        }
+      }
+      result[minColIdx].push({ item, globalIndex: i });
+      heights[minColIdx] += item.heightFactor;
+    }
+    return result;
+  }, [visibleCount, smmContent, columns]);
+
+  if (!smmContent || smmContent.length === 0) return null;
+
+  const hasMore = visibleCount < totalCount;
+
+  return (
+    <section className="w-full min-h-screen bg-black px-4 py-16 sm:py-20">
+      <div className="max-w-[2500px] mx-auto flex flex-row gap-4 sm:gap-6">
+        {lanes.map((laneItems, laneIdx) => (
+          <div key={`lane-${laneIdx}`} className="flex-1 flex flex-col min-w-0">
+            {laneItems.map(({ item, globalIndex }) => (
+              <GridItem key={item.id} item={item} globalIndex={globalIndex} />
+            ))}
+          </div>
+        ))}
+      </div>
+
+      <div
+        ref={loaderRef}
+        className={`w-full flex flex-col items-center justify-center bg-black transition-all duration-300 ${
+          hasMore ? "h-32 mt-10" : "h-0 mt-0 overflow-hidden"
+        }`}
+      >
+        {hasMore && (
+          <div className="flex flex-col items-center gap-3">
+            <div className="w-9 h-9 rounded-full border-2 border-white/10 border-t-blue-500 animate-spin" />
+            <span className="text-blue-400/60 text-[10px] font-bold tracking-[0.3em] uppercase">
+              Loading More
+            </span>
+          </div>
+        )}
+      </div>
+    </section>
+  );
 };
 
 export default memo(SMMGrid);
