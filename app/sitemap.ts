@@ -38,4 +38,4 @@ export default function sitemap() {
     changeFrequency: path === "/" ? "weekly" : "monthly",
     priority: path === "/" ? 1.0 : path.startsWith("/blog/") ? 0.6 : 0.8,
   }));
-}
+}   
