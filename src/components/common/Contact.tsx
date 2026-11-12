@@ -5,7 +5,6 @@ import { sendForm } from "@emailjs/browser";
 import toast from "react-hot-toast";
 import privacyPolicy from "../../views/PrivacyPolicy";
 import { useNavigate } from "@/lib/router";
-import { Link } from "@/lib/router";
 import {
   FaFacebookF,
   FaInstagram,
@@ -227,34 +226,6 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Footer */}
-          <div className="mt-10 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-5 text-[13px] text-white/75">
-              <Link
-                type="button"
-                to="/privacy-policy"
-                className="hover:text-white transition-colors duration-300 cursor-pointer"
-              >
-                Privacy Policy
-              </Link>
-
-              <Link
-                type="button"
-                to="/privacy-policy"
-                className="hover:text-white transition-colors duration-300 cursor-pointer"
-              >
-                Terms & Conditions
-              </Link>
-            </div>
-
-            {/* <p className="text-[13px] text-white/60 text-center sm:text-right">
-            © SwastixaDigital 2025
-          </p> */}
-            <p className="text-[13px] text-white/60 text-center sm:text-right">
-              © SwastixaDigital {new Date().getFullYear()}
-            </p>
           </div>
         </div>
       </div>
