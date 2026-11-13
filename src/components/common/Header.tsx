@@ -213,7 +213,17 @@ export default function Navbar() {
                     onClick={() => setIsWorkOpen(!isWorkOpen)}
                     className="flex justify-center items-center gap-2"
                   >
-                    <AnimatedText text="WORK" />
+                    <Link
+                      to="/work"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setIsWorkOpen(!isWorkOpen);
+                      }}
+                      className="text-inherit no-underline"
+                    >
+                      <AnimatedText text="WORK" />
+                    </Link>
                     <span>{isWorkOpen ? "−" : "+"}</span>
                   </div>
 
@@ -229,13 +239,17 @@ export default function Navbar() {
                           <li
                             key={i}
                             className="cursor-pointer hover:text-blue-600"
-                            onClick={() => {
-                              setIsOpen(false);
-                              setIsWorkOpen(false);
-                              navigate(work.path);
-                            }}
                           >
-                            {work.label}
+                            <Link
+                              to={work.path}
+                              onClick={() => {
+                                setIsOpen(false);
+                                setIsWorkOpen(false);
+                              }}
+                              className="text-inherit no-underline hover:text-blue-600 block"
+                            >
+                              {work.label}
+                            </Link>
                           </li>
                         ))}
                       </motion.ul>
@@ -245,16 +259,24 @@ export default function Navbar() {
 
                 {menuItems
                   .filter((item) => item !== "WORK")
-                  .map((item, i) => (
-                    <motion.li
-                      key={i}
-                      variants={itemVariants}
-                      className="text-3xl sm:text-[42px] font-extrabold cursor-pointer"
-                      onClick={() => handleMenuClick(item)}
-                    >
-                      <AnimatedText text={item} />
-                    </motion.li>
-                  ))}
+                  .map((item, i) => {
+                    const href = item === "CONTACT" ? "/#contact" : `/${item.toLowerCase()}`;
+                    return (
+                      <motion.li
+                        key={i}
+                        variants={itemVariants}
+                        className="text-3xl sm:text-[42px] font-extrabold cursor-pointer"
+                      >
+                        <Link
+                          to={href}
+                          onClick={() => handleMenuClick(item)}
+                          className="text-inherit no-underline inline-block"
+                        >
+                          <AnimatedText text={item} />
+                        </Link>
+                      </motion.li>
+                    );
+                  })}
               </motion.ul>
 
               {/* Social Icons */}

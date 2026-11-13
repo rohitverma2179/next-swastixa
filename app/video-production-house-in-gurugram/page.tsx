@@ -1,4 +1,4 @@
-import { getPageMetadata } from "@/lib/seo";
+import { getPageMetadata, ServiceJsonLd } from "@/lib/seo";
 import View from "@/views/VideoProductionLandingPage";
 
 export const metadata = getPageMetadata("/video-production-house-in-gurugram", {
@@ -8,6 +8,11 @@ export const metadata = getPageMetadata("/video-production-house-in-gurugram", {
 });
 
 export default function Page() {
-  return <View />;
+  return (
+    <>
+      <ServiceJsonLd name="Video Production House In Gurugram" path="/video-production-house-in-gurugram" />
+      <View />
+    </>
+  );
 }
 

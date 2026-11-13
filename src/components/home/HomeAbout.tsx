@@ -130,7 +130,7 @@ const HomeAbout = () => {
             >
               <img loading="lazy" decoding="async"                 ref={addToImgRefs}
                 src={src}
-                alt=""
+                alt={`Swastixa Digital Portfolio Showcase ${index + 1}`}
                 className="w-full h-full object-cover rounded-xl"
                 style={{
                   transformOrigin: "center",
@@ -164,9 +164,9 @@ const HomeAbout = () => {
 
 
 
-            <button
+            <Link
+              to="/about"
               className="group relative flex flex-col items-center justify-center max-w-[180px] w-[100px] h-[50px] decoration-0 transition-transform active:scale-95 cursor-pointer outline-none"
-              type="button"
               style={{
                 backgroundColor: "rgba(255, 255, 255, 0.05)",
                 borderRadius: "8px",
@@ -242,12 +242,11 @@ const HomeAbout = () => {
                       textShadow: "0 1px 2px rgba(0,0,0,0.5)",
                     }}
                   >
-                    {/* <Link to="/about">About Us</Link> */}
-                    <a href="/about">About Us</a>
+                    About Us
                   </p>  
                 </div>
               </div>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

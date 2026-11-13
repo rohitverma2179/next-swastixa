@@ -4,112 +4,100 @@ import React, { useState, useEffect, useMemo } from "react";
 const ICONS = [
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/dlf-logo.png",
-    alt: "dlf-logo",
+    alt: "DLF",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/emaar-logo.png",
-    alt: "Munchon",
+    alt: "Emaar",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/mthreem-logo.png",
-    alt: "Munchon",
+    alt: "M3M",
   },
-  // m3m
-
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/mrg-logo.png",
-    alt: "Munchon",
+    alt: "MRG World",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/signature-global-logo.png",
     alt: "Signature Global",
-    // link: "https://signatureglobal.in" 
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/ganga-logo.png",
-    alt: "Munchon",
+    alt: "Ganga Realty",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/aarize-logo.png",
-    alt: "Mahagun",
-    // link: "https://mahagunindia.com"
+    alt: "Aarize Group",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/iris-logo.png",
-    alt: "Munchon",
+    alt: "Iris Broadway",
   },
-
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/tirasya-logo.png",
-    alt: "Munchon",
+    alt: "Tirasya",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/bestmate-logo.png",
-    alt: "Paramount",
-    // link: "https://paramountgroup.co.in"
+    alt: "Bestmate",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/smart-world-logo.png",
-    alt: "Munchon",
+    alt: "Smartworld Developers",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/sare-logo.png",
-    alt: "Munchon",
+    alt: "Sare Homes",
   },
-
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/panasonic-logo.png",
-    alt: "Munchon",
+    alt: "Panasonic",
   },
-
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/paramount-logo.png",
-    alt: "Munchon",
+    alt: "Paramount Group",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/rki-logo.png",
-    alt: "Munchon",
+    alt: "RKI",
   },
-
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/egrowthindia-logo.png",
-    alt: "Munchon",
+    alt: "eGrowth India",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/bexex-logo.png",
-    alt: "Ministry of Information and Broadcasting",
+    alt: "Bexex",
   },
-
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/kevvali-logo.png",
-    alt: "Munchon",
+    alt: "Kevvali",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/grace-aesthetic-logo.png",
-    alt: "Munchon",
+    alt: "Grace Aesthetic",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/ishaadrii-logo.png",
-    alt: "Munchon",
+    alt: "Ishaadrii",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/swadeshi-logo.png",
-    alt: "Munchon",
+    alt: "Swadeshi",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/washguys-logo.png",
-    alt: "Munchon",
+    alt: "Washguys",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/kloy-logo.png",
-    alt: "Munchon",
+    alt: "Kloy",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/one-group-logo.png",
-    alt: "Munchon",
+    alt: "One Group",
   },
-
-
 ];
 
 
@@ -183,11 +171,8 @@ export default function LogoCarousel() {
       <div className="w-full max-w-[1250px] px-4">
         <div className={gridClasses}>
           {currentIcons.map((icon, idx) => (
-            <a
+            <div
               key={`${icon.url}_${idx}_${page}`}
-              // href={(icon as any).link || icon.url}
-              target="_blank"
-              rel="noopener noreferrer"
               className="flex items-end justify-center group transition-transform duration-300 hover:scale-110"
             >
               <img
@@ -205,7 +190,7 @@ export default function LogoCarousel() {
                   transition
                 "
               />
-            </a>
+            </div>
           ))}
         </div>
       </div>

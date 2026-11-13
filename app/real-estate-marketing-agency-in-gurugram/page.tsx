@@ -1,4 +1,4 @@
-import { getPageMetadata } from "@/lib/seo";
+import { getPageMetadata, ServiceJsonLd } from "@/lib/seo";
 import View from "@/views/RealEstateMarketingAgencyInGurugram";
 
 export const metadata = getPageMetadata("/real-estate-marketing-agency-in-gurugram", {
@@ -8,5 +8,10 @@ export const metadata = getPageMetadata("/real-estate-marketing-agency-in-gurugr
 });
 
 export default function Page() {
-  return <View />;
+  return (
+    <>
+      <ServiceJsonLd name="Real Estate Marketing Agency In Gurugram" path="/real-estate-marketing-agency-in-gurugram" />
+      <View />
+    </>
+  );
 }

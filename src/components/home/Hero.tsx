@@ -106,6 +106,8 @@ const Hero = () => {
           <OptimizedVideo
             src="https://cdn.swastixa.com/swastixadigital/swastixa-hero-video/swastixa-top.mp4"
             poster="/posters/swastixa-hero-poster.jpg"
+            eager={true}
+            preload="auto"
             autoPlay={true}
             muted={true}
             loop={true}

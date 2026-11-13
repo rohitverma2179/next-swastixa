@@ -47,7 +47,25 @@ export const metadata = {
   openGraph: {
     type: "website",
     siteName: "Swastixa Digital",
+    title: "Swastixa | Digital Marketing & Web Development Agency",
+    description:
+      "Swastixa Digital is a full-service digital company that blends strategy, design, and technology to deliver 360° creative and digital marketing solutions, including video production, social media, and website development.",
     url: "https://swastixa.com",
+    images: [
+      {
+        url: "https://cdn.swastixa.com/Swastixa_white.png",
+        width: 1200,
+        height: 630,
+        alt: "Swastixa Digital",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Swastixa | Digital Marketing & Web Development Agency",
+    description:
+      "Swastixa Digital is a full-service digital company that blends strategy, design, and technology to deliver 360° creative and digital marketing solutions, including video production, social media, and website development.",
+    images: ["https://cdn.swastixa.com/Swastixa_white.png"],
   },
 };
 
@@ -64,13 +82,41 @@ const websiteSchema = {
   url: "https://swastixa.com",
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  name: "Swastixa Digital",
+  legalName: "Swastixa Services LLP",
+  url: "https://swastixa.com",
+  logo: "https://cdn.swastixa.com/Swastixa_white.png",
+  image: "https://cdn.swastixa.com/Swastixa_white.png",
+  sameAs: [
+    "https://www.instagram.com/swastixadigital",
+    "https://www.linkedin.com/company/swastixa/",
+    "https://www.facebook.com/share/1BavrtTDFV/",
+    "https://youtube.com/@swastixadigital",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Plot No. 2-A, Third Floor, Jai Vihar",
+    addressLocality: "New Delhi",
+    postalCode: "110043",
+    addressCountry: "IN",
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${rajdhani.variable} ${chakraPetch.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [websiteSchema, organizationSchema],
+            }),
+          }}
         />
         <Providers>{children}</Providers>
 

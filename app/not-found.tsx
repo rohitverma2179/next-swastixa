@@ -1,6 +1,4 @@
-"use client";
-
-import { Link } from "@/lib/router";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -10,7 +8,7 @@ export default function NotFound() {
         The page you are looking for does not exist or has been moved.
       </p>
       <Link
-        to="/"
+        href="/"
         className="mt-8 inline-block border border-white/30 text-white px-8 py-3 rounded-sm transition-colors hover:border-white hover:bg-white hover:text-black"
       >
         Back to Home
