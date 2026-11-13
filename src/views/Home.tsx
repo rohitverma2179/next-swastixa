@@ -14,29 +14,18 @@ import { useLocation } from "@/lib/router";
 
 export default function Home() {
   const location = useLocation();
-  // useEffect(() => {
-  //   if (location.hash === "#contact") {
-  //     // const timer = setTimeout(() => {
-  //     const el = document.getElementById("contactSection");
-  //     if (el) {
-  //       el.scrollIntoView({ behavior: "instant", block: "start" });
-  //     }
-  //     // }, 10);
-  //     // return () => clearTimeout(timer);
-  //   }
-  // }, [location]);
+
 
 
   useEffect(() => {
+  
     if (location.hash === "#contact") {
-
-
-      const timer = setTimeout(() => {
+  
+  const timer = setTimeout(() => {
         const el = document.getElementById("contactSection");
         if (el) {
           el.scrollIntoView({ behavior: "instant", block: "start" });
 
-          // 🔥 URL se #contact remove (without reload)
           window.history.replaceState(
             null,
             "",

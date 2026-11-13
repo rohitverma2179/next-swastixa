@@ -78,9 +78,9 @@ export default function ContactSection() {
       <div className="absolute"></div>
 
       <div className="relative z-10 w-[95%] md:w-[85%] lg:w-[80%] max-w-6xl">
-        <h1 className="text-white text-4xl md:text-7xl font-bold mb-4">
+        <h2 className="text-white text-4xl md:text-7xl font-bold mb-4">
           Contact Us
-        </h1>
+        </h2>
 
         <div className="bg-[#843c29]/25 backdrop-blur-md rounded-2xl p-6 md:p-10">
           {/* Top Content */}

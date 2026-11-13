@@ -37,9 +37,9 @@ const EndToEndExcellence = () => {
           //   boxShadow: "rgb(110 109 109 / 25%) 1.5px 1px 2.8px inset", // Inner shadow
           // }}
         >
-          <h1 className="text-white text-[29px] md:text-7xl font-bold">
+          <h2 className="text-white text-[29px] md:text-7xl font-bold">
             Excellence <span className="text-blue-500">Through</span> Flow
-          </h1>
+          </h2>
 
           <p className="text-gray-300 text-left lg:text-center text-[18px]  sm:text-xl mt-6 max-w-3xl mx-auto">
             Website development, digital marketing, in-house production—all under one roof. Every touchpoint connects perfectly, creating balanced ecosystems that deliver results.

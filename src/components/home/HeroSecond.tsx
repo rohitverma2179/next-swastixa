@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center max-w-6xl w-full">
         {/* Left Text Section */}
         <div className="text-left lg:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-snug">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black leading-snug">
             DIGITAL AGENCY FOR <br />
             <span className="text-blue-500">
               {" "}
@@ -19,7 +19,7 @@ export default function HeroSection() {
             </span>
             <br />
             ROOTED IN CULTURE
-          </h1>
+          </h2>
         </div>
 
         {/* Right Image Section */}

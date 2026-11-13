@@ -152,9 +152,9 @@ const HomeAbout = () => {
             //   boxShadow: "rgb(110 109 109 / 25%) 1.5px 1px 2.8px inset",
             // }}
           >
-            <h1 className="text-3xl md:text-5xl   font-bold mb-8 sm:mb-10">
+            <h2 className="text-3xl md:text-5xl   font-bold mb-8 sm:mb-10">
               Our Philosophy <span className="text-blue-500">Rooted</span>  in Culture
-            </h1>
+            </h2>
 
             <p className="text-justify hyphens-auto mb-8 break-words text-sm sm:text-base md:text-lg leading-relaxed opacity-90">
               Swastixa means eternal flow in Sanskrit. This principle guides everything—how we understand your business, collaborate with teams, and serve clients. Like water adapting to every vessel, we honor cultural wisdom in strategy, creativity, and execution. From client relationships to creative processes, culture shapes every decision we make.
