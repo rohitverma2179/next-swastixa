@@ -130,8 +130,10 @@ export default function Navbar() {
               ? "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/swastixa/swastixa.png"
               : "https://cdn.swastixa.com/Swastixa_white.png"
           }
-          alt="Logo"
-          className="w-55 h-20 object-contain"
+          alt="Swastixa Digital Logo - Digital Marketing & Web Development Agency"
+          width={220}
+          height={40}
+          className="w-auto h-10 object-contain"
         />
       </Link>
 

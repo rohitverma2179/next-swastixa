@@ -100,14 +100,15 @@ const Hero = () => {
         <h1 className="heading pt-10 sm:pt-28 text-center text-[22px] font-bold sm:text-[28px] md:text-[38px] lg:text-[50px] xl:text-[68px] leading-snug text-gray-800 max-w-6xl">
           Creativity That Flows From Culture <br />
           Culture Guides Us. Creativity Defines Us
+          <span className="sr-only"> - Premier Digital Marketing &amp; Web Development Agency</span>
         </h1>
 
         <div className="mt-8 w-full flex justify-center relative z-10">
           <OptimizedVideo
             src="https://cdn.swastixa.com/swastixadigital/swastixa-hero-video/swastixa-top.mp4"
             poster="/posters/swastixa-hero-poster.jpg"
-            eager={true}
-            preload="auto"
+            eager={false}
+            preload="metadata"
             autoPlay={true}
             muted={true}
             loop={true}

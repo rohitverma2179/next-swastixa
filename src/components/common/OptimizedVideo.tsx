@@ -98,12 +98,11 @@ const OptimizedVideo = forwardRef<HTMLVideoElement, any>(function OptimizedVideo
       autoPlay={autoPlay}
       muted
       playsInline
-      preload={eager ? "auto" : "none"}
+      preload={eager ? "metadata" : (props.preload || "none")}
       onCanPlay={handleCanPlay}
       onError={handleError}
     >
       {children}
-      Your browser does not support HTML5 video.
     </video>
   );
 });

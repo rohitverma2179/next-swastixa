@@ -177,8 +177,11 @@ export default function LogoCarousel() {
             >
               <img
                 src={icon.url}
-                alt={icon.alt || `logo-${idx}`}
+                alt={`${icon.alt || "Client"} - Swastixa Digital Partner Logo`}
+                width={160}
+                height={160}
                 loading="lazy"
+                decoding="async"
                 className="
                   h-28 w-28 
                   sm:h-32 sm:w-32 

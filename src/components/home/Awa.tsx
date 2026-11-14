@@ -147,9 +147,14 @@ const AwardsHero = () => {
 
         {/* Left Image */}
         <div className="flex items-center justify-center h-full w-full">
-          <img loading="lazy" decoding="async"             src={typeof Award === 'string' ? Award : Award?.src}
-            alt="Awards_img"
-            className="max-w-xs md:max-w-2xl w-full object-contain"
+          <img
+            loading="lazy"
+            decoding="async"
+            src={typeof Award === 'string' ? Award : Award?.src}
+            alt="Swastixa Digital Agency Awards & Recognition"
+            width={600}
+            height={400}
+            className="max-w-xs md:max-w-2xl w-full h-auto object-contain"
           />
         </div>
 

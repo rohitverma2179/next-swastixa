@@ -187,9 +187,10 @@ export default function Footer() {
           loading="lazy"
           decoding="async"
           src="https://cdn.swastixa.com/Swastixa_white.png"
-          alt=""
-          className="w-full max-w-[1300px] h-auto object-contain "
-         
+          alt="Swastixa Digital Brand Watermark"
+          width={1300}
+          height={300}
+          className="w-full max-w-[1300px] h-auto object-contain"
         />
       </div>
     </footer>

@@ -31,7 +31,7 @@ export const metadata = {
   metadataBase: new URL("https://swastixa.com"),
   title: "Swastixa | Digital Marketing & Web Development Agency",
   description:
-    "Swastixa Digital is a full-service digital company that blends strategy, design, and technology to deliver 360° creative and digital marketing solutions, including video production, social media, and website development.",
+    "Swastixa Digital is a premier creative & digital marketing agency in India delivering 360° branding, web development, video production, and SEO solutions.",
   applicationName: "Swastixa Digital",
   authors: [{ name: "Swastixa Digital" }],
   verification: {
@@ -39,17 +39,19 @@ export const metadata = {
   },
   icons: {
     icon: [
+      { url: "/favicon.ico" },
       { url: "/swastixa_32X32.png", sizes: "32x32", type: "image/png" },
       { url: "/swastixa_192X192.png", sizes: "192x192", type: "image/png" },
     ],
     apple: [{ url: "/swastixa_180X180.png", sizes: "180x180" }],
   },
+  manifest: "/manifest.json",
   openGraph: {
     type: "website",
     siteName: "Swastixa Digital",
     title: "Swastixa | Digital Marketing & Web Development Agency",
     description:
-      "Swastixa Digital is a full-service digital company that blends strategy, design, and technology to deliver 360° creative and digital marketing solutions, including video production, social media, and website development.",
+      "Swastixa Digital is a premier creative & digital marketing agency in India delivering 360° branding, web development, video production, and SEO solutions.",
     url: "https://swastixa.com",
     images: [
       {
@@ -64,7 +66,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Swastixa | Digital Marketing & Web Development Agency",
     description:
-      "Swastixa Digital is a full-service digital company that blends strategy, design, and technology to deliver 360° creative and digital marketing solutions, including video production, social media, and website development.",
+      "Swastixa Digital is a premier creative & digital marketing agency in India delivering 360° branding, web development, video production, and SEO solutions.",
     images: ["https://cdn.swastixa.com/Swastixa_white.png"],
   },
 };

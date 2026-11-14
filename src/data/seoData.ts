@@ -2,7 +2,7 @@ export const seoData = {
   "/": {
     title: "Swastixa | Digital Marketing & Web Development Agency",
     description:
-      "Swastixa Digital is a full-service digital company that blends strategy, design, and technology to deliver 360° creative and digital marketing solutions, including video production, social media, and website development.",
+      "Swastixa Digital is a premier creative & digital marketing agency in India delivering 360° branding, web development, video production, and SEO solutions.",
   },
 
   "/work/video-production": {

@@ -93,9 +93,7 @@ export default function ContentRenderer({ block }) {
                 src={rawUrl}
                 controls
                 className="w-full h-full object-cover"
-              >
-                Your browser does not support the video tag.
-              </video>
+              />
             )}
           </div>
         </div>
