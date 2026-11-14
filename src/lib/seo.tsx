@@ -117,3 +117,28 @@ export function BreadcrumbJsonLd({ items }: { items: BreadcrumbItem[] }) {
     />
   );
 }
+
+export function getFaqSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.answer,
+      },
+    })),
+  };
+}
+
+export function FaqJsonLd({ faqs }: { faqs: { question: string; answer: string }[] }) {
+  const schema = getFaqSchema(faqs);
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
