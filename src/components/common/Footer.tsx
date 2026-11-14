@@ -20,6 +20,7 @@ const footerGroups = [
       { label: "Services", path: "/services" },
       { label: "Careers", path: "/careers" },
       { label: "Blog", path: "/blog" },
+      { label: "FAQ", path: "/frequently-asked-questions" },
     ],
   },
   {
