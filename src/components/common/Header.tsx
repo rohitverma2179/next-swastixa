@@ -120,7 +120,7 @@ export default function Navbar() {
       <Link
         to="/"
         onClick={() => setIsOpen(false)}
-        className="flex items-center h-10 space-x-2"
+        className="flex items-center space-x-2"
       >
         <img
           loading="lazy"
@@ -131,9 +131,9 @@ export default function Navbar() {
               : "https://cdn.swastixa.com/Swastixa_white.png"
           }
           alt="Swastixa Digital Logo - Digital Marketing & Web Development Agency"
-          width={220}
-          height={40}
-          className="w-auto h-10 object-contain"
+          width={120}
+          height={20}
+          className="w-auto h-6 sm:h-7 object-contain"
         />
       </Link>
 
