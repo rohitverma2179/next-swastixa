@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import OptimizedVideo from "../common/OptimizedVideo";
+const hero = "/swastixa-top-update.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,14 +27,17 @@ const Hero = () => {
 
     // Programmatic play trigger for Safari
     const playVideo = () => {
-      videoEl.play().catch((err) => {
-        console.warn("Autoplay blocked initially, retrying: ", err);
-      });
+      if (videoEl.paused) {
+        videoEl.play().catch(() => {});
+      }
     };
 
-    playVideo();
     videoEl.addEventListener("loadedmetadata", playVideo);
-    videoEl.addEventListener("loadeddata", playVideo);
+    videoEl.addEventListener("canplay", playVideo);
+
+    if (videoEl.readyState >= 2) {
+      playVideo();
+    }
 
     // Responsive GSAP using matchMedia (perfect for resizing & device rotation)
     const mm = gsap.matchMedia();
@@ -84,9 +88,9 @@ const Hero = () => {
 
     // Cleanup on unmount
     return () => {
-      mm.revert(); // Reverts all GSAP matchMedia settings & kills all associated ScrollTriggers
+      mm.revert();
       videoEl.removeEventListener("loadedmetadata", playVideo);
-      videoEl.removeEventListener("loadeddata", playVideo);
+      videoEl.removeEventListener("canplay", playVideo);
     };
   }, []);
 
@@ -105,9 +109,9 @@ const Hero = () => {
 
         <div className="mt-8 w-full flex justify-center relative z-10">
           <OptimizedVideo
-            src="https://cdn.swastixa.com/swastixadigital/swastixa-hero-video/swastixa-top.mp4"
+            src={hero}
             poster="/posters/swastixa-hero-poster.webp"
-            eager={false}
+            eager={true}
             preload="metadata"
             autoPlay={true}
             muted={true}

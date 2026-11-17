@@ -155,12 +155,21 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <head>
+        <link rel="preconnect" href="https://cdn.swastixa.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://cdn.swastixa.com" />
         <link rel="describedby" href="/llms.txt" />
         <link
           rel="alternate"
           type="text/markdown"
           href="/llms.txt"
           title="LLMs Text"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/posters/swastixa-hero-poster.webp"
+          type="image/webp"
+          fetchPriority="high"
         />
       </head>
       <body suppressHydrationWarning>
@@ -178,15 +187,15 @@ export default function RootLayout({ children }) {
         {/* Google Analytics (GA4) & Google Tag Manager */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-PM5LV7QM"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-PM5LV7QM');`}
         </Script>
-        <Script id="gtm" strategy="afterInteractive">
+        <Script id="gtm" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PM5LV7QM');`}
         </Script>
         <noscript>

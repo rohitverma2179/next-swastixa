@@ -25,9 +25,10 @@ export default function HeroSection() {
         {/* Right Image Section */}
         <div className="flex justify-center items-center w-full max-w-md">
           <OptimizedVideo
-            src="https://cdn.swastixa.com/swastixadigital/swastixa-hero-video/swastixa-second.mp4"
+            src="https://cdn.swastixa.com/swastixadigital/swastixa-hero-video/swastixa-second-update.mp4"
             poster="/posters/swastixa-second-poster.webp"
             preload="none"
+            rootMargin="0px"
             loop
             className="w-full max-w-md object-contain"
             style={{ border: "none", outline: "none" }}

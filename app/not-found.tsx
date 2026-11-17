@@ -1,14 +1,4 @@
 import Link from "next/link";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "404 - Page Not Found | Swastixa",
-  description: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
-  robots: {
-    index: false,
-    follow: true,
-  },
-};
 
 export default function NotFound() {
   return (
