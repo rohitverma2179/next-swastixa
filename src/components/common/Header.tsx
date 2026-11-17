@@ -12,15 +12,17 @@ import {
 } from "react-icons/fa";
 
 const socialLinks = [
-  { icon: <FaFacebookF />, url: "https://www.facebook.com/share/1BavrtTDFV/" },
+  { icon: <FaFacebookF />, url: "https://www.facebook.com/share/1BavrtTDFV/", name: "Facebook" },
   {
     icon: <FaInstagram />,
     url: "https://www.instagram.com/swastixadigital?igsh=ZHQwMmthamV3a3Vu",
+    name: "Instagram",
   },
-  { icon: <FaLinkedinIn />, url: "https://www.linkedin.com/company/swastixa/" },
+  { icon: <FaLinkedinIn />, url: "https://www.linkedin.com/company/swastixa/", name: "LinkedIn" },
   {
     icon: <FaYoutube />,
     url: "https://youtube.com/@swastixadigital?si=Pfy9tRbjKuLInRJE",
+    name: "YouTube",
   },
 ];
 
@@ -139,6 +141,7 @@ export default function Navbar() {
 
       <button
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
         className={`p-3 rounded-lg transition z-50 ${
           isHome ? "hover:bg-gray-200" : "hover:bg-white/10"
         }`}
@@ -294,6 +297,7 @@ export default function Navbar() {
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Follow Swastixa on ${item.name}`}
                     className="text-black/70 hover:text-blue-400 text-2xl sm:text-3xl"
                     whileHover={{ scale: 1.2 }}
                     transition={{ type: "spring", stiffness: 200 }}

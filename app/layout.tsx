@@ -31,7 +31,7 @@ export const metadata = {
   metadataBase: new URL("https://swastixa.com"),
   title: "Swastixa | Digital Marketing & Web Development Agency",
   description:
-    "Swastixa Digital is a premier creative & digital marketing agency in India delivering 360° branding, web development, video production, and SEO solutions.",
+    "Swastixa is a digital marketing and web development agency offering SEO, social media, performance marketing and video production to grow your brand.",
   applicationName: "Swastixa Digital",
   authors: [{ name: "Swastixa Digital" }],
   verification: {
@@ -110,6 +110,10 @@ const organizationSchema = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${rajdhani.variable} ${chakraPetch.variable}`} suppressHydrationWarning>
+      <head>
+        <link rel="describedby" href="/llms.txt" />
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs Text" />
+      </head>
       <body suppressHydrationWarning>
         <script
           type="application/ld+json"
@@ -122,8 +126,18 @@ export default function RootLayout({ children }) {
         />
         <Providers>{children}</Providers>
 
-        {/* Google Tag Manager */}
-        <Script id="gtm" strategy="lazyOnload">
+        {/* Google Analytics (GA4) & Google Tag Manager */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-PM5LV7QM"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PM5LV7QM');`}
+        </Script>
+        <Script id="gtm" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PM5LV7QM');`}
         </Script>
         <noscript>

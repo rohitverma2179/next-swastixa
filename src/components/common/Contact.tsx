@@ -94,21 +94,30 @@ export default function ContactSection() {
             >
               <input
                 type="text"
+                id="contact-name"
                 name="name"
+                aria-label="Full Name"
+                autoComplete="name"
                 placeholder="Enter Your name"
                 className="w-full bg-transparent border-b border-white/40 text-white placeholder-white/70 py-3 focus:outline-none"
               />
 
               <input
                 type="email"
+                id="contact-email"
                 name="email"
+                aria-label="Email Address"
+                autoComplete="email"
                 placeholder="Enter Your Email"
                 className="w-full bg-transparent border-b border-white/40 text-white placeholder-white/70 py-3 focus:outline-none"
               />
 
               <input
-                type="text"
+                type="tel"
+                id="contact-phone"
                 name="phone"
+                aria-label="Mobile Number"
+                autoComplete="tel"
                 placeholder="Enter Your Mobile no."
                 onInput={(e) => {
                   const target = e.currentTarget as HTMLInputElement;
@@ -120,8 +129,10 @@ export default function ContactSection() {
               />
 
               <textarea
+                id="contact-message"
                 placeholder="Enter Your Query"
                 name="textarea"
+                aria-label="Your Query or Message"
                 rows={2}
                 className="w-full bg-transparent border-b border-white/40 text-white placeholder-white/70 py-3 focus:outline-none resize-none"
               />

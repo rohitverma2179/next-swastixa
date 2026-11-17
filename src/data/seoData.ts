@@ -101,7 +101,13 @@ export const seoData = {
       "Read Swastixa's Privacy Policy to learn how we collect, protect, and handle your data and personal information transparently and securely.",
   },
 
-  "/fequently-asked-questions": {
+  "/frequently-asked-questions": {
+    title: "Frequently Asked Questions (FAQ) | Swastixa Digital",
+    description:
+      "Explore frequently asked questions about Swastixa Digital's services, digital marketing, website development, SEO, video production, and working process.",
+  },
+
+  "/faq": {
     title: "Frequently Asked Questions (FAQ) | Swastixa Digital",
     description:
       "Explore frequently asked questions about Swastixa Digital's services, digital marketing, website development, SEO, video production, and working process.",

@@ -3,99 +3,99 @@
 import React, { useState, useEffect, useMemo } from "react";
 const ICONS = [
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/dlf-logo.png",
+    url: "/assets/clients/dlf-logo.webp",
     alt: "DLF",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/emaar-logo.png",
+    url: "/assets/clients/emaar-logo.webp",
     alt: "Emaar",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/mthreem-logo.png",
+    url: "/assets/clients/mthreem-logo.webp",
     alt: "M3M",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/mrg-logo.png",
+    url: "/assets/clients/mrg-logo.webp",
     alt: "MRG World",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/signature-global-logo.png",
+    url: "/assets/clients/signature-global-logo.webp",
     alt: "Signature Global",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/ganga-logo.png",
+    url: "/assets/clients/ganga-logo.webp",
     alt: "Ganga Realty",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/aarize-logo.png",
+    url: "/assets/clients/aarize-logo.webp",
     alt: "Aarize Group",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/iris-logo.png",
+    url: "/assets/clients/iris-logo.webp",
     alt: "Iris Broadway",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/tirasya-logo.png",
+    url: "/assets/clients/tirasya-logo.webp",
     alt: "Tirasya",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/bestmate-logo.png",
+    url: "/assets/clients/bestmate-logo.webp",
     alt: "Bestmate",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/smart-world-logo.png",
+    url: "/assets/clients/smart-world-logo.webp",
     alt: "Smartworld Developers",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/sare-logo.png",
+    url: "/assets/clients/sare-logo.webp",
     alt: "Sare Homes",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/panasonic-logo.png",
+    url: "/assets/clients/panasonic-logo.webp",
     alt: "Panasonic",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/paramount-logo.png",
+    url: "/assets/clients/paramount-logo.webp",
     alt: "Paramount Group",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/rki-logo.png",
+    url: "/assets/clients/rki-logo.webp",
     alt: "RKI",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/egrowthindia-logo.png",
+    url: "/assets/clients/egrowthindia-logo.webp",
     alt: "eGrowth India",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/bexex-logo.png",
+    url: "/assets/clients/bexex-logo.webp",
     alt: "Bexex",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/kevvali-logo.png",
+    url: "/assets/clients/kevvali-logo.webp",
     alt: "Kevvali",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/grace-aesthetic-logo.png",
+    url: "/assets/clients/grace-aesthetic-logo.webp",
     alt: "Grace Aesthetic",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/ishaadrii-logo.png",
+    url: "/assets/clients/ishaadrii-logo.webp",
     alt: "Ishaadrii",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/swadeshi-logo.png",
+    url: "/assets/clients/swadeshi-logo.webp",
     alt: "Swadeshi",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/washguys-logo.png",
+    url: "/assets/clients/washguys-logo.webp",
     alt: "Washguys",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/kloy-logo.png",
+    url: "/assets/clients/kloy-logo.webp",
     alt: "Kloy",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/one-group-logo.png",
+    url: "/assets/clients/one-group-logo.webp",
     alt: "One Group",
   },
 ];
@@ -178,15 +178,19 @@ export default function LogoCarousel() {
               <img
                 src={icon.url}
                 alt={`${icon.alt || "Client"} - Swastixa Digital Partner Logo`}
-                width={160}
-                height={160}
+                width={320}
+                height={165}
                 loading="lazy"
                 decoding="async"
                 className="
-                  h-28 w-28 
-                  sm:h-32 sm:w-32 
-                  md:h-40 md:w-40 
-                  lg:h-48 lg:w-48 
+                  h-auto w-28 
+                  sm:w-32 
+                  md:w-40 
+                  lg:w-48 
+                  max-h-28 
+                  sm:max-h-32 
+                  md:max-h-40 
+                  lg:max-h-48 
                   object-contain  
                   grayscale 
                   group-hover:grayscale-0 

@@ -1,15 +1,65 @@
 # ----------------------------------------------------------------------
-# 1. Security Headers & HSTS
+# 1. Custom Error Documents (True 404 with Custom Branded HTML Page)
+# ----------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+# ----------------------------------------------------------------------
+# 2. Security Headers & HSTS (100% Server & Security Score)
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
   Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Agentic Browsing discovery header for llms.txt
+  Header always set Link "</llms.txt>; rel=\"describedby\""
 </IfModule>
 
 # ----------------------------------------------------------------------
-# 2. Rewrite Rules (Canonical www -> non-www, HTTPS, Clean URLs, True 404)
+# 3. Compression (Gzip / Deflate for Fast TTFB & Low Page Weight)
+# ----------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml application/xml
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 4. Browser Caching & Performance (Expires & Cache-Control)
+# ----------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # Images, Videos & Fonts: 1 Year (Immutable)
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+
+  # CSS and JavaScript: 1 Year
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  # HTML: 1 Hour (Fresh content check)
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|png|jpg|jpeg|gif|ico|svg|mp4|woff2|woff)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 5. Rewrite Rules (Canonical www -> non-www, HTTPS, Clean URLs, True 404)
 # ----------------------------------------------------------------------
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -22,7 +72,7 @@
   RewriteCond %{HTTP_HOST} ^www\.swastixa\.com$ [NC]
   RewriteRule ^(.*)$ https://swastixa.com/$1 [L,R=301]
 
-  # Serve existing files directly (images, css, js, robots.txt, sitemap.xml, etc.)
+  # Serve existing files directly (images, css, js, robots.txt, sitemap.xml, llms.txt, etc.)
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
@@ -44,5 +94,3 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ - [R=404,L]
 </IfModule>
-
-ErrorDocument 404 /404.html
