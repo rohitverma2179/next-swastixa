@@ -112,7 +112,7 @@ const Hero = () => {
             src={hero}
             poster="/posters/swastixa-hero-poster.webp"
             eager={true}
-            preload="metadata"
+            preload="auto"
             autoPlay={true}
             muted={true}
             loop={true}

@@ -112,7 +112,7 @@ const OptimizedVideo = forwardRef<HTMLVideoElement, any>(
         autoPlay={autoPlay}
         muted
         playsInline
-        preload={eager ? "metadata" : props.preload || "none"}
+        preload={props.preload ?? (eager ? "auto" : "none")}
         onCanPlay={handleCanPlay}
         onError={handleError}
       >
