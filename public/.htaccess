@@ -9,7 +9,7 @@
 </IfModule>
 
 # ----------------------------------------------------------------------
-# 2. Rewrite Rules (Canonical www -> non-www, HTTPS, Clean URLs)
+# 2. Rewrite Rules (Canonical www -> non-www, HTTPS, Clean URLs, True 404)
 # ----------------------------------------------------------------------
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -39,10 +39,10 @@
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.*?)/?$ $1.html [L]
 
-  # Fallback to 404 page for non-existent paths
+  # Trigger true HTTP 404 for missing paths so Apache invokes ErrorDocument 404
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ /404.html [L]
+  RewriteRule ^ - [R=404,L]
 </IfModule>
 
 ErrorDocument 404 /404.html

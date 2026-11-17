@@ -127,11 +127,11 @@ export default function Navbar() {
           decoding="async"
           src={
             isHome
-              ? "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/swastixa/swastixa.png"
-              : "https://cdn.swastixa.com/Swastixa_white.png"
+              ? "/swastixa.webp"
+              : "/Swastixa_white.webp"
           }
           alt="Swastixa Digital Logo - Digital Marketing & Web Development Agency"
-          width={120}
+          width={180}
           height={20}
           className="w-auto h-6 sm:h-7 object-contain"
         />

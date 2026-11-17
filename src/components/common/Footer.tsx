@@ -186,10 +186,10 @@ export default function Footer() {
         <img
           loading="lazy"
           decoding="async"
-          src="https://cdn.swastixa.com/Swastixa_white.png"
+          src="/Swastixa_white.webp"
           alt="Swastixa Digital Brand Watermark"
           width={1300}
-          height={300}
+          height={145}
           className="w-full max-w-[1300px] h-auto object-contain"
         />
       </div>

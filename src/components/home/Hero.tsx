@@ -105,8 +105,8 @@ const Hero = () => {
 
         <div className="mt-8 w-full flex justify-center relative z-10">
           <OptimizedVideo
-            src="https://cdn.swastixa.com/swastixadigital/swastixa-hero-video/swastixa-top.mp4"
-            poster="/posters/swastixa-hero-poster.jpg"
+            src="/swastixa-top.mp4"
+            poster="/posters/swastixa-hero-poster.webp"
             eager={false}
             preload="metadata"
             autoPlay={true}

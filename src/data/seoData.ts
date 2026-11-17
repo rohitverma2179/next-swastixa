@@ -2,37 +2,37 @@ export const seoData = {
   "/": {
     title: "Swastixa | Digital Marketing & Web Development Agency",
     description:
-      "Swastixa Digital is a premier creative & digital marketing agency in India delivering 360° branding, web development, video production, and SEO solutions.",
+      "Swastixa is a digital marketing and web development agency offering SEO, social media, performance marketing and video production to grow your brand.",
   },
 
   "/work/video-production": {
     title: "Swastixa | Video Production Work",
     description:
-      "Explore Swastixa's video production portfolio, showcasing high-quality visual storytelling, commercial films, and creative content designed to engage audiences and elevate brands.",
+      "Explore Swastixa’s video production portfolio featuring commercial films, brand videos and creative visual storytelling that engage audiences and lift brands.",
   },
 
   "/work/social-media-management": {
     title: "Swastixa | Social Media Portfolio",
     description:
-      "Explore Swastixa's social media portfolio showcasing creative campaigns, strategic content, and impactful brand growth across digital platforms.",
+      "Explore Swastixa’s social media portfolio showcasing creative campaigns, strategic content and measurable brand growth across leading digital platforms.",
   },
 
   "/about": {
     title: "About Us | Swastixa",
     description:
-      "Learn more about Swastixa, a premier digital marketing and web development agency. Discover our mission, our story, and how our expert team helps brands scale and succeed.",
+      "Learn about Swastixa, a digital marketing and web development agency. Discover our mission, our story and how our expert team helps brands scale and succeed.",
   },
 
   "/services": {
     title: "Our Services | Swastixa",
     description:
-      "Explore the wide range of digital marketing, web development, video production, and branding services offered by Swastixa to help grow and scale your brand.",
+      "Explore Swastixa’s digital marketing, web development, video production and branding services designed to help your brand grow and scale faster online.",
   },
 
   "/services/social-media-marketing": {
     title: "Swastixa | Social Media Marketing Services",
     description:
-      "Elevate your brand with Swastixa's expert social media marketing services, offering strategic campaign management, content creation, and targeted advertising to grow your online presence.",
+      "Grow your online presence with Swastixa’s social media marketing services, including campaign management, content creation and targeted paid advertising.",
   },
 
   "/services/website-development": {
@@ -44,7 +44,7 @@ export const seoData = {
   "/services/performance-marketing": {
     title: "Swastixa | Performance Marketing Agency",
     description:
-      "Swastixa Digital is a leading performance marketing agency delivering data-driven campaigns designed to maximize ROAS, lower acquisition costs, and scale paid growth.",
+      "Swastixa is a performance marketing agency running data-driven campaigns that maximize ROAS, lower customer acquisition costs and scale your paid growth.",
   },
 
   "/services/influencer-marketing": {
@@ -62,19 +62,19 @@ export const seoData = {
   "/services/seo-agency": {
     title: "Swastixa | SEO Agency & Services",
     description:
-      "Swastixa Digital provides expert SEO services and data-driven strategies to maximize your search visibility, boost organic traffic, and grow your business online.",
+      "Swastixa provides expert SEO services and data-driven strategies to improve search visibility, boost organic traffic and grow your business online.",
   },
 
   "/services/video-production-house": {
     title: "Swastixa | Video Production House",
     description:
-      "Swastixa Digital is a full-service video production house crafting high-impact videos, ads, and visual stories designed to connect, inspire, and elevate your brand.",
+      "Swastixa is a full-service video production house creating high-impact videos, ads and visual stories that connect with audiences and elevate your brand.",
   },
 
   "/services/packaging-design": {
     title: "Swastixa | Product Packaging Design Services",
     description:
-      "Swastixa offers professional product packaging design services that blend creativity and strategy to create impactful, custom packaging solutions that elevate your brand.",
+      "Swastixa offers professional product packaging design services that blend creativity and strategy to deliver custom, impactful packaging for your brand.",
   },
 
   "/careers": {
@@ -110,19 +110,19 @@ export const seoData = {
   "/work": {
     title: "Our Work & Portfolio | Swastixa",
     description:
-      "Explore Swastixa's creative portfolio featuring high-performance video production, digital marketing campaigns, branding, reels, and web development projects.",
+      "Explore Swastixa’s creative portfolio featuring video production, digital marketing campaigns, branding, reels and web development projects for brands.",
   },
 
   "/work/branding": {
     title: "Branding & Identity Portfolio | Swastixa",
     description:
-      "Discover Swastixa's branding portfolio, showcasing brand identity systems, logo designs, guidelines, and corporate visual identities crafted for leading brands.",
+      "Discover Swastixa’s branding portfolio featuring brand identity systems, logo designs, guidelines and corporate visual identities crafted for leading brands.",
   },
 
   "/work/digital-marketing": {
     title: "Digital Marketing Portfolio | Swastixa",
     description:
-      "View Swastixa's digital marketing case studies and results-driven campaigns designed to maximize engagement, leads, and brand growth across digital channels.",
+      "View Swastixa’s digital marketing case studies and results-driven campaigns built to maximize engagement, generate leads and drive brand growth online.",
   },
 
   "/work/print": {
@@ -140,7 +140,7 @@ export const seoData = {
   "/work/website-development": {
     title: "Website Development Portfolio | Swastixa",
     description:
-      "Explore Swastixa's web development portfolio, featuring modern, responsive, and high-performance websites built for modern businesses.",
+      "Swastixa offers custom website development services that blend strategy, design and technology to build fast, scalable websites that grow your brand.",
   },
 
   "/work/video-production/films": {
@@ -158,12 +158,12 @@ export const seoData = {
   "/real-estate-marketing-agency-in-gurugram": {
     title: "Real Estate Marketing Agency In Gurugram | Swastixa Digital",
     description:
-      "Swastixa Digital is a real estate marketing agency in Gurgaon that helps developers and brokers get qualified buyer leads. Book your free strategy call today.",
+      "Swastixa Digital is a real estate marketing agency in Gurugram helping developers and brokers get qualified buyer leads. Book a free strategy call.",
   },
 
   "/video-production-house-in-gurugram": {
     title: "Video Production House In Gurugram | By Swastixa Digital",
     description:
-      "Swastixa Digital is a video production company in Gurugram making brand films, ads and corporate videos for every industry. Book your free strategy call today.",
+      "Swastixa Digital is a video production house in Gurugram creating brand films, ads and corporate videos for every industry. Book your free strategy call.",
   },
 };

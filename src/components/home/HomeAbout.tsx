@@ -91,10 +91,10 @@ const HomeAbout = () => {
   };
 
   const imagesList = [
-    "https://cdn.swastixa.com/swastixadigital/swastixa-about-page-images/two-website-design-swastixa.jpg",
-    "https://cdn.swastixa.com/swastixadigital/swastixa-about-page-images/three-website-design-swastixa.jpg",
-    "https://cdn.swastixa.com/swastixadigital/swastixa-about-page-images/one-website-design-swastixa.jpg",
-    "https://cdn.swastixa.com/swastixadigital/swastixa-about-page-images/four-website-design-swastixa.jpg",
+    "/assets/about/two.webp",
+    "/assets/about/three.webp",
+    "/assets/about/one.webp",
+    "/assets/about/four.webp",
   ];
   return (
     <section
@@ -134,8 +134,8 @@ const HomeAbout = () => {
                 ref={addToImgRefs}
                 src={src}
                 alt={`Swastixa Digital Web Development & Creative Agency Project ${index + 1}`}
-                width={800}
-                height={600}
+                width={1600}
+                height={1000}
                 className="w-full h-full object-cover rounded-xl"
                 style={{
                   transformOrigin: "center",
