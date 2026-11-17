@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 import ScrollToTop from "@/components/common/ScrollToTop";
 import ScrollButton from "@/components/common/ScrollButton";
 
@@ -47,6 +48,7 @@ export default function Providers({ children }) {
       <ScrollButton />
       <Header />
       {children}
+      <Footer />
     </>
   );
 }

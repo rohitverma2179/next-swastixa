@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Link, useLocation, useNavigate } from "@/lib/router";
-import swastixawhite from "../../assets/Swastixa_white.png";
+// import swastixawhite from "../../assets/Swastixa_white.png";
 import {
   FaFacebookF,
   FaInstagram,
@@ -12,15 +12,17 @@ import {
 } from "react-icons/fa";
 
 const socialLinks = [
-  { icon: <FaFacebookF />, url: "https://www.facebook.com/share/1BavrtTDFV/" },
+  { icon: <FaFacebookF />, url: "https://www.facebook.com/share/1BavrtTDFV/", name: "Facebook" },
   {
     icon: <FaInstagram />,
     url: "https://www.instagram.com/swastixadigital?igsh=ZHQwMmthamV3a3Vu",
+    name: "Instagram",
   },
-  { icon: <FaLinkedinIn />, url: "https://www.linkedin.com/company/swastixa/" },
+  { icon: <FaLinkedinIn />, url: "https://www.linkedin.com/company/swastixa/", name: "LinkedIn" },
   {
     icon: <FaYoutube />,
     url: "https://youtube.com/@swastixadigital?si=Pfy9tRbjKuLInRJE",
+    name: "YouTube",
   },
 ];
 
@@ -75,6 +77,8 @@ export default function Navbar() {
     },
   };
 
+  
+
   // === Animated Text Hover === //
   const AnimatedText = ({ text }) => (
     <motion.span
@@ -106,47 +110,38 @@ export default function Navbar() {
   );
 
   return (
-    <nav
-      className={`top-0 left-0 w-full flex justify-between items-center px-6 py-4 z-50 transition-all duration-300 ${
-        isHome ? "bg-white" : "bg-black relative"
-      }`}
-    >
-      {/* ===== Logo ===== */}
-      {/* <Link
-        to="/"
-        onClick={() => setIsOpen(false)}
-        className="flex items-center h-10 space-x-2"
-      >
-        <img loading="lazy" decoding="async" src={
+    <>
+      <nav
+        className={`sticky top-0 left-0 w-full flex justify-between items-center px-6 py-0 z-50 transition-all duration-300 ${
           isHome
-            ? "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/swastixa/swastixa.png"
-            : swastixawhite?.src || swastixawhite
-        }
-          alt="Logo"
-          className="w-55 h-20 object-contain"
-        />
-      </Link> */}
-
+            ? "bg-white backdrop-blur-md "
+            : "bg-black backdrop-blur-md "
+        }`}
+      >
+        
       <Link
         to="/"
         onClick={() => setIsOpen(false)}
-        className="flex items-center h-10 space-x-2"
+        className="flex items-center space-x-2"
       >
         <img
           loading="lazy"
           decoding="async"
           src={
             isHome
-              ? "https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/swastixa/swastixa.png"
-              : swastixawhite.src
+              ? "/swastixa.webp"
+              : "/Swastixa_white.webp"
           }
-          alt="Logo"
-          className="w-55 h-20 object-contain"
+          alt="Swastixa Digital Logo - Digital Marketing & Web Development Agency"
+          width={180}
+          height={20}
+          className="w-auto h-6 sm:h-7 object-contain"
         />
       </Link>
 
       <button
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
         className={`p-3 rounded-lg transition z-50 ${
           isHome ? "hover:bg-gray-200" : "hover:bg-white/10"
         }`}
@@ -171,13 +166,14 @@ export default function Navbar() {
           />
         </div>
       </button>
+      </nav>
 
       {/* ===== Sidebar (Menu) ===== */}
       <AnimatePresence>
         {isOpen && (
           <>
             <motion.div
-              className="fixed inset-0 border-none z-40"
+              className="fixed inset-0 border-none z-[60]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -185,7 +181,7 @@ export default function Navbar() {
             />
 
             <motion.div
-              className="fixed top-0 right-0 w-[70%] sm:w-[60%] md:w-[26%] h-full bg-white/55 backdrop-blur text-[#243E84] z-50 flex flex-col justify-between p-8 pr-7 pt-6"
+              className="fixed top-0 right-0 w-[70%] sm:w-[60%] md:w-[26%] h-full bg-white/55 backdrop-blur text-[#243E84] z-[70] flex flex-col justify-between p-8 pr-7 pt-6"
               variants={sidebarVariants}
               initial="hidden"
               animate="visible"
@@ -222,7 +218,17 @@ export default function Navbar() {
                     onClick={() => setIsWorkOpen(!isWorkOpen)}
                     className="flex justify-center items-center gap-2"
                   >
-                    <AnimatedText text="WORK" />
+                    <Link
+                      to="/work"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setIsWorkOpen(!isWorkOpen);
+                      }}
+                      className="text-inherit no-underline"
+                    >
+                      <AnimatedText text="WORK" />
+                    </Link>
                     <span>{isWorkOpen ? "−" : "+"}</span>
                   </div>
 
@@ -238,13 +244,17 @@ export default function Navbar() {
                           <li
                             key={i}
                             className="cursor-pointer hover:text-blue-600"
-                            onClick={() => {
-                              setIsOpen(false);
-                              setIsWorkOpen(false);
-                              navigate(work.path);
-                            }}
                           >
-                            {work.label}
+                            <Link
+                              to={work.path}
+                              onClick={() => {
+                                setIsOpen(false);
+                                setIsWorkOpen(false);
+                              }}
+                              className="text-inherit no-underline hover:text-blue-600 block"
+                            >
+                              {work.label}
+                            </Link>
                           </li>
                         ))}
                       </motion.ul>
@@ -254,16 +264,24 @@ export default function Navbar() {
 
                 {menuItems
                   .filter((item) => item !== "WORK")
-                  .map((item, i) => (
-                    <motion.li
-                      key={i}
-                      variants={itemVariants}
-                      className="text-3xl sm:text-[42px] font-extrabold cursor-pointer"
-                      onClick={() => handleMenuClick(item)}
-                    >
-                      <AnimatedText text={item} />
-                    </motion.li>
-                  ))}
+                  .map((item, i) => {
+                    const href = item === "CONTACT" ? "/#contact" : `/${item.toLowerCase()}`;
+                    return (
+                      <motion.li
+                        key={i}
+                        variants={itemVariants}
+                        className="text-3xl sm:text-[42px] font-extrabold cursor-pointer"
+                      >
+                        <Link
+                          to={href}
+                          onClick={() => handleMenuClick(item)}
+                          className="text-inherit no-underline inline-block"
+                        >
+                          <AnimatedText text={item} />
+                        </Link>
+                      </motion.li>
+                    );
+                  })}
               </motion.ul>
 
               {/* Social Icons */}
@@ -279,6 +297,7 @@ export default function Navbar() {
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Follow Swastixa on ${item.name}`}
                     className="text-black/70 hover:text-blue-400 text-2xl sm:text-3xl"
                     whileHover={{ scale: 1.2 }}
                     transition={{ type: "spring", stiffness: 200 }}
@@ -291,6 +310,6 @@ export default function Navbar() {
           </>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 }

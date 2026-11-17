@@ -1,22 +1,96 @@
+# ----------------------------------------------------------------------
+# 1. Custom Error Documents (True 404 with Custom Branded HTML Page)
+# ----------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+# ----------------------------------------------------------------------
+# 2. Security Headers & HSTS (100% Server & Security Score)
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Agentic Browsing discovery header for llms.txt
+  Header always set Link "</llms.txt>; rel=\"describedby\""
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 3. Compression (Gzip / Deflate for Fast TTFB & Low Page Weight)
+# ----------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml application/xml
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 4. Browser Caching & Performance (Expires & Cache-Control)
+# ----------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # Images, Videos & Fonts: 1 Year (Immutable)
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+
+  # CSS and JavaScript: 1 Year
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  # HTML: 1 Hour (Fresh content check)
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|png|jpg|jpeg|gif|ico|svg|mp4|woff2|woff)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# 5. Rewrite Rules (Canonical www -> non-www, HTTPS, Clean URLs, True 404)
+# ----------------------------------------------------------------------
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
   Options -MultiViews
   DirectoryIndex index.html
 
-  # 1. Serve existing files directly (e.g., css, js, images)
+  # Force HTTPS & Non-WWW (URL Canonicalization)
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\.swastixa\.com$ [NC]
+  RewriteRule ^(.*)$ https://swastixa.com/$1 [L,R=301]
+
+  # Serve existing files directly (images, css, js, robots.txt, sitemap.xml, llms.txt, etc.)
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # 2. Prioritize serving .html files over directories (fixes 403 Forbidden)
+  # Serve existing directories if index.html exists
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^ - [L]
+
+  # Prioritize serving .html files for clean URLs (e.g. /about -> /about.html)
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^(.*)$ $1.html [L]
 
-  # 3. Alternative check using DOCUMENT_ROOT (sometimes required on GoDaddy)
+  # Check DOCUMENT_ROOT with .html
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.*?)/?$ $1.html [L]
 
-  # 4. Fallback to index.html or 404
-  RewriteRule ^ index.html [L]
-  ErrorDocument 404 /404.html
+  # Trigger true HTTP 404 for missing paths so Apache invokes ErrorDocument 404
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ - [R=404,L]
 </IfModule>

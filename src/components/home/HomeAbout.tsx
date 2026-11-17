@@ -91,10 +91,10 @@ const HomeAbout = () => {
   };
 
   const imagesList = [
-    "https://cdn.swastixa.com/swastixadigital/swastixa-about-page-images/two-website-design-swastixa.jpg",
-    "https://cdn.swastixa.com/swastixadigital/swastixa-about-page-images/three-website-design-swastixa.jpg",
-    "https://cdn.swastixa.com/swastixadigital/swastixa-about-page-images/one-website-design-swastixa.jpg",
-    "https://cdn.swastixa.com/swastixadigital/swastixa-about-page-images/four-website-design-swastixa.jpg",
+    "/assets/about/two.webp",
+    "/assets/about/three.webp",
+    "/assets/about/one.webp",
+    "/assets/about/four.webp",
   ];
   return (
     <section
@@ -128,9 +128,14 @@ const HomeAbout = () => {
               className="w-full sm:w-[90%] md:w-[85%] h-[45vh] sm:h-[55vh] md:h-[67vh] 
                 relative overflow-hidden rounded-xl"
             >
-              <img loading="lazy" decoding="async"                 ref={addToImgRefs}
+              <img
+                loading="lazy"
+                decoding="async"
+                ref={addToImgRefs}
                 src={src}
-                alt=""
+                alt={`Swastixa Digital Web Development & Creative Agency Project ${index + 1}`}
+                width={1600}
+                height={1000}
                 className="w-full h-full object-cover rounded-xl"
                 style={{
                   transformOrigin: "center",
@@ -146,15 +151,15 @@ const HomeAbout = () => {
         <div className="w-full md:w-[35%] h-auto  md:h-full flex justify-center items-center max-sm:mt-10 text-white p-4 md:p-10">
           <div
             className="left-para max-w-[450px] text-left rounded-2xl p-4 md:p-10 text-center md:text-left"
-            style={{
-              background: "#0c0c0c00",
-              backdropFilter: "blur(15px)",
-              boxShadow: "rgb(110 109 109 / 25%) 1.5px 1px 2.8px inset",
-            }}
+            // style={{
+            //   background: "#0c0c0c00",
+            //   backdropFilter: "blur(15px)",
+            //   boxShadow: "rgb(110 109 109 / 25%) 1.5px 1px 2.8px inset",
+            // }}
           >
-            <h1 className="text-3xl md:text-5xl   font-bold mb-8 sm:mb-10">
+            <h2 className="text-3xl md:text-5xl   font-bold mb-8 sm:mb-10">
               Our Philosophy <span className="text-blue-500">Rooted</span>  in Culture
-            </h1>
+            </h2>
 
             <p className="text-justify hyphens-auto mb-8 break-words text-sm sm:text-base md:text-lg leading-relaxed opacity-90">
               Swastixa means eternal flow in Sanskrit. This principle guides everything—how we understand your business, collaborate with teams, and serve clients. Like water adapting to every vessel, we honor cultural wisdom in strategy, creativity, and execution. From client relationships to creative processes, culture shapes every decision we make.
@@ -164,9 +169,9 @@ const HomeAbout = () => {
 
 
 
-            <button
+            <Link
+              to="/about"
               className="group relative flex flex-col items-center justify-center max-w-[180px] w-[100px] h-[50px] decoration-0 transition-transform active:scale-95 cursor-pointer outline-none"
-              type="button"
               style={{
                 backgroundColor: "rgba(255, 255, 255, 0.05)",
                 borderRadius: "8px",
@@ -242,12 +247,11 @@ const HomeAbout = () => {
                       textShadow: "0 1px 2px rgba(0,0,0,0.5)",
                     }}
                   >
-                    {/* <Link to="/about">About Us</Link> */}
-                    <a href="/about">About Us</a>
+                    About Us
                   </p>  
                 </div>
               </div>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

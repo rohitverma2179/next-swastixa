@@ -3,113 +3,101 @@
 import React, { useState, useEffect, useMemo } from "react";
 const ICONS = [
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/dlf-logo.png",
-    alt: "dlf-logo",
+    url: "/assets/clients/dlf-logo.webp",
+    alt: "DLF Limited - Leading Real Estate Developer Client of Swastixa Digital",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/emaar-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/emaar-logo.webp",
+    alt: "Emaar India - Luxury Real Estate Developer Partner of Swastixa Digital",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/mthreem-logo.png",
-    alt: "Munchon",
-  },
-  // m3m
-
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/mrg-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/mthreem-logo.webp",
+    alt: "M3M India - Commercial & Residential Real Estate Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/signature-global-logo.png",
-    alt: "Signature Global",
-    // link: "https://signatureglobal.in" 
+    url: "/assets/clients/mrg-logo.webp",
+    alt: "MRG World - Affordable Housing Developers Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/ganga-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/signature-global-logo.webp",
+    alt: "Signature Global - Premium Real Estate Developer Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/aarize-logo.png",
-    alt: "Mahagun",
-    // link: "https://mahagunindia.com"
+    url: "/assets/clients/ganga-logo.webp",
+    alt: "Ganga Realty - Luxury Residential Developments Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/iris-logo.png",
-    alt: "Munchon",
-  },
-
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/tirasya-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/aarize-logo.webp",
+    alt: "Aarize Group - Commercial Infrastructure & Real Estate Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/bestmate-logo.png",
-    alt: "Paramount",
-    // link: "https://paramountgroup.co.in"
+    url: "/assets/clients/iris-logo.webp",
+    alt: "Iris Broadway - Retail & Commercial Hub Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/smart-world-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/tirasya-logo.webp",
+    alt: "Tirasya Living - Real Estate & Hospitality Brand Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/sare-logo.png",
-    alt: "Munchon",
-  },
-
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/panasonic-logo.png",
-    alt: "Munchon",
-  },
-
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/paramount-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/bestmate-logo.webp",
+    alt: "Bestmate - Pet Nutrition & Healthcare Brand Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/rki-logo.png",
-    alt: "Munchon",
-  },
-
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/egrowthindia-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/smart-world-logo.webp",
+    alt: "Smartworld Developers - Modern Urban Living Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/bexex-logo.png",
-    alt: "Ministry of Information and Broadcasting",
-  },
-
-  {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/kevvali-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/sare-logo.webp",
+    alt: "SARE Homes - Integrated Township Developer Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/grace-aesthetic-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/panasonic-logo.webp",
+    alt: "Panasonic India - Global Electronics & Appliances Brand Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/ishaadrii-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/paramount-logo.webp",
+    alt: "Paramount Group - Real Estate & Infrastructure Developer Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/swadeshi-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/rki-logo.webp",
+    alt: "RKI Infrastructure & Engineering Developer Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/washguys-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/egrowthindia-logo.webp",
+    alt: "eGrowth India - National B2B Business Ecosystem Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/kloy-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/bexex-logo.webp",
+    alt: "Bexex - Logistics, Cargo & Supply Chain Solutions Partner Logo",
   },
   {
-    url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/one-group-logo.png",
-    alt: "Munchon",
+    url: "/assets/clients/kevvali-logo.webp",
+    alt: "Kevvali - Lifestyle & Contemporary Fashion Apparel Partner Logo",
   },
-
-
+  {
+    url: "/assets/clients/grace-aesthetic-logo.webp",
+    alt: "Grace Aesthetic Clinic - Cosmetic Dermatology & Wellness Partner Logo",
+  },
+  {
+    url: "/assets/clients/ishaadrii-logo.webp",
+    alt: "Ishaadrii - Handcrafted Designer Ethnic Wear Partner Logo",
+  },
+  {
+    url: "/assets/clients/swadeshi-logo.webp",
+    alt: "Swadeshi Blessings - Artisan Clay Handicrafts Brand Partner Logo",
+  },
+  {
+    url: "/assets/clients/washguys-logo.webp",
+    alt: "Washguys - Professional Automotive Cleaning & Detailing Partner Logo",
+  },
+  {
+    url: "/assets/clients/kloy-logo.webp",
+    alt: "Kloy - Premium Women's Western Wear Brand Partner Logo",
+  },
+  {
+    url: "/assets/clients/one-group-logo.webp",
+    alt: "One Group - Commercial & Residential Real Estate Partner Logo",
+  },
 ];
 
 
@@ -183,29 +171,33 @@ export default function LogoCarousel() {
       <div className="w-full max-w-[1250px] px-4">
         <div className={gridClasses}>
           {currentIcons.map((icon, idx) => (
-            <a
+            <div
               key={`${icon.url}_${idx}_${page}`}
-              href={(icon as any).link || icon.url}
-              target="_blank"
-              rel="noopener noreferrer"
               className="flex items-end justify-center group transition-transform duration-300 hover:scale-110"
             >
               <img
                 src={icon.url}
-                alt={icon.alt || `logo-${idx}`}
+                alt={icon.alt}
+                width={320}
+                height={165}
                 loading="lazy"
+                decoding="async"
                 className="
-                  h-28 w-28 
-                  sm:h-32 sm:w-32 
-                  md:h-40 md:w-40 
-                  lg:h-48 lg:w-52 
+                  h-auto w-28 
+                  sm:w-32 
+                  md:w-40 
+                  lg:w-48 
+                  max-h-28 
+                  sm:max-h-32 
+                  md:max-h-40 
+                  lg:max-h-48 
                   object-contain  
                   grayscale 
                   group-hover:grayscale-0 
                   transition
                 "
               />
-            </a>
+            </div>
           ))}
         </div>
       </div>

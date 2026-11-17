@@ -12,16 +12,56 @@ const rajdhani = localFont({
 
 const chakraPetch = localFont({
   src: [
-    { path: "../public/chakra-petch/ChakraPetch-Light.woff2", weight: "300", style: "normal" },
-    { path: "../public/chakra-petch/ChakraPetch-LightItalic.woff2", weight: "300", style: "italic" },
-    { path: "../public/chakra-petch/ChakraPetch-Regular.woff2", weight: "400", style: "normal" },
-    { path: "../public/chakra-petch/ChakraPetch-Italic.woff2", weight: "400", style: "italic" },
-    { path: "../public/chakra-petch/ChakraPetch-Medium.woff2", weight: "500", style: "normal" },
-    { path: "../public/chakra-petch/ChakraPetch-MediumItalic.woff2", weight: "500", style: "italic" },
-    { path: "../public/chakra-petch/ChakraPetch-SemiBold.woff2", weight: "600", style: "normal" },
-    { path: "../public/chakra-petch/ChakraPetch-SemiBoldItalic.woff2", weight: "600", style: "italic" },
-    { path: "../public/chakra-petch/ChakraPetch-Bold.woff2", weight: "700", style: "normal" },
-    { path: "../public/chakra-petch/ChakraPetch-BoldItalic.woff2", weight: "700", style: "italic" },
+    {
+      path: "../public/chakra-petch/ChakraPetch-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-LightItalic.woff2",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-Italic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-MediumItalic.woff2",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-SemiBold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-SemiBoldItalic.woff2",
+      weight: "600",
+      style: "italic",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-BoldItalic.woff2",
+      weight: "700",
+      style: "italic",
+    },
   ],
   variable: "--font-chakra-petch",
   display: "swap",
@@ -31,7 +71,7 @@ export const metadata = {
   metadataBase: new URL("https://swastixa.com"),
   title: "Swastixa | Digital Marketing & Web Development Agency",
   description:
-    "Swastixa Digital is a full-service digital company that blends strategy, design, and technology to deliver 360° creative and digital marketing solutions, including video production, social media, and website development.",
+    "Swastixa is a digital marketing and web development agency offering SEO, social media, performance marketing and video production to grow your brand.",
   applicationName: "Swastixa Digital",
   authors: [{ name: "Swastixa Digital" }],
   verification: {
@@ -39,15 +79,35 @@ export const metadata = {
   },
   icons: {
     icon: [
+      { url: "/favicon.ico" },
       { url: "/swastixa_32X32.png", sizes: "32x32", type: "image/png" },
       { url: "/swastixa_192X192.png", sizes: "192x192", type: "image/png" },
     ],
     apple: [{ url: "/swastixa_180X180.png", sizes: "180x180" }],
   },
+  manifest: "/manifest.json",
   openGraph: {
     type: "website",
     siteName: "Swastixa Digital",
+    title: "Swastixa | Digital Marketing & Web Development Agency",
+    description:
+      "Swastixa Digital is a premier creative & digital marketing agency in India delivering 360° branding, web development, video production, and SEO solutions.",
     url: "https://swastixa.com",
+    images: [
+      {
+        url: "https://cdn.swastixa.com/Swastixa_white.png",
+        width: 1200,
+        height: 630,
+        alt: "Swastixa Digital",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Swastixa | Digital Marketing & Web Development Agency",
+    description:
+      "Swastixa Digital is a premier creative & digital marketing agency in India delivering 360° branding, web development, video production, and SEO solutions.",
+    images: ["https://cdn.swastixa.com/Swastixa_white.png"],
   },
 };
 
@@ -64,17 +124,68 @@ const websiteSchema = {
   url: "https://swastixa.com",
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  name: "Swastixa Digital",
+  legalName: "Swastixa Services LLP",
+  url: "https://swastixa.com",
+  logo: "https://cdn.swastixa.com/Swastixa_white.png",
+  image: "https://cdn.swastixa.com/Swastixa_white.png",
+  sameAs: [
+    "https://www.instagram.com/swastixadigital",
+    "https://www.linkedin.com/company/swastixa/",
+    "https://www.facebook.com/share/1BavrtTDFV/",
+    "https://youtube.com/@swastixadigital",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Plot No. 2-A, Third Floor, Jai Vihar",
+    addressLocality: "New Delhi",
+    postalCode: "110043",
+    addressCountry: "IN",
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${rajdhani.variable} ${chakraPetch.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${rajdhani.variable} ${chakraPetch.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <link rel="describedby" href="/llms.txt" />
+        <link
+          rel="alternate"
+          type="text/markdown"
+          href="/llms.txt"
+          title="LLMs Text"
+        />
+      </head>
       <body suppressHydrationWarning>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [websiteSchema, organizationSchema],
+            }),
+          }}
         />
         <Providers>{children}</Providers>
 
-        {/* Google Tag Manager */}
+        {/* Google Analytics (GA4) & Google Tag Manager */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-PM5LV7QM"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PM5LV7QM');`}
+        </Script>
         <Script id="gtm" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PM5LV7QM');`}
         </Script>

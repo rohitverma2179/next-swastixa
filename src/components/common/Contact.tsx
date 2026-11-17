@@ -5,7 +5,6 @@ import { sendForm } from "@emailjs/browser";
 import toast from "react-hot-toast";
 import privacyPolicy from "../../views/PrivacyPolicy";
 import { useNavigate } from "@/lib/router";
-import { Link } from "@/lib/router";
 import {
   FaFacebookF,
   FaInstagram,
@@ -73,15 +72,15 @@ export default function ContactSection() {
       className="relative w-full min-h-screen py-20 flex items-center justify-center bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage:
-          "url(https://cdn.swastixa.com/swastixadigital/swastixa-four-videos-contact-image/swastixa-contact.png)",
+          "url(/assets/contact/swastixa-contact.webp)",
       }}
     >
       <div className="absolute"></div>
 
       <div className="relative z-10 w-[95%] md:w-[85%] lg:w-[80%] max-w-6xl">
-        <h1 className="text-white text-4xl md:text-7xl font-bold mb-4">
+        <h2 className="text-white text-4xl md:text-7xl font-bold mb-4">
           Contact Us
-        </h1>
+        </h2>
 
         <div className="bg-[#843c29]/25 backdrop-blur-md rounded-2xl p-6 md:p-10">
           {/* Top Content */}
@@ -95,21 +94,30 @@ export default function ContactSection() {
             >
               <input
                 type="text"
+                id="contact-name"
                 name="name"
+                aria-label="Full Name"
+                autoComplete="name"
                 placeholder="Enter Your name"
                 className="w-full bg-transparent border-b border-white/40 text-white placeholder-white/70 py-3 focus:outline-none"
               />
 
               <input
                 type="email"
+                id="contact-email"
                 name="email"
+                aria-label="Email Address"
+                autoComplete="email"
                 placeholder="Enter Your Email"
                 className="w-full bg-transparent border-b border-white/40 text-white placeholder-white/70 py-3 focus:outline-none"
               />
 
               <input
-                type="text"
+                type="tel"
+                id="contact-phone"
                 name="phone"
+                aria-label="Mobile Number"
+                autoComplete="tel"
                 placeholder="Enter Your Mobile no."
                 onInput={(e) => {
                   const target = e.currentTarget as HTMLInputElement;
@@ -121,8 +129,10 @@ export default function ContactSection() {
               />
 
               <textarea
+                id="contact-message"
                 placeholder="Enter Your Query"
                 name="textarea"
+                aria-label="Your Query or Message"
                 rows={2}
                 className="w-full bg-transparent border-b border-white/40 text-white placeholder-white/70 py-3 focus:outline-none resize-none"
               />
@@ -187,74 +197,8 @@ export default function ContactSection() {
                 </p>
               </div>
 
-              <div className="mt-4">
-                <div className="flex justify-end gap-3">
-                  <a
-                    href="https://www.facebook.com/share/1BavrtTDFV/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-full border border-white/20 bg-white/5 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300"
-                  >
-                    <FaFacebookF size={18} />
-                  </a>
-
-                  <a
-                    href="https://www.instagram.com/swastixadigital?igsh=ZHQwMmthamV3a3Vu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-full border border-white/20 bg-white/5 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300"
-                  >
-                    <FaInstagram size={18} />
-                  </a>
-
-                  <a
-                    href="https://www.linkedin.com/company/swastixa/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-full border border-white/20 bg-white/5 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300"
-                  >
-                    <FaLinkedinIn size={18} />
-                  </a>
-
-                  <a
-                    href="https://youtube.com/@swastixadigital?si=Pfy9tRbjKuLInRJE"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-full border border-white/20 bg-white/5 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300"
-                  >
-                    <FaYoutube size={18} />
-                  </a>
-                </div>
-              </div>
+            
             </div>
-          </div>
-
-          {/* Footer */}
-          <div className="mt-10 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-5 text-[13px] text-white/75">
-              <Link
-                type="button"
-                to="/privacy-policy"
-                className="hover:text-white transition-colors duration-300 cursor-pointer"
-              >
-                Privacy Policy
-              </Link>
-
-              <Link
-                type="button"
-                to="/privacy-policy"
-                className="hover:text-white transition-colors duration-300 cursor-pointer"
-              >
-                Terms & Conditions
-              </Link>
-            </div>
-
-            {/* <p className="text-[13px] text-white/60 text-center sm:text-right">
-            © SwastixaDigital 2025
-          </p> */}
-            <p className="text-[13px] text-white/60 text-center sm:text-right">
-              © SwastixaDigital {new Date().getFullYear()}
-            </p>
           </div>
         </div>
       </div>
