@@ -1,4 +1,3 @@
-"use client";
 
 
 
@@ -7,7 +6,8 @@
 
 
 
-import { Link } from "@/lib/router";
+import Link from "next/link";
+import { localBlogContentImage } from "@/lib/blogImages";
 
 function getYouTubeEmbedUrl(url) {
   if (!url) return null;
@@ -84,6 +84,8 @@ export default function ContentRenderer({ block }) {
               <iframe
                 src={embedUrl}
                 title={block.title || "Video"}
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
                 className="absolute top-0 left-0 w-full h-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -92,6 +94,7 @@ export default function ContentRenderer({ block }) {
               <video
                 src={rawUrl}
                 controls
+                preload="metadata"
                 className="w-full h-full object-cover"
               />
             )}
@@ -138,8 +141,10 @@ export default function ContentRenderer({ block }) {
           <img
             loading="lazy"
             decoding="async"
-            src={src}
+            src={localBlogContentImage(src)}
             alt={alt}
+            width="1200"
+            height="675"
             className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
           />
           {alt && <p className="text-center text-sm text-gray-400 mt-2 p-2">{alt}</p>}
@@ -151,7 +156,7 @@ export default function ContentRenderer({ block }) {
       return (
         <div className="flex flex-col md:flex-row gap-8 items-center mb-12">
           <div className="w-full md:w-1/2 overflow-hidden rounded-xl border border-white/10">
-            <img loading="lazy" decoding="async"               src={block.image}
+            <img loading="lazy" decoding="async" width="800" height="600" src={localBlogContentImage(block.image)}
               alt={block.alt || "content image"}
               className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
             />
@@ -165,7 +170,7 @@ export default function ContentRenderer({ block }) {
     case "imageRightText":
       return (
         <div className="flex justify-center items-center mb-12 overflow-hidden rounded-2xl border border-white/10">
-          <img loading="lazy" decoding="async"             src={block.image}
+          <img loading="lazy" decoding="async" width="1200" height="675" src={localBlogContentImage(block.image)}
             alt={block.alt || "image"}
             className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500"
           />
@@ -283,7 +288,7 @@ function renderTextWithLinks(text) {
       return (
         <Link
           key={index}
-          to={`/blog/${slug}`}
+          href={`/blog/${slug}`}
           className="text-blue-400 hover:underline"
         >
           {label}

@@ -1,46 +1,16 @@
-"use client";
-
-import dynamic from 'next/dynamic';
-import { useEffect, useState } from "react";
-const BlogGrid = dynamic(() => import('../components/blog/BlogGrid'));
-// import BlogHeader from "../components/blog/BlogHeader";
+import BlogGrid from "../components/blog/BlogGrid";
 import { blogs } from "../data/blogs";
-const InnerPageHeader = dynamic(() => import('../components/common/innerPageHeader'));
-const Particles = dynamic(() => import('../components/home/Particles'));
-const CTASection = dynamic(() => import('../components/common/CTASection'));
 
 export default function BlogPage() {
-  const [loading, setLoading] = useState(false);
-  const [blogList, setBlogList] = useState(blogs);
-
-  useEffect(() => {
-    // Simulate API delay
-    setTimeout(() => {
-      setBlogList(blogs);
-      setLoading(false);
-    }, 300);
-  }, []);
-
   return (
-    <>
-      <div className="relative pt-24 z-0 w-full px-2 sm:px-4 md:px-10 lg:px-10 py-10 xl:px-24 bg-black overflow-hidden min-h-screen">
-        {/* <BlogHeader /> */}
-        <Particles
-          particleBaseSize={120}
-          particleColors={['#2196F3', '#FFFFFF']}
-          particleCount={350}
-          particleSpread={25}
-          speed={0.3}
-          moveParticlesOnHover={true}
-          alphaParticles={false}
-          disableRotation={false}
-        />
-        <InnerPageHeader title="Blog" description="At Swastixa, our blog features informative articles, insights, and updates focused on culture-driven ideas, business growth, digital trends, and thoughtful perspectives. Each post is crafted to share knowledge, inspire clarity, and support meaningful progress through valuable content." />
-        <BlogGrid blogs={blogList} loading={loading} />
-      </div>
-        <CTASection />
-    </>
+    <main className="relative z-0 min-h-screen w-full overflow-hidden bg-black px-4 pb-16 pt-32 md:px-10 xl:px-24">
+        <header className="mx-auto mb-14 max-w-4xl text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-white md:text-6xl">Digital Marketing Insights</h1>
+          <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-gray-300 md:text-lg">
+            Practical guides on SEO, paid advertising, social media, content, branding and business growth from Swastixa Digital.
+          </p>
+        </header>
+        <BlogGrid blogs={blogs} />
+    </main>
   );
 }
-
-          // particleBaseSize={200}

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { blogs } from "@/data/blogs";
-import { getBlogMetadata, BreadcrumbJsonLd } from "@/lib/seo";
+import { getBlogMetadata, BreadcrumbJsonLd, FaqJsonLd } from "@/lib/seo";
 import View from "@/views/BlogInner";
 
 export function generateStaticParams() {
@@ -55,7 +55,8 @@ export default async function Page({ params }) {
           { name: blog.hero?.metaTitle || blog.slug, path: `/blog/${slug}` },
         ]}
       />
-      <View />
+      {blog.faq?.length > 0 && <FaqJsonLd faqs={blog.faq} />}
+      <View blog={blog} />
     </>
   );
 }

@@ -1,68 +1,32 @@
-"use client";
+import Link from "next/link";
+import { blogCoverSources } from "@/lib/blogImages";
 
-import { Link } from "@/lib/router";
-import { GlowingBorder } from "../common/GlowingBorder";
+export default function BlogCard({ blog, priority = false }) {
+  const title = blog.hero?.metaTitle || blog.hero?.title || blog.slug;
+  const cover = blogCoverSources(blog.slug);
 
-export default function BlogCard({ blog }) {
-
-    return (
-        <GlowingBorder
-            //
-           
-            data-aos-anchor-placement="top-bottom"
-            containerClassName="shadow-md hover:shadow-2xl transition-all  duration-300 bg-zinc-900"
-            className="p-4 rounded-sm  h-auto"
-            borderRadius="0.8rem"
-        // color="rgba(255, 255, 255, 0.4)"
-
-        >
-
-            {/* IMAGE SECTION */}
-            <div
-                className="
-                    rounded-[0.8rem]
-                    w-full
-                    h-[50vw]          /* Mobile */
-                    sm:h-[40vw]        /* Small screens */
-                    md:h-[30vw]        /* Tablets */
-                    lg:h-[22vw]        /* Laptops */
-                    xl:h-[38.133vh]        /* Large monitors */
-                    2xl:h-[57.2vh]       /* Ultra wide screens */
-                    max-h-160      /* hard safety cap */
-                    overflow-hidden
-                "
-                style={{
-                    background: "#4e4e4e66", // Transparent background
-                    backdropFilter: "blur(15px)",        // Blur effect
-                    boxShadow: "rgb(110 109 109 / 25%) 1.5px 1px 2.8px inset", // Inner shadow
-                    borderRadius: "0.8rem"
-                }} >
-                <img loading="lazy" decoding="async"                     src={blog.image || blog.hero?.image}
-                    alt={blog.title || blog.hero?.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-all duration-300"
-                />
-            </div>
-
-            {/* TEXT SECTION */}
-            <div className="p-[1.2rem]">
-                
-                <Link to={`/blog/${blog.slug}`}>
-                    <p className="
-                  text-[0.95rem]
-                  text-gray-300
-                  mt-[0.6rem]
-                  2xl:text-[1.3rem]
-                  line-clamp-2
-                  cursor-pointer
-                  hover:text-white
-                  transition
-          ">
-                        {blog.hero?.metaTitle || blog.hero?.subtitle || blog.hero?.title}
-                    </p>
-                </Link>
-
-            </div>
-
-        </GlowingBorder>
-    );
+  return (
+    <article className="overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 shadow-md transition hover:-translate-y-1 hover:border-white/20 hover:shadow-2xl [content-visibility:auto] [contain-intrinsic-size:520px]">
+      <Link href={`/blog/${blog.slug}`} className="group block" aria-label={`Read ${title}`}>
+        <div className="aspect-[16/9] w-full overflow-hidden bg-zinc-800">
+          <img
+            src={cover.small}
+            srcSet={`${cover.small} 640w, ${cover.large} 1200w`}
+            sizes="(max-width: 639px) 100vw, (max-width: 1535px) 50vw, 640px"
+            alt={title}
+            width="800"
+            height="450"
+            loading={priority ? "eager" : "lazy"}
+            fetchPriority={priority ? "high" : "auto"}
+            decoding="async"
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+          />
+        </div>
+        <div className="p-5 md:p-6">
+          <h2 className="line-clamp-2 text-lg font-semibold leading-snug text-gray-100 transition group-hover:text-white md:text-xl">{title}</h2>
+          <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-gray-400">{blog.hero?.description}</p>
+        </div>
+      </Link>
+    </article>
+  );
 }

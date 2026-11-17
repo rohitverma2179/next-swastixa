@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Allows CI/production builds to use an isolated cache while `next dev` is running.
+  distDir: process.env.NEXT_DIST_DIR || ".next",
   // Pure static site - build-time HTML generation (SSG), NO server-side rendering at runtime.
   output: "export",
   images: {

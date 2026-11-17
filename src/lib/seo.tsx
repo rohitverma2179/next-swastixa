@@ -53,11 +53,19 @@ export function getPageMetadata(path: string, overrides: SeoOverrides = {}) {
 export function getBlogMetadata(slug: string) {
   const blog = (blogs as any[]).find((b) => b.slug === slug);
   if (!blog || !blog.hero) return getPageMetadata(`/blog/${slug}`);
-  return getPageMetadata(`/blog/${slug}`, {
+  const metadata = getPageMetadata(`/blog/${slug}`, {
     title: blog.hero.metaTitle,
     description: blog.hero.description,
     image: blog.hero.image,
   });
+  return {
+    ...metadata,
+    robots: { index: true, follow: true },
+    openGraph: {
+      ...metadata.openGraph,
+      type: "article" as const,
+    },
+  };
 }
 
 export function getServiceSchema(serviceName: string, path: string, description?: string) {

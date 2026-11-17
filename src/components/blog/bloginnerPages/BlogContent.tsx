@@ -1,5 +1,3 @@
-"use client";
-
 // export default function BlogContent({ content }) {
 //   return (
 //     <div className="max-h-[70vh] overflow-y-auto pr-4 custom-scroll">
@@ -37,10 +35,10 @@ import ContentRenderer from "./ContentRenderer";
 
 export default function BlogContent({ content }) {
   return (
-    <div className="w-full">
+    <article className="w-full">
       {content.map((block, index) => (
         <ContentRenderer key={index} block={block} />
       ))}
-    </div>
+    </article>
   );
 }
