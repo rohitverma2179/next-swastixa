@@ -4,99 +4,99 @@ import React, { useState, useEffect, useMemo } from "react";
 const ICONS = [
   {
     url: "/assets/clients/dlf-logo.webp",
-    alt: "DLF",
+    alt: "DLF Limited - Leading Real Estate Developer Client of Swastixa Digital",
   },
   {
     url: "/assets/clients/emaar-logo.webp",
-    alt: "Emaar",
+    alt: "Emaar India - Luxury Real Estate Developer Partner of Swastixa Digital",
   },
   {
     url: "/assets/clients/mthreem-logo.webp",
-    alt: "M3M",
+    alt: "M3M India - Commercial & Residential Real Estate Partner Logo",
   },
   {
     url: "/assets/clients/mrg-logo.webp",
-    alt: "MRG World",
+    alt: "MRG World - Affordable Housing Developers Partner Logo",
   },
   {
     url: "/assets/clients/signature-global-logo.webp",
-    alt: "Signature Global",
+    alt: "Signature Global - Premium Real Estate Developer Partner Logo",
   },
   {
     url: "/assets/clients/ganga-logo.webp",
-    alt: "Ganga Realty",
+    alt: "Ganga Realty - Luxury Residential Developments Partner Logo",
   },
   {
     url: "/assets/clients/aarize-logo.webp",
-    alt: "Aarize Group",
+    alt: "Aarize Group - Commercial Infrastructure & Real Estate Partner Logo",
   },
   {
     url: "/assets/clients/iris-logo.webp",
-    alt: "Iris Broadway",
+    alt: "Iris Broadway - Retail & Commercial Hub Partner Logo",
   },
   {
     url: "/assets/clients/tirasya-logo.webp",
-    alt: "Tirasya",
+    alt: "Tirasya Living - Real Estate & Hospitality Brand Partner Logo",
   },
   {
     url: "/assets/clients/bestmate-logo.webp",
-    alt: "Bestmate",
+    alt: "Bestmate - Pet Nutrition & Healthcare Brand Partner Logo",
   },
   {
     url: "/assets/clients/smart-world-logo.webp",
-    alt: "Smartworld Developers",
+    alt: "Smartworld Developers - Modern Urban Living Partner Logo",
   },
   {
     url: "/assets/clients/sare-logo.webp",
-    alt: "Sare Homes",
+    alt: "SARE Homes - Integrated Township Developer Partner Logo",
   },
   {
     url: "/assets/clients/panasonic-logo.webp",
-    alt: "Panasonic",
+    alt: "Panasonic India - Global Electronics & Appliances Brand Partner Logo",
   },
   {
     url: "/assets/clients/paramount-logo.webp",
-    alt: "Paramount Group",
+    alt: "Paramount Group - Real Estate & Infrastructure Developer Partner Logo",
   },
   {
     url: "/assets/clients/rki-logo.webp",
-    alt: "RKI",
+    alt: "RKI Infrastructure & Engineering Developer Partner Logo",
   },
   {
     url: "/assets/clients/egrowthindia-logo.webp",
-    alt: "eGrowth India",
+    alt: "eGrowth India - National B2B Business Ecosystem Partner Logo",
   },
   {
     url: "/assets/clients/bexex-logo.webp",
-    alt: "Bexex",
+    alt: "Bexex - Logistics, Cargo & Supply Chain Solutions Partner Logo",
   },
   {
     url: "/assets/clients/kevvali-logo.webp",
-    alt: "Kevvali",
+    alt: "Kevvali - Lifestyle & Contemporary Fashion Apparel Partner Logo",
   },
   {
     url: "/assets/clients/grace-aesthetic-logo.webp",
-    alt: "Grace Aesthetic",
+    alt: "Grace Aesthetic Clinic - Cosmetic Dermatology & Wellness Partner Logo",
   },
   {
     url: "/assets/clients/ishaadrii-logo.webp",
-    alt: "Ishaadrii",
+    alt: "Ishaadrii - Handcrafted Designer Ethnic Wear Partner Logo",
   },
   {
     url: "/assets/clients/swadeshi-logo.webp",
-    alt: "Swadeshi",
+    alt: "Swadeshi Blessings - Artisan Clay Handicrafts Brand Partner Logo",
   },
   {
     url: "/assets/clients/washguys-logo.webp",
-    alt: "Washguys",
+    alt: "Washguys - Professional Automotive Cleaning & Detailing Partner Logo",
   },
   {
     url: "/assets/clients/kloy-logo.webp",
-    alt: "Kloy",
+    alt: "Kloy - Premium Women's Western Wear Brand Partner Logo",
   },
   {
     url: "/assets/clients/one-group-logo.webp",
-    alt: "One Group",
+    alt: "One Group - Commercial & Residential Real Estate Partner Logo",
   },
 ];
 
@@ -177,7 +177,7 @@ export default function LogoCarousel() {
             >
               <img
                 src={icon.url}
-                alt={`${icon.alt || "Client"} - Swastixa Digital Partner Logo`}
+                alt={icon.alt}
                 width={320}
                 height={165}
                 loading="lazy"

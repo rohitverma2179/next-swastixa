@@ -1,9 +1,9 @@
 "use client";
 
-import TextWriteAnimation from "./TextWriteAnimation";
 import OptimizedVideo from "../common/OptimizedVideo";
+import TextWriteAnimation from "./TextWriteAnimation";
 
-const VIDEO_URL = "/swastixa-second.mp4";
+// const VIDEO_URL = "/swastixa-second.mp4";
 
 export default function HeroSection() {
   return (
@@ -25,7 +25,9 @@ export default function HeroSection() {
         {/* Right Image Section */}
         <div className="flex justify-center items-center w-full max-w-md">
           <OptimizedVideo
-            src={VIDEO_URL}
+            src="https://cdn.swastixa.com/swastixadigital/swastixa-hero-video/swastixa-second.mp4"
+            poster="/posters/swastixa-second-poster.webp"
+            preload="none"
             loop
             className="w-full max-w-md object-contain"
             style={{ border: "none", outline: "none" }}

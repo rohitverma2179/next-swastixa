@@ -12,16 +12,56 @@ const rajdhani = localFont({
 
 const chakraPetch = localFont({
   src: [
-    { path: "../public/chakra-petch/ChakraPetch-Light.woff2", weight: "300", style: "normal" },
-    { path: "../public/chakra-petch/ChakraPetch-LightItalic.woff2", weight: "300", style: "italic" },
-    { path: "../public/chakra-petch/ChakraPetch-Regular.woff2", weight: "400", style: "normal" },
-    { path: "../public/chakra-petch/ChakraPetch-Italic.woff2", weight: "400", style: "italic" },
-    { path: "../public/chakra-petch/ChakraPetch-Medium.woff2", weight: "500", style: "normal" },
-    { path: "../public/chakra-petch/ChakraPetch-MediumItalic.woff2", weight: "500", style: "italic" },
-    { path: "../public/chakra-petch/ChakraPetch-SemiBold.woff2", weight: "600", style: "normal" },
-    { path: "../public/chakra-petch/ChakraPetch-SemiBoldItalic.woff2", weight: "600", style: "italic" },
-    { path: "../public/chakra-petch/ChakraPetch-Bold.woff2", weight: "700", style: "normal" },
-    { path: "../public/chakra-petch/ChakraPetch-BoldItalic.woff2", weight: "700", style: "italic" },
+    {
+      path: "../public/chakra-petch/ChakraPetch-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-LightItalic.woff2",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-Italic.woff2",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-MediumItalic.woff2",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-SemiBold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-SemiBoldItalic.woff2",
+      weight: "600",
+      style: "italic",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/chakra-petch/ChakraPetch-BoldItalic.woff2",
+      weight: "700",
+      style: "italic",
+    },
   ],
   variable: "--font-chakra-petch",
   display: "swap",
@@ -109,10 +149,19 @@ const organizationSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${rajdhani.variable} ${chakraPetch.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${rajdhani.variable} ${chakraPetch.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <link rel="describedby" href="/llms.txt" />
-        <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs Text" />
+        <link
+          rel="alternate"
+          type="text/markdown"
+          href="/llms.txt"
+          title="LLMs Text"
+        />
       </head>
       <body suppressHydrationWarning>
         <script

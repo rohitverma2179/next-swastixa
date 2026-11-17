@@ -17,6 +17,7 @@ export const seoData = {
       "Explore Swastixa’s social media portfolio showcasing creative campaigns, strategic content and measurable brand growth across leading digital platforms.",
   },
 
+
   "/about": {
     title: "About Us | Swastixa",
     description:

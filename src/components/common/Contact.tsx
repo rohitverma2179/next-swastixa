@@ -72,7 +72,7 @@ export default function ContactSection() {
       className="relative w-full min-h-screen py-20 flex items-center justify-center bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage:
-          "url(https://cdn.swastixa.com/swastixadigital/swastixa-four-videos-contact-image/swastixa-contact.png)",
+          "url(/assets/contact/swastixa-contact.webp)",
       }}
     >
       <div className="absolute"></div>

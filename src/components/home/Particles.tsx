@@ -2,10 +2,6 @@
 
 import { useEffect, useRef } from 'react';
 import { Renderer, Camera, Geometry, Program, Mesh } from 'ogl';
-import LogoCarousel from './Logo';
-import EndToEndExcellence from './EndToEndExcellence';
-import ForthSection from './HomeWork';
-import HomeAbout from './HomeAbout';
 
 const defaultColors = ['#ffffff', '#ffffff', '#ffffff'];
 
@@ -186,11 +182,13 @@ const Particles = ({
 
     const particles = new Mesh(gl, { mode: gl.POINTS, geometry, program });
 
+    let isVisible = false;
     let animationFrameId;
     let lastTime = performance.now();
     let elapsed = 0;
 
     const update = t => {
+      if (!isVisible) return;
       animationFrameId = requestAnimationFrame(update);
       const delta = t - lastTime;
       lastTime = t;
@@ -215,13 +213,28 @@ const Particles = ({
       renderer.render({ scene: particles, camera });
     };
 
-    animationFrameId = requestAnimationFrame(update);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible) {
+          lastTime = performance.now();
+          cancelAnimationFrame(animationFrameId);
+          animationFrameId = requestAnimationFrame(update);
+        } else {
+          cancelAnimationFrame(animationFrameId);
+        }
+      },
+      { rootMargin: '150px 0px', threshold: 0.01 }
+    );
+
+    observer.observe(container);
 
     return () => {
       window.removeEventListener('resize', resize);
       if (moveParticlesOnHover) {
         container.removeEventListener('mousemove', handleMouseMove);
       }
+      observer.disconnect();
       cancelAnimationFrame(animationFrameId);
       if (container.contains(gl.canvas)) {
         container.removeChild(gl.canvas);
