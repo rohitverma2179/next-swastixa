@@ -2,7 +2,6 @@
 
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from 'ogl';
 import { useEffect, useRef } from 'react';
-import img_one from "../../assets/blog1.jpeg"
 
 function debounce(func, wait) {
   let timeout;
@@ -47,7 +46,7 @@ function createTextTexture(gl, text, font = 'bold 30px monospace', color = 'blac
 
 class Title {
   [key: string]: any;
-  constructor({ gl, plane, renderer, text, textColor = '#545050', font = '30px sans-serif' }: any) {
+  constructor({ gl, plane, renderer, text, textColor = '#ffffff', font = '30px sans-serif' }: any) {
     autoBind(this);
     this.gl = gl;
     this.plane = plane;
@@ -154,7 +153,7 @@ class Media {
   }
   createShader() {
     const texture = new Texture(this.gl, {
-      generateMipmaps: true
+      generateMipmaps: false
     });
     this.texture = texture;
     this.program = new Program(this.gl, {
@@ -232,10 +231,14 @@ class Media {
     } else {
       img.src = this.image;
     }
-    img.onload = () => {
+    const handleLoad = () => {
       texture.image = img;
       this.program.uniforms.uImageSizes.value = [img.naturalWidth, img.naturalHeight];
     };
+    img.onload = handleLoad;
+    if (img.complete && img.naturalWidth > 0) {
+      handleLoad();
+    }
   }
   createMesh() {
     this.plane = new Mesh(this.gl, {
@@ -379,6 +382,7 @@ class App {
     this.scrollSpeed = scrollSpeed;
     this.scroll = { ease: scrollEase, current: 0, target: 0, last: 0 };
     this.onCheckDebounce = debounce(this.onCheck, 200);
+    this.boundUpdate = this.update.bind(this);
     this.createRenderer();
     this.createCamera();
     this.createScene();
@@ -389,10 +393,11 @@ class App {
     this.addEventListeners();
   }
   createRenderer() {
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
     this.renderer = new Renderer({
       alpha: true,
-      antialias: true,
-      dpr: Math.min(window.devicePixelRatio || 1, 2)
+      antialias: !isMobile,
+      dpr: isMobile ? 1 : Math.min(window.devicePixelRatio || 1, 1.5)
     });
     this.gl = this.renderer.gl;
     this.gl.clearColor(0, 0, 0, 0);
@@ -408,28 +413,17 @@ class App {
   }
   createGeometry() {
     this.planeGeometry = new Plane(this.gl, {
-      heightSegments: 50,
-      widthSegments: 100
+      heightSegments: 10,
+      widthSegments: 20
     });
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/mthreem.jpeg`, text: 'M3M' },
-      // { image: `https://cdn.swastixa.com/Swastixa%20-%20WORK/social/tirasya1.jpg`, text: 'Tirasya' },
-      { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/kloy.jpeg`, text: 'Kloy' },
-      { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/bestmate.jpeg`, text: 'Bestmate' },
-      { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/kevvali-edm.jpeg`, text: 'Kevvali' },
-      { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/top-main-imgs-social-media/mrg-did-you-know.jpeg`, text: 'MRG' },
-      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/Emaar-serenty-hills-edm.jpg`, text: 'M3M' },
-      // // { image: `https://cdn.swastixa.com/Swastixa%20-%20WORK/social/tirasya1.jpg`, text: 'Tirasya' },
-      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/asva-coming.jpg`, text: 'Kloy' },
-      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/bestmate-mutual-fund-edm.jpg`, text: 'Bestmate' },
-      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/kevvali-edm.jpg`, text: 'Kevvali' },
-      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/mrg-did-you-know.jpeg`, text: 'MRG' },
-      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/mthreem-theline-edm.jpeg`, text: 'MRG' },
-      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/rki-thinklong-edm.jpg`, text: 'MRG' },
-      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/swastixa-kloy.jpeg`, text: 'MRG' },
-      // { image: `https://cdn.swastixa.com/swastixawork/social-media-image-reels/all-posts-swastixa/social-media-partner/tirasya-effortless-static.jpg`, text: 'MRG' },
+      { image: `/images/gallery/m3m.webp`, text: 'M3M' },
+      { image: `/images/gallery/kloy.webp`, text: 'Kloy' },
+      { image: `/images/gallery/bestmate.webp`, text: 'Bestmate' },
+      { image: `/images/gallery/kevvali.webp`, text: 'Kevvali' },
+      { image: `/images/gallery/mrg.webp`, text: 'MRG' },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);
@@ -545,7 +539,7 @@ class App {
       this.scroll.last = this.scroll.current;
     }
     this.renderer.render({ scene: this.scene, camera: this.camera });
-    this.raf = window.requestAnimationFrame(this.update.bind(this));
+    this.raf = window.requestAnimationFrame(this.boundUpdate || this.update.bind(this));
   }
   addEventListeners() {
     this.boundOnResize = this.onResize.bind(this);
@@ -599,7 +593,7 @@ export default function CircularGallery({
         if (entry.isIntersecting) {
           if (!app) {
             app = new App(containerRef.current, { items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase });
-          } else {
+          } else if (!app.raf) {
             // Restart loop if it was stopped
             app.update();
           }

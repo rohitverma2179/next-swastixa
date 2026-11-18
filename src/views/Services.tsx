@@ -2,7 +2,10 @@
 
 import dynamic from "next/dynamic";
 const LogoCarousel = dynamic(() => import("../components/home/Logo"));
-import LightRays from "../components/services/LightRays";
+const LightRays = dynamic(() => import("../components/services/LightRays"), {
+  ssr: false,
+  loading: () => <div className="w-full h-full pointer-events-none" />,
+});
 const ServiceCards = dynamic(
   () => import("../components/services/servicecards"),
 );

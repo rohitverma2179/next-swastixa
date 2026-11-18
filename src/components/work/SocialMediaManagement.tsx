@@ -1,8 +1,16 @@
 "use client";
 
 import React, { lazy, Suspense } from 'react'
+import { preload } from "react-dom";
 import { useNavigate } from "@/lib/router";
 import smmContent from '../../data/smmContent'
+
+// Preload critical hero gallery images
+preload("/images/gallery/m3m.webp", { as: "image", fetchPriority: "high" });
+preload("/images/gallery/kloy.webp", { as: "image", fetchPriority: "high" });
+preload("/images/gallery/bestmate.webp", { as: "image", fetchPriority: "high" });
+preload("/images/gallery/kevvali.webp", { as: "image", fetchPriority: "high" });
+preload("/images/gallery/mrg.webp", { as: "image", fetchPriority: "high" });
 
 // Lazy load heavy components for better initial performance
 const SMMGrid = lazy(() => import('./SMMGrid'));
@@ -34,6 +42,7 @@ const SocialMediaManagement = () => {
         <h1 className='pt-24 md:pt-40 lg:pt-60 2xl:pt-30 text-white text-center text-4xl md:text-6xl lg:text-8xl font-bold tracking-tighter'>
           Social Media 
         </h1>
+        <h2 className="sr-only">Social Media Campaigns &amp; Creative Portfolio</h2>
         <div className='text-white text-center mt-12 mb-16'>
                     <Smmbutton />
           </div>

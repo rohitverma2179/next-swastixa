@@ -56,7 +56,12 @@ const LightRays = ({
     const meshRef = useRef(null);
     const cleanupFunctionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const observerRef = useRef(null);
+
+    useEffect(() => {
+        setIsMobile(window.innerWidth < 768);
+    }, []);
 
     useEffect(() => {
         if (!containerRef.current) return;
@@ -80,7 +85,7 @@ const LightRays = ({
     }, []);
 
     useEffect(() => {
-        if (!isVisible || !containerRef.current) return;
+        if (!isVisible || !containerRef.current || isMobile) return;
 
         if (cleanupFunctionRef.current) {
             cleanupFunctionRef.current();
@@ -90,12 +95,12 @@ const LightRays = ({
         const initializeWebGL = async () => {
             if (!containerRef.current) return;
 
-            await new Promise(resolve => setTimeout(resolve, 10));
+            await new Promise(resolve => setTimeout(resolve, 80));
 
             if (!containerRef.current) return;
 
             const renderer = new Renderer({
-                dpr: Math.min(window.devicePixelRatio, 2),
+                dpr: 1, // Locked to 1 for high-performance zero-lag ambient rendering
                 alpha: true
             });
             rendererRef.current = renderer;
@@ -240,12 +245,12 @@ void main() {
             const updatePlacement = () => {
                 if (!containerRef.current || !renderer) return;
 
-                renderer.dpr = Math.min(window.devicePixelRatio, 2);
+                renderer.dpr = 1;
 
                 const { clientWidth: wCSS, clientHeight: hCSS } = containerRef.current;
                 renderer.setSize(wCSS, hCSS);
 
-                const dpr = renderer.dpr;
+                const dpr = 1;
                 const w = wCSS * dpr;
                 const h = hCSS * dpr;
 
@@ -256,10 +261,19 @@ void main() {
                 uniforms.rayDir.value = dir;
             };
 
+            let lastTime = 0;
+            const fpsInterval = 1000 / 30; // 30 FPS ambient cap eliminates main-thread spikes
+
             const loop = t => {
                 if (!rendererRef.current || !uniformsRef.current || !meshRef.current) {
                     return;
                 }
+
+                animationIdRef.current = requestAnimationFrame(loop);
+
+                const elapsed = t - lastTime;
+                if (elapsed < fpsInterval) return;
+                lastTime = t - (elapsed % fpsInterval);
 
                 uniforms.iTime.value = t * 0.001;
 
@@ -274,7 +288,6 @@ void main() {
 
                 try {
                     renderer.render({ scene: mesh });
-                    animationIdRef.current = requestAnimationFrame(loop);
                 } catch (error) {
                     console.warn('WebGL rendering error:', error);
                     return;
@@ -389,6 +402,27 @@ void main() {
             return () => window.removeEventListener('mousemove', handleMouseMove);
         }
     }, [followMouse]);
+
+    if (isMobile) {
+        return (
+            <div
+                ref={containerRef}
+                className={`w-full h-full pointer-events-none z-[3] overflow-hidden relative ${className}`.trim()}
+            >
+                <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                        background: `
+                            radial-gradient(ellipse 75% 65% at 50% -10%, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.12) 35%, rgba(255, 255, 255, 0.02) 65%, transparent 100%),
+                            linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.04) 40%, transparent 80%)
+                        `,
+                        maskImage: "radial-gradient(ellipse 90% 90% at 50% 0%, black 50%, transparent 95%)",
+                        WebkitMaskImage: "radial-gradient(ellipse 90% 90% at 50% 0%, black 50%, transparent 95%)"
+                    }}
+                />
+            </div>
+        );
+    }
 
     return (
         <div

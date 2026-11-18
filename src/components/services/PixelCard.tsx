@@ -212,16 +212,26 @@ export default function PixelCard({ variant = 'default', gap = undefined, speed 
   };
 
   useEffect(() => {
-    initPixels();
-    const observer = new ResizeObserver(() => {
-      initPixels();
+    let lastW = 0;
+    let lastH = 0;
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const { width, height } = entry.contentRect;
+        if (Math.abs(width - lastW) > 5 || Math.abs(height - lastH) > 5) {
+          lastW = width;
+          lastH = height;
+          initPixels();
+        }
+      }
     });
     if (containerRef.current) {
       observer.observe(containerRef.current);
     }
     return () => {
       observer.disconnect();
-      cancelAnimationFrame(animationRef.current);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finalGap, finalSpeed, finalColors, finalNoFocus]);
@@ -234,7 +244,7 @@ export default function PixelCard({ variant = 'default', gap = undefined, speed 
       onMouseLeave={onMouseLeave}
       onFocus={finalNoFocus ? undefined : onFocus}
       onBlur={finalNoFocus ? undefined : onBlur}
-      tabIndex={finalNoFocus ? -1 : 0}
+      tabIndex={rest.tabIndex !== undefined ? rest.tabIndex : (finalNoFocus ? -1 : undefined)}
       {...rest}
     >
       <canvas className="absolute inset-0 w-full h-full block z-0 pointer-events-none" ref={canvasRef} />

@@ -12,7 +12,7 @@ import React, {
 import { preconnect } from "react-dom";
 import type { SMMItem } from "@/data/smmContent";
 
-const INITIAL_BATCH = 12;
+const INITIAL_BATCH = 8;
 const LOAD_STEP = 8;
 
 const useIsomorphicLayoutEffect =
@@ -71,11 +71,13 @@ const GridItem = memo(({ item, globalIndex }: GridItemProps) => {
           ref={imgRef}
           src={item.image}
           alt={item.title || "Social Media Content"}
+          width={600}
+          height={item.isTall ? 750 : 600}
           onLoad={() => setIsImageLoaded(true)}
           onError={() => setIsImageLoaded(true)}
-          loading={isInitialBatch ? "eager" : "lazy"}
+          loading="lazy"
           decoding="async"
-          fetchPriority={isTopPriority ? "high" : isInitialBatch ? "auto" : "low"}
+          fetchPriority="low"
           className={`w-full h-auto block object-cover transition-[opacity,transform] duration-500 ease-out group-hover:scale-[1.03] ${
             isImageLoaded ? "opacity-100" : "opacity-0"
           }`}
@@ -199,7 +201,7 @@ const SMMGrid = ({ smmContent }: SMMGridProps) => {
         {hasMore && (
           <div className="flex flex-col items-center gap-3">
             <div className="w-9 h-9 rounded-full border-2 border-white/10 border-t-blue-500 animate-spin" />
-            <span className="text-blue-400/60 text-[10px] font-bold tracking-[0.3em] uppercase">
+            <span className="text-blue-400 text-[10px] font-bold tracking-[0.3em] uppercase">
               Loading More
             </span>
           </div>

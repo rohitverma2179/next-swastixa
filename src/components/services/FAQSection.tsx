@@ -49,9 +49,9 @@ export default function FAQSection() {
             <div className="max-w-4xl mx-auto px-6">
                 {/* Heading */}
                 <div className="text-center mb-12">
-                    <span className="text-white lg:text-[32px] text-[20px]  font-medium">
+                    <h2 className="text-white lg:text-[32px] text-[20px] font-medium">
                         Everything You Need to Know
-                    </span>
+                    </h2>
                 </div>
 
                 {/* Accordion */}
@@ -78,6 +78,9 @@ export default function FAQSection() {
                                 {/* Question */}
                                 <button
                                     onClick={() => toggleAccordion(index)}
+                                    id={`faq-btn-${index}`}
+                                    aria-expanded={isOpen}
+                                    aria-controls={`faq-answer-${index}`}
                                     className="
                     w-full
                     flex
@@ -91,11 +94,11 @@ export default function FAQSection() {
                                 >
                                     <span
                                         className="
-                      text-white
-                      lg:text-[18px]
-                      text-mb
-                      font-medium
-                    "
+                       text-white
+                       lg:text-[18px]
+                       text-mb
+                       font-medium
+                     "
                                     >
                                         {faq.question}
                                     </span>
@@ -122,6 +125,9 @@ export default function FAQSection() {
                                 <AnimatePresence initial={false}>
                                     {isOpen && (
                                         <motion.div
+                                            id={`faq-answer-${index}`}
+                                            role="region"
+                                            aria-labelledby={`faq-btn-${index}`}
                                             initial={{
                                                 height: 0,
                                                 opacity: 0,

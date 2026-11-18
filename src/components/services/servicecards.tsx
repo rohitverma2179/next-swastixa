@@ -87,6 +87,7 @@ const ServiceCards = () => {
           <Link key={index} href={service.path} className="block">
           <PixelCard
             variant="blue"
+            noFocus={true}
             className="h-full flex flex-col justify-between p-6 rounded-[12px] bg-[#121214] border border-[#232326] hover:border-[#38383c] hover:bg-[#151518] hover:-translate-y-1 transition-all duration-300 min-h-[190px] group cursor-pointer shadow-[0_4px_25px_rgba(0,0,0,0.35)]"
           >
           

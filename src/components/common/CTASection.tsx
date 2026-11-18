@@ -33,7 +33,7 @@ const CTASection = () => {
   "
         style={{
           backgroundImage:
-            "url('https://cdn.swastixa.com/swastixadigital/swastixa-ad-section-bg-images/Swastixa-ads.jpg')",
+            "url('/images/Swastixa-ads.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

@@ -11,37 +11,37 @@ const whyCardsData = [
   {
     number: '01',
     title: 'Creative + Performance',
-    image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=800&auto=format&fit=crop',
+    image: '/images/why-company/1.webp',
     alt: 'Creative and Performance'
   },
   {
     number: '02',
     title: 'Data Driven Decisions',
-    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800&auto=format&fit=crop',
+    image: '/images/why-company/2.webp',
     alt: 'Data Driven Decisions'
   },
   {
     number: '03',
     title: 'In-House Production',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop',
+    image: '/images/why-company/3.webp',
     alt: 'In-House Production'
   },
   {
     number: '04',
     title: 'Social Media Platforms',
-    image: 'https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=800&auto=format&fit=crop',
+    image: '/images/why-company/4.webp',
     alt: 'Social Media Platforms'
   },
   {
     number: '05',
-    title: ' Transparent Reporting',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop',
-    alt: ' Transparent Reporting'
+    title: 'Transparent Reporting',
+    image: '/images/why-company/5.webp',
+    alt: 'Transparent Reporting'
   },
   {
     number: '06',
     title: 'Scalable Brand Growth',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop',
+    image: '/images/why-company/6.webp',
     alt: 'Scalable Brand Growth'
   }
 ];
@@ -95,16 +95,23 @@ const WhyCompany = () => {
       // Mobile layout fallback: native touch scrolling updating the progress bar
       mm.add('(max-width: 1023px)', () => {
         const cardsEl = cardsWrapperRef.current;
+        let ticking = false;
         
         const handleScroll = () => {
-          const maxScroll = cardsEl.scrollWidth - cardsEl.clientWidth;
-          const scrollPct = maxScroll > 0 ? (cardsEl.scrollLeft / maxScroll) * 100 : 0;
-          if (progressBarFillRef.current) {
-            progressBarFillRef.current.style.width = `${scrollPct}%`;
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              const maxScroll = cardsEl.scrollWidth - cardsEl.clientWidth;
+              const scrollPct = maxScroll > 0 ? (cardsEl.scrollLeft / maxScroll) * 100 : 0;
+              if (progressBarFillRef.current) {
+                progressBarFillRef.current.style.width = `${scrollPct}%`;
+              }
+              ticking = false;
+            });
+            ticking = true;
           }
         };
 
-        cardsEl.addEventListener('scroll', handleScroll);
+        cardsEl.addEventListener('scroll', handleScroll, { passive: true });
         return () => cardsEl.removeEventListener('scroll', handleScroll);
       });
 
@@ -162,8 +169,13 @@ const WhyCompany = () => {
 
             {/* Image Container */}
             <div className="w-full aspect-[2.2/1] overflow-hidden rounded-[8px] mb-6 relative">
-              <img loading="lazy" decoding="async"                 src={card.image}
+              <img
+                loading="lazy"
+                decoding="async"
+                src={card.image}
                 alt={card.alt}
+                width={500}
+                height={227}
                 className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out group-hover:scale-105"
               />
               {/* Subtle inner overlay */}
