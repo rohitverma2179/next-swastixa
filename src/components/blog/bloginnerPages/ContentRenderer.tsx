@@ -1,12 +1,3 @@
-"use client";
-
-
-
-
-
-
-
-
 import { Link } from "@/lib/router";
 
 function getYouTubeEmbedUrl(url) {
@@ -38,9 +29,9 @@ export default function ContentRenderer({ block }) {
 
     case "subSubHeading":
       return (
-        <h4 className="text-lg font-semibold mt-5 mb-2">
+        <h3 className="text-lg font-semibold mt-5 mb-2">
           {block.text}
-        </h4>
+        </h3>
       );
 
     case "paragraph":
@@ -75,9 +66,9 @@ export default function ContentRenderer({ block }) {
       return (
         <div className="my-10 w-full">
           {block.title && (
-            <h4 className="text-xl font-semibold mb-4 text-white/90">
+            <h3 className="text-xl font-semibold mb-4 text-white/90">
               {block.title}
-            </h4>
+            </h3>
           )}
           <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black/40">
             {isYouTube ? (
@@ -298,7 +289,7 @@ function renderTextWithLinks(text) {
         <Link
           key={index}
           to={`/blog/${slug}`}
-          className="text-blue-400 hover:underline"
+          className="text-blue-400 underline underline-offset-2 hover:text-blue-300"
         >
           {label}
         </Link>

@@ -17,8 +17,13 @@ export default async function Page({ params }) {
   const blog = blogs.find((b) => b.slug === slug);
   if (!blog) notFound();
 
-  const heroImg = blog.hero?.image
-    ? (blog.hero.image.startsWith("http") ? blog.hero.image : `https://swastixa.com${blog.hero.image}`)
+  const desktopImg = blog.hero?.image;
+  const mobileImg =
+    blog.hero?.mobileImage ||
+    (desktopImg ? desktopImg.replace(/\.webp$/, "-mobile.webp") : desktopImg);
+
+  const heroImg = desktopImg
+    ? (desktopImg.startsWith("http") ? desktopImg : `https://swastixa.com${desktopImg}`)
     : "https://cdn.swastixa.com/Swastixa_white.png";
 
   const articleSchema = {
@@ -48,14 +53,25 @@ export default async function Page({ params }) {
 
   return (
     <>
-      {blog.hero?.image && (
-        <link
-          rel="preload"
-          as="image"
-          href={blog.hero.image}
-          type="image/webp"
-          fetchPriority="high"
-        />
+      {desktopImg && (
+        <>
+          <link
+            rel="preload"
+            as="image"
+            href={mobileImg}
+            media="(max-width: 768px)"
+            type="image/webp"
+            fetchPriority="high"
+          />
+          <link
+            rel="preload"
+            as="image"
+            href={desktopImg}
+            media="(min-width: 769px)"
+            type="image/webp"
+            fetchPriority="high"
+          />
+        </>
       )}
       <script
         type="application/ld+json"

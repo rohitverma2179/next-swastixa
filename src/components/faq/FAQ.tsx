@@ -1,5 +1,3 @@
-"use client";
-
 // components/faq/FAQ.jsx
 import FAQItem from "./FAQItem";
 

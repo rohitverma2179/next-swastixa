@@ -1,5 +1,3 @@
-"use client";
-
 // export default function BlogContent({ content }) {
 //   return (
 //     <div className="max-h-[70vh] overflow-y-auto pr-4 custom-scroll">

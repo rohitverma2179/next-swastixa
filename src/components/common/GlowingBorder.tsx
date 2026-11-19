@@ -16,7 +16,7 @@ export const GlowingBorder = ({
     const [opacity, setOpacity] = useState(0);
 
     const handleMouseMove = (e) => {
-        if (!divRef.current) return;
+        if (!divRef.current || (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(pointer: coarse)').matches)) return;
 
         const div = divRef.current;
         const rect = div.getBoundingClientRect();
@@ -25,6 +25,7 @@ export const GlowingBorder = ({
     };
 
     const handleMouseEnter = () => {
+        if (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return;
         setOpacity(1);
     };
 

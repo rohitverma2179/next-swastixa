@@ -11,8 +11,8 @@ interface LinkProps extends Omit<React.ComponentProps<typeof NextLink>, 'href'> 
 }
 
 // react-router <Link to="/x"> -> next/link <Link href="/x">
-export function Link({ to, replace, state, ...rest }: LinkProps) {
-  return <NextLink href={to} replace={replace} {...rest} />;
+export function Link({ to, replace, state, prefetch = false, ...rest }: LinkProps) {
+  return <NextLink href={to} replace={replace} prefetch={prefetch} {...rest} />;
 }
 
 // useLocation() -> minimal shape used by the codebase (pathname, search, hash)

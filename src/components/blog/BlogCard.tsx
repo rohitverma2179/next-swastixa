@@ -1,22 +1,20 @@
-"use client";
-
 import { Link } from "@/lib/router";
 import { GlowingBorder } from "../common/GlowingBorder";
 
-export default function BlogCard({ blog }) {
+export default function BlogCard({ blog, index = 0 }: { blog: any; index?: number }) {
+    const isPriority = index === 0;
+    const desktopImg = blog.image || blog.hero?.image;
+    const mobileImg = blog.mobileImage || blog.hero?.mobileImage || (desktopImg ? desktopImg.replace(/\.webp$/, "-mobile.webp") : desktopImg);
+    const title = blog.hero?.metaTitle || blog.hero?.subtitle || blog.hero?.title || blog.title;
+    const altText = blog.title || blog.hero?.title || title || "Blog cover";
 
     return (
         <GlowingBorder
-            //
-           
             data-aos-anchor-placement="top-bottom"
-            containerClassName="shadow-md hover:shadow-2xl transition-all  duration-300 bg-zinc-900"
-            className="p-4 rounded-sm  h-auto"
+            containerClassName="shadow-md hover:shadow-2xl transition-all duration-300 bg-zinc-900"
+            className="p-4 rounded-sm h-auto"
             borderRadius="0.8rem"
-        // color="rgba(255, 255, 255, 0.4)"
-
         >
-
             {/* IMAGE SECTION */}
             <div
                 className="
@@ -37,20 +35,24 @@ export default function BlogCard({ blog }) {
                     boxShadow: "rgb(110 109 109 / 25%) 1.5px 1px 2.8px inset", // Inner shadow
                     borderRadius: "0.8rem"
                 }} >
-                <img
-                    loading="lazy"
-                    decoding="async"
-                    width={600}
-                    height={350}
-                    src={blog.image || blog.hero?.image}
-                    alt={blog.title || blog.hero?.title || "Blog cover"}
-                    className="w-full h-full object-cover hover:scale-105 transition-all duration-300"
-                />
+                <picture>
+                    {mobileImg && <source media="(max-width: 640px)" srcSet={mobileImg} type="image/webp" />}
+                    {desktopImg && <source media="(min-width: 641px)" srcSet={desktopImg} type="image/webp" />}
+                    <img
+                        loading={isPriority ? "eager" : "lazy"}
+                        decoding={isPriority ? "sync" : "async"}
+                        fetchPriority={isPriority ? "high" : "low"}
+                        width={600}
+                        height={350}
+                        src={mobileImg || desktopImg}
+                        alt={altText}
+                        className="w-full h-full object-cover hover:scale-105 transition-all duration-300"
+                    />
+                </picture>
             </div>
 
             {/* TEXT SECTION */}
             <div className="p-[1.2rem]">
-                
                 <Link to={`/blog/${blog.slug}`}>
                     <p className="
                   text-[0.95rem]
@@ -62,10 +64,9 @@ export default function BlogCard({ blog }) {
                   hover:text-white
                   transition
           ">
-                        {blog.hero?.metaTitle || blog.hero?.subtitle || blog.hero?.title}
+                        {title}
                     </p>
                 </Link>
-
             </div>
 
         </GlowingBorder>

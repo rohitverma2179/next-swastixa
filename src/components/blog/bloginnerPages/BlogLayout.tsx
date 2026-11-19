@@ -1,7 +1,3 @@
-"use client";
-
-
-
 import BlogHero from "./BlogHero";
 import BlogContent from "./BlogContent";
 import FAQ from "../../faq/FAQ";

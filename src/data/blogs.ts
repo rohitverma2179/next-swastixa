@@ -8,9 +8,8 @@ export const blogs = [
       metaTitle: "How to Recover a Hacked Instagram Account (Step-by-Step)",
       description:
         "Instagram account hacked? Follow this step-by-step guide to recover access, verify your identity, and secure your profile against future breaches.",
-      image:
-        // "/images/blogs/hacked-instagram.webp",
-        "/images/blogs/hacked-instagram.webp",
+      image: "/images/blogs/hacked-instagram.webp",
+      mobileImage: "/images/blogs/hacked-instagram-mobile.webp",
     },
     content: [
       {
@@ -603,6 +602,7 @@ export const blogs = [
         "Learn how Indian SMEs can build a complete 360° digital marketing strategy on a limited budget. Practical steps, tools, and proven tactics inside.",
       image:
         "/images/blogs/digital-marketing.webp",
+      mobileImage: "/images/blogs/digital-marketing-mobile.webp",
     },
 
     content: [
@@ -1337,6 +1337,7 @@ export const blogs = [
         "Complete step-by-step guide for traditional businesses to transition from offline to online. Practical digital transformation strategies for Indian SMEs.",
       image:
         "/images/blogs/digital-transformation.webp",
+      mobileImage: "/images/blogs/digital-transformation-mobile.webp",
     },
 
     content: [
@@ -2156,6 +2157,7 @@ export const blogs = [
         "Complete 2025 social media playbook for Indian local businesses. Learn platform selection, content planning, posting schedule, and growth tactics that work.",
       image:
         "/images/blogs/social-media.webp",
+      mobileImage: "/images/blogs/social-media-mobile.webp",
     },
 
     content: [
@@ -3406,6 +3408,7 @@ export const blogs = [
         "Learn essential on-page SEO basics every business owner should know before hiring an agency. Understand what matters, avoid getting fooled, and ask the right questions.",
       image:
         "/images/blogs/on-page.webp",
+      mobileImage: "/images/blogs/on-page-mobile.webp",
     },
 
     content: [
@@ -4245,6 +4248,7 @@ export const blogs = [
       metaTitle: "High-Converting Website Design for Service Businesses | Swastixa",
       description: "Learn what makes a website actually convert visitors into customers for Indian service businesses. Real examples, must-have elements, and conversion psychology.",
       image: "/images/blogs/high-converting.webp",
+      mobileImage: "/images/blogs/high-converting-mobile.webp",
     },
 
 
@@ -5114,6 +5118,7 @@ export const blogs = [
       metaTitle: "SEO vs SCO: What Your Business Needs in 2025 | Swastixa Digital",
       description: " Understand the difference between SEO and SCO (Search Content Optimization) and discover which approach delivers better results for your business in 2025.",
       image: "/images/blogs/seo-sco.webp",
+      mobileImage: "/images/blogs/seo-sco-mobile.webp",
     },
     content: [
 
@@ -6263,6 +6268,7 @@ export const blogs = [
         "Compare Google Ads vs Meta Ads for your business. Learn which platform delivers better ROI based on your business type, budget, and goals.",
       image:
         "/images/blogs/google-meta.webp",
+      mobileImage: "/images/blogs/google-meta-mobile.webp",
     },
 
     content: [
@@ -7111,6 +7117,7 @@ export const blogs = [
         "Complete local SEO guide for service businesses. Learn how to rank in Google Maps and local search results to get found by customers in your city.",
       image:
         "/images/blogs/local-seo.webp",
+      mobileImage: "/images/blogs/local-seo-mobile.webp",
     },
 
     content: [
@@ -8335,6 +8342,7 @@ export const blogs = [
       metaTitle: "Explainer Videos vs Reels vs Carousels | Swastixa Digital",
       description: "Learn which content format—explainer videos, reels, or carousels—works best for your brand story, business type, and marketing goals.",
       image: "/images/blogs/explainer-videos.webp",
+      mobileImage: "/images/blogs/explainer-videos-mobile.webp",
     },
     content: [
       {
@@ -9330,6 +9338,7 @@ export const blogs = [
       metaTitle: "Data-Driven Marketing for Small Brands | Swastixa Digital",
       description: "Learn simple data-driven marketing tactics for small businesses. Use analytics to improve results without needing a data team or expensive tools.",
       image: "/images/blogs/data-driven.webp",
+      mobileImage: "/images/blogs/data-driven-mobile.webp",
     },
     content: [
 
@@ -10300,6 +10309,7 @@ export const blogs = [
       metaTitle: "7 Paid Ads Mistakes Businesses Make | Swastixa Digital ",
       description: "Discover the 7 most common paid advertising mistakes Indian businesses make and learn how to fix them for better ROI and lower cost per lead.",
       image: "/images/blogs/paid-ads.webp",
+      mobileImage: "/images/blogs/paid-ads-mobile.webp",
     },
     content: [
       {
@@ -10837,6 +10847,7 @@ export const blogs = [
       metaTitle: "10 Website Design Mistakes Killing Your Leads | Swastixa ",
       description: "Discover 10 critical website design mistakes that cost you leads daily. Learn how to fix them and turn your website into a lead-generating machine. ",
       image: "/images/blogs/website-design.webp",
+      mobileImage: "/images/blogs/website-design-mobile.webp",
     },
     content: [
       { type: "heading", text: "10 Website Design Mistakes That Are Silently Killing Your Leads" },
@@ -11517,6 +11528,7 @@ export const blogs = [
         " Learn how to create a 30-day content calendar in just 2 hours. Proven framework for high-engagement social media posts without daily stress.",
       image:
         "/images/blogs/content-calendar.webp",
+      mobileImage: "/images/blogs/content-calendar-mobile.webp",
     },
 
     content: [
@@ -12145,6 +12157,7 @@ export const blogs = [
       metaTitle: "Retargeting Ads Guide: Convert Lost Visitors | Swastixa Digital",
       description: "Learn how retargeting ads turn website visitors who didn't convert into paying customers. Complete guide with strategies, budgets, and real examples.",
       image: "/images/blogs/retargeting-ads.webp",
+      mobileImage: "/images/blogs/retargeting-ads-mobile.webp",
     },
     content: [
       { type: "heading", text: "Retargeting Ads Explained: Turning Lost Visitors Into Paying Customers" },
@@ -12781,6 +12794,7 @@ export const blogs = [
       metaTitle: "In-House Content Production for Social Media | Swastixa Digital ",
       description: " Discover why businesses with in-house content production consistently outperform competitors on social media. Learn the real advantages beyond cost savings.",
       image: "/images/blogs/in-house.webp",
+      mobileImage: "/images/blogs/in-house-mobile.webp",
     },
     content: [
       { type: "heading", text: "Power of In-House Production: Why Consistent Visual Content Wins on Social Media" },
@@ -13380,6 +13394,7 @@ export const blogs = [
       metaTitle: "How Graphic Design Builds Trust & Conversions | Swastixa Digital ",
       description: "Discover how professional graphic design builds instant trust and drives conversions in just 5 seconds. Learn the psychology behind design that sells.",
       image: "/images/blogs/how-graphic.webp",
+      mobileImage: "/images/blogs/how-graphic-mobile.webp",
     },
     content: [
       { type: "heading", text: "How Good Graphic Design Builds Trust and Conversions in the First 5 Seconds" },
@@ -14015,6 +14030,7 @@ export const blogs = [
       metaTitle: "Build Your Brand Using Instagram & Facebook Reels | Swastixa",
       description: "Learn how service businesses can build authentic brands using Instagram and Facebook Reels. Practical strategies, content ideas, and proven formats inside.",
       image: "/images/blogs/build-your.webp",
+      mobileImage: "/images/blogs/build-your-mobile.webp",
     },
     content: [{ type: "heading", text: "Building a Brand on Instagram and Facebook Reels: Practical Tips for Service Businesses" },
     {
@@ -14632,6 +14648,7 @@ export const blogs = [
       metaTitle: "Choose the Right Digital Marketing Partner | Swastixa Digital",
       description: "Learn how to evaluate and choose the right digital marketing agency for your business. Complete checklist, red flags, and questions to ask before signing.",
       image: "/images/blogs/choose.webp",
+      mobileImage: "/images/blogs/choose-mobile.webp",
     },
     content: [
       { type: "heading", text: "How to Choose the Right Digital Marketing Partner: Checklist and Red Flags for Businesses" },
@@ -15241,6 +15258,7 @@ export const blogs = [
       metaTitle: "Full-Stack Digital Marketing Approach | Swastixa Digital ",
       description: "Discover how Swastixa Digital's integrated full-stack approach delivers better results than working with multiple vendors. One team, complete strategy, consistent execution. ",
       image: "/images/blogs/full-stack.webp",
+      mobileImage: "/images/blogs/full-stack-mobile.webp",
     },
     content: [{ type: "heading", text: "Swastixa Digital's Full-Stack Approach: When One Team Handles Strategy, Content, Ads, and Production Together" },
 
@@ -15872,6 +15890,7 @@ export const blogs = [
       metaTitle: " Swastixa's Client Success Blueprint | Digital Growth Process",
       description: "Discover Swastixa Digital's proven process for taking businesses from zero online presence to consistent digital growth. Complete roadmap with real results.",
       image: "/images/blogs/swastixa-client.webp",
+      mobileImage: "/images/blogs/swastixa-client-mobile.webp",
     },
     content: [
       { type: "heading", text: "Success Blueprint: How Swastixa Digital Takes Clients From Zero Presence to Consistent Online Growth" },

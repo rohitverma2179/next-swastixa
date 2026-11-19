@@ -1,7 +1,5 @@
-"use client";
-
 import React from "react";
-import { Link, useLocation } from "@/lib/router";
+import Link from "next/link";
 import {
   FaFacebookF,
   FaInstagram,
@@ -64,8 +62,6 @@ const footerGroups = [
 ];
 
 export default function Footer() {
-  const location = useLocation();
-
   return (
     <footer className="relative bg-black text-white pt-12 sm:pt-16 pb-0 overflow-hidden border-t border-white/5">
       {/* Subtle Ambient Glow */}
@@ -85,23 +81,17 @@ export default function Footer() {
                   {group.title}
                 </h3>
                 <ul className="space-y-2.5">
-                  {group.links.map((item) => {
-                    const isActive = location.pathname === item.path;
-                    return (
-                      <li key={item.path}>
-                        <Link
-                          to={item.path}
-                          className={`text-[13.5px] sm:text-[14px] leading-relaxed transition-colors duration-200 inline-block ${
-                            isActive
-                              ? "text-white font-medium"
-                              : "text-[#9CA3AF] hover:text-white"
-                          }`}
-                        >
-                          {item.label}
-                        </Link>
-                      </li>
-                    );
-                  })}
+                  {group.links.map((item) => (
+                    <li key={item.path}>
+                      <Link
+                        href={item.path}
+                        prefetch={false}
+                        className="text-[13.5px] sm:text-[14px] leading-relaxed transition-colors duration-200 inline-block text-[#9CA3AF] hover:text-white"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             ))}
@@ -162,13 +152,15 @@ export default function Footer() {
 
             <div className="flex flex-wrap items-center justify-center sm:justify-end gap-5 sm:gap-7 text-[13px] text-[#9CA3AF] order-1 sm:order-2">
               <Link
-                to="/privacy-policy"
+                href="/privacy-policy"
+                prefetch={false}
                 className="underline underline-offset-4 decoration-white/25 hover:text-white hover:decoration-white transition-colors duration-200"
               >
                 Privacy Policy
               </Link>
               <Link
-                to="/privacy-policy"
+                href="/privacy-policy"
+                prefetch={false}
                 className="underline underline-offset-4 decoration-white/25 hover:text-white hover:decoration-white transition-colors duration-200"
               >
                 Terms &amp; Conditions

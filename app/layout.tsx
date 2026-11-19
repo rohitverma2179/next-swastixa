@@ -1,6 +1,7 @@
 import "../src/index.css";
 import "../src/App.css";
 import Providers from "./providers";
+import Footer from "@/components/common/Footer";
 import Script from "next/script";
 import localFont from "next/font/local";
 
@@ -176,21 +177,50 @@ export default function RootLayout({ children }) {
           }}
         />
         <Providers>{children}</Providers>
+        <Footer />
 
-        {/* Google Analytics (GA4) & Google Tag Manager */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-PM5LV7QM"
-          strategy="lazyOnload"
+        {/* Google Analytics (GA4) & Google Tag Manager - Deferred on user interaction / idle to eliminate TBT & main thread blocking */}
+        <script
+          id="gtm-ga4-deferred"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var loaded = false;
+                function loadAnalytics() {
+                  if (loaded) return;
+                  loaded = true;
+                  ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'].forEach(function(ev) {
+                    window.removeEventListener(ev, loadAnalytics, { passive: true });
+                  });
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  window.gtag = gtag;
+                  gtag('js', new Date());
+                  gtag('config', 'G-PM5LV7QM');
+
+                  var gtm = document.createElement('script');
+                  gtm.async = true;
+                  gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PM5LV7QM';
+                  document.head.appendChild(gtm);
+
+                  var gtagScript = document.createElement('script');
+                  gtagScript.async = true;
+                  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-PM5LV7QM';
+                  document.head.appendChild(gtagScript);
+                }
+
+                ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'].forEach(function(ev) {
+                  window.addEventListener(ev, loadAnalytics, { passive: true, once: true });
+                });
+                if ('requestIdleCallback' in window) {
+                  requestIdleCallback(function() { setTimeout(loadAnalytics, 7000); });
+                } else {
+                  setTimeout(loadAnalytics, 7000);
+                }
+              })();
+            `,
+          }}
         />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PM5LV7QM');`}
-        </Script>
-        <Script id="gtm" strategy="lazyOnload">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PM5LV7QM');`}
-        </Script>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PM5LV7QM"

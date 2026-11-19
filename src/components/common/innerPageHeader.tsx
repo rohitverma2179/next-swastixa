@@ -1,5 +1,3 @@
-"use client";
-
 export default function InnerPageHeader({ title, description }) {
     return (
         <div className="border h-auto        border-zinc-300 rounded-xl p-6 text-center mb-8" >
