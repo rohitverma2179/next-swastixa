@@ -9,8 +9,8 @@ export const blogs = [
       description:
         "Instagram account hacked? Follow this step-by-step guide to recover access, verify your identity, and secure your profile against future breaches.",
       image:
-        // "https://cdn.swastixa.com/swastixablog/hacked-instagram.webp",
-        "https://cdn.swastixa.com/swastixablog/hacked-instagram.webp",
+        // "/images/blogs/hacked-instagram.webp",
+        "/images/blogs/hacked-instagram.webp",
     },
     content: [
       {
@@ -314,7 +314,7 @@ export const blogs = [
       {
         type: "imageRightText",
         image:
-          "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/hacked-Instagramtwo.webp",
+          "/images/blogs/hacked-instagramtwo.webp",
         alt: "Securing Digital Footprint",
       },
       {
@@ -426,7 +426,7 @@ export const blogs = [
       {
         type: "imageRightText",
         image:
-          "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/hacked-Instagramthree.webp",
+          "/images/blogs/hacked-instagramthree.webp",
         alt: "Securing Digital Footprint",
       },
       {
@@ -602,7 +602,7 @@ export const blogs = [
       description:
         "Learn how Indian SMEs can build a complete 360° digital marketing strategy on a limited budget. Practical steps, tools, and proven tactics inside.",
       image:
-        "https://cdn.swastixa.com/swastixablog/digital-marketing.jpg",
+        "/images/blogs/digital-marketing.webp",
     },
 
     content: [
@@ -761,7 +761,7 @@ export const blogs = [
 
        {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/digital-marketing-goals.jpg",
+        image: "/images/blogs/digital-marketing-goals.webp",
         alt: "One-page customer avatar exercise for SME marketing planning"
       },
 
@@ -971,7 +971,7 @@ export const blogs = [
 
         {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/digital-marketing-plan.jpg",
+        image: "/images/blogs/digital-marketing-plan.webp",
         alt: "30-day content calendar example using 70-20-10 rule for SME social media"
       },
 
@@ -1119,7 +1119,7 @@ export const blogs = [
 
 {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/digital-marketing-tracking.jpg",
+        image: "/images/blogs/digital-marketing-tracking.webp",
         alt: "Website traffic growth example using budget digital marketing tactics",
       },
 
@@ -1336,7 +1336,7 @@ export const blogs = [
       description:
         "Complete step-by-step guide for traditional businesses to transition from offline to online. Practical digital transformation strategies for Indian SMEs.",
       image:
-        "https://cdn.swastixa.com/swastixablog/digital-transformation.jpg",
+        "/images/blogs/digital-transformation.webp",
     },
 
     content: [
@@ -1479,7 +1479,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/digital-transformation-media.jpg",
+        image: "/images/blogs/digital-transformation-media.webp",
         // text: ""
         alt: "Digital footprint audit checklist for traditional businesses going online"
       },
@@ -1670,7 +1670,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/digital-transformation-roadmap.jpg",
+        image: "/images/blogs/digital-transformation-roadmap.webp",
         // text: "Using data and analytics, companies can improve {{link:conversion rates|/blog/conversion-rate}} effectively."
       },
 
@@ -1893,7 +1893,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/digital-transformation-tracking.jpg",
+        image: "/images/blogs/digital-transformation-tracking.webp",
         // text: "Using data and analytics, companies can improve {{link:conversion rates|/blog/conversion-rate}} effectively."
       },
 
@@ -2155,7 +2155,7 @@ export const blogs = [
       description:
         "Complete 2025 social media playbook for Indian local businesses. Learn platform selection, content planning, posting schedule, and growth tactics that work.",
       image:
-        "https://cdn.swastixa.com/swastixablog/social-media.jpg",
+        "/images/blogs/social-media.webp",
     },
 
     content: [
@@ -2339,7 +2339,7 @@ export const blogs = [
 
        {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/social-media-content.jpg",
+        image: "/images/blogs/social-media-content.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -2554,7 +2554,7 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/social-media-emoji.jpg",
+        image: "/images/blogs/social-media-emoji.webp",
         text: "Using data and analytics, companies can improve {{link:conversion rates|/blog/conversion-rate}} effectively."
       },
 
@@ -2904,7 +2904,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/social-media-planning.jpg",
+        image: "/images/blogs/social-media-planning.webp",
         text: "Using data and analytics, companies can improve {{link:conversion rates|/blog/conversion-rate}} effectively."
       },
 
@@ -3405,7 +3405,7 @@ export const blogs = [
       description:
         "Learn essential on-page SEO basics every business owner should know before hiring an agency. Understand what matters, avoid getting fooled, and ask the right questions.",
       image:
-        "https://cdn.swastixa.com/swastixablog/on-page.jpg",
+        "/images/blogs/on-page.webp",
     },
 
     content: [
@@ -3747,7 +3747,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/on-page-seo.jpg",
+        image: "/images/blogs/on-page-seo.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -4018,7 +4018,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/on-page-work.jpg",
+        image: "/images/blogs/on-page-work.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -4244,7 +4244,7 @@ export const blogs = [
     hero: {
       metaTitle: "High-Converting Website Design for Service Businesses | Swastixa",
       description: "Learn what makes a website actually convert visitors into customers for Indian service businesses. Real examples, must-have elements, and conversion psychology.",
-      image: "https://cdn.swastixa.com/swastixablog/high-converting.jpg",
+      image: "/images/blogs/high-converting.webp",
     },
 
 
@@ -4481,7 +4481,7 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/high-converting-layout.jpg",
+        image: "/images/blogs/high-converting-layout.webp",
         alt: "Mobile website design comparison showing poor versus high-converting service business layout"
       },
 
@@ -4769,7 +4769,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/high-converting-wireframe.jpg",
+        image: "/images/blogs/high-converting-wireframe.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -5113,7 +5113,7 @@ export const blogs = [
     hero: {
       metaTitle: "SEO vs SCO: What Your Business Needs in 2025 | Swastixa Digital",
       description: " Understand the difference between SEO and SCO (Search Content Optimization) and discover which approach delivers better results for your business in 2025.",
-      image: "https://cdn.swastixa.com/swastixablog/seo-sco.jpg",
+      image: "/images/blogs/seo-sco.webp",
     },
     content: [
 
@@ -5535,7 +5535,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/seo-sco-business.jpg",
+        image: "/images/blogs/seo-sco-business.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
       {
@@ -5872,7 +5872,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/seo-sco-content.jpg",
+        image: "/images/blogs/seo-sco-content.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -6262,7 +6262,7 @@ export const blogs = [
       description:
         "Compare Google Ads vs Meta Ads for your business. Learn which platform delivers better ROI based on your business type, budget, and goals.",
       image:
-        "https://cdn.swastixa.com/swastixablog/google-meta.jpg",
+        "/images/blogs/google-meta.webp",
     },
 
     content: [
@@ -6579,7 +6579,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/google-ads-meta-ads.jpg",
+        image: "/images/blogs/google-ads-meta-ads.webp",
         alt: "Google Ads vs Meta Ads decision matrix by business type and customer journey stage"
       },
 
@@ -7110,7 +7110,7 @@ export const blogs = [
       description:
         "Complete local SEO guide for service businesses. Learn how to rank in Google Maps and local search results to get found by customers in your city.",
       image:
-        "https://cdn.swastixa.com/swastixablog/local-seo.jpg",
+        "/images/blogs/local-seo.webp",
     },
 
     content: [
@@ -7386,7 +7386,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/local-seo-guide.jpg",
+        image: "/images/blogs/local-seo-guide.webp",
         alt: "Optimized Google Business Profile example showing complete sections for local SEO"
       },
 
@@ -7569,7 +7569,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/local-seo-service.jpg",
+        image: "/images/blogs/local-seo-service.webp",
         alt: "Optimized Google Business Profile example showing complete sections for local SEO"
       },
 
@@ -8334,7 +8334,7 @@ export const blogs = [
     hero: {
       metaTitle: "Explainer Videos vs Reels vs Carousels | Swastixa Digital",
       description: "Learn which content format—explainer videos, reels, or carousels—works best for your brand story, business type, and marketing goals.",
-      image: "https://cdn.swastixa.com/swastixablog/explainer-videos.jpg",
+      image: "/images/blogs/explainer-videos.webp",
     },
     content: [
       {
@@ -8617,7 +8617,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/explainer-videos-reels.jpg",
+        image: "/images/blogs/explainer-videos-reels.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -8948,7 +8948,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/explainer-videos-swastixa.jpg",
+        image: "/images/blogs/explainer-videos-swastixa.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -9329,7 +9329,7 @@ export const blogs = [
     hero: {
       metaTitle: "Data-Driven Marketing for Small Brands | Swastixa Digital",
       description: "Learn simple data-driven marketing tactics for small businesses. Use analytics to improve results without needing a data team or expensive tools.",
-      image: "https://cdn.swastixa.com/swastixablog/data-driven.jpg",
+      image: "/images/blogs/data-driven.webp",
     },
     content: [
 
@@ -9630,7 +9630,7 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/data-driven-brands.jfif",
+        image: "/images/blogs/data-driven-brands.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -10017,7 +10017,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/data-driven-marketing.jpg",
+        image: "/images/blogs/data-driven-marketing.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -10299,7 +10299,7 @@ export const blogs = [
     hero: {
       metaTitle: "7 Paid Ads Mistakes Businesses Make | Swastixa Digital ",
       description: "Discover the 7 most common paid advertising mistakes Indian businesses make and learn how to fix them for better ROI and lower cost per lead.",
-      image: "https://cdn.swastixa.com/swastixablog/paid-ads.jpg",
+      image: "/images/blogs/paid-ads.webp",
     },
     content: [
       {
@@ -10410,7 +10410,7 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/paid-ads-businesses.jpg",
+        image: "/images/blogs/paid-ads-businesses.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -10637,7 +10637,7 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/paid-ads-mistakes.jpg",
+        image: "/images/blogs/paid-ads-mistakes.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -10836,7 +10836,7 @@ export const blogs = [
     hero: {
       metaTitle: "10 Website Design Mistakes Killing Your Leads | Swastixa ",
       description: "Discover 10 critical website design mistakes that cost you leads daily. Learn how to fix them and turn your website into a lead-generating machine. ",
-      image: "https://cdn.swastixa.com/swastixablog/website-design.jpg",
+      image: "/images/blogs/website-design.webp",
     },
     content: [
       { type: "heading", text: "10 Website Design Mistakes That Are Silently Killing Your Leads" },
@@ -10936,7 +10936,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/website-design-killing.jpg",
+        image: "/images/blogs/website-design-killing.webp",
         alt: "Alt text: Website loading speed impact on conversion rates for Indian businesses"
       },
       // {
@@ -11188,7 +11188,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/website-design-swastixa.jpg",
+        image: "/images/blogs/website-design-swastixa.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
       {
@@ -11516,7 +11516,7 @@ export const blogs = [
       description:
         " Learn how to create a 30-day content calendar in just 2 hours. Proven framework for high-engagement social media posts without daily stress.",
       image:
-        "https://cdn.swastixa.com/swastixablog/content-calendar.jpg",
+        "/images/blogs/content-calendar.webp",
     },
 
     content: [
@@ -11696,7 +11696,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/content-calendar-framework.jpg",
+        image: "/images/blogs/content-calendar-framework.webp",
         text: "Using data and analytics, companies can improve {{link:conversion rates|/blog/conversion-rate}} effectively."
       },
 
@@ -11942,7 +11942,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/content-calendar-template.jpg",
+        image: "/images/blogs/content-calendar-template.webp",
         text: "Using data and analytics, companies can improve {{link:conversion rates|/blog/conversion-rate}} effectively."
       },
 
@@ -12144,7 +12144,7 @@ export const blogs = [
     hero: {
       metaTitle: "Retargeting Ads Guide: Convert Lost Visitors | Swastixa Digital",
       description: "Learn how retargeting ads turn website visitors who didn't convert into paying customers. Complete guide with strategies, budgets, and real examples.",
-      image: "https://cdn.swastixa.com/swastixablog/retargeting-ads.jpg",
+      image: "/images/blogs/retargeting-ads.webp",
     },
     content: [
       { type: "heading", text: "Retargeting Ads Explained: Turning Lost Visitors Into Paying Customers" },
@@ -12303,7 +12303,7 @@ export const blogs = [
       },
      {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/retargeting-ads-guide.jpg",
+        image: "/images/blogs/retargeting-ads-guide.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
       {
@@ -12538,7 +12538,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/retargeting-ads-visitors.jpg",
+        image: "/images/blogs/retargeting-ads-visitors.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -12780,7 +12780,7 @@ export const blogs = [
     hero: {
       metaTitle: "In-House Content Production for Social Media | Swastixa Digital ",
       description: " Discover why businesses with in-house content production consistently outperform competitors on social media. Learn the real advantages beyond cost savings.",
-      image: "https://cdn.swastixa.com/swastixablog/in-house.jpg",
+      image: "/images/blogs/in-house.webp",
     },
     content: [
       { type: "heading", text: "Power of In-House Production: Why Consistent Visual Content Wins on Social Media" },
@@ -12911,7 +12911,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/in-house-content.jfif",
+        image: "/images/blogs/in-house-content.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -13137,7 +13137,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/in-house-production.jpg",
+        image: "/images/blogs/in-house-production.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
       {
@@ -13379,7 +13379,7 @@ export const blogs = [
     hero: {
       metaTitle: "How Graphic Design Builds Trust & Conversions | Swastixa Digital ",
       description: "Discover how professional graphic design builds instant trust and drives conversions in just 5 seconds. Learn the psychology behind design that sells.",
-      image: "https://cdn.swastixa.com/swastixablog/how-graphic.jpg",
+      image: "/images/blogs/how-graphic.webp",
     },
     content: [
       { type: "heading", text: "How Good Graphic Design Builds Trust and Conversions in the First 5 Seconds" },
@@ -13546,7 +13546,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/how-graphic-builds.jpg",
+        image: "/images/blogs/how-graphic-builds.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -13748,7 +13748,7 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/how-graphic-design.jpg",
+        image: "/images/blogs/how-graphic-design.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -14014,7 +14014,7 @@ export const blogs = [
     hero: {
       metaTitle: "Build Your Brand Using Instagram & Facebook Reels | Swastixa",
       description: "Learn how service businesses can build authentic brands using Instagram and Facebook Reels. Practical strategies, content ideas, and proven formats inside.",
-      image: "https://cdn.swastixa.com/swastixablog/build-your.jpg",
+      image: "/images/blogs/build-your.webp",
     },
     content: [{ type: "heading", text: "Building a Brand on Instagram and Facebook Reels: Practical Tips for Service Businesses" },
     {
@@ -14201,7 +14201,7 @@ export const blogs = [
     },
     {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/build-your-builds.jpg",
+        image: "/images/blogs/build-your-builds.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -14374,7 +14374,7 @@ export const blogs = [
     },
    {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/build-your-instagram.jpg",
+        image: "/images/blogs/build-your-instagram.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -14631,7 +14631,7 @@ export const blogs = [
     hero: {
       metaTitle: "Choose the Right Digital Marketing Partner | Swastixa Digital",
       description: "Learn how to evaluate and choose the right digital marketing agency for your business. Complete checklist, red flags, and questions to ask before signing.",
-      image: "https://cdn.swastixa.com/swastixablog/choose.jpg",
+      image: "/images/blogs/choose.webp",
     },
     content: [
       { type: "heading", text: "How to Choose the Right Digital Marketing Partner: Checklist and Red Flags for Businesses" },
@@ -14936,7 +14936,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/choose-swastixa-digital.jpg",
+        image: "/images/blogs/choose-swastixa-digital.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -15240,7 +15240,7 @@ export const blogs = [
     hero: {
       metaTitle: "Full-Stack Digital Marketing Approach | Swastixa Digital ",
       description: "Discover how Swastixa Digital's integrated full-stack approach delivers better results than working with multiple vendors. One team, complete strategy, consistent execution. ",
-      image: "https://cdn.swastixa.com/swastixablog/full-stack.jpg",
+      image: "/images/blogs/full-stack.webp",
     },
     content: [{ type: "heading", text: "Swastixa Digital's Full-Stack Approach: When One Team Handles Strategy, Content, Ads, and Production Together" },
 
@@ -15373,7 +15373,7 @@ export const blogs = [
     },
     {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/full-stack-digital.jpg",
+        image: "/images/blogs/full-stack-digital.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -15657,7 +15657,7 @@ export const blogs = [
     },
     {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/full-stack-marketing.jpg",
+        image: "/images/blogs/full-stack-marketing.webp",
         alt: "Cost comparison full-stack digital marketing versus multiple vendor approach with time investment"
       },
     {
@@ -15871,7 +15871,7 @@ export const blogs = [
     hero: {
       metaTitle: " Swastixa's Client Success Blueprint | Digital Growth Process",
       description: "Discover Swastixa Digital's proven process for taking businesses from zero online presence to consistent digital growth. Complete roadmap with real results.",
-      image: "https://cdn.swastixa.com/swastixablog/swastixa-client.jpg",
+      image: "/images/blogs/swastixa-client.webp",
     },
     content: [
       { type: "heading", text: "Success Blueprint: How Swastixa Digital Takes Clients From Zero Presence to Consistent Online Growth" },
@@ -16063,7 +16063,7 @@ export const blogs = [
       },
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/swastixa-client-blueprint.jpg",
+        image: "/images/blogs/swastixa-client-blueprint.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 
@@ -16287,7 +16287,7 @@ export const blogs = [
 
       {
         type: "imageRightText",
-        image: "https://cdn.swastixa.com/swastixablog/swastixa-inner-blog/inner-blog/swastixa-client-success.jpg",
+        image: "/images/blogs/swastixa-client-success.webp",
         alt: "High-converting service page structure showing essential sections and trust elements"
       },
 

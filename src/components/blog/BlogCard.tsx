@@ -37,8 +37,13 @@ export default function BlogCard({ blog }) {
                     boxShadow: "rgb(110 109 109 / 25%) 1.5px 1px 2.8px inset", // Inner shadow
                     borderRadius: "0.8rem"
                 }} >
-                <img loading="lazy" decoding="async"                     src={blog.image || blog.hero?.image}
-                    alt={blog.title || blog.hero?.title}
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    width={600}
+                    height={350}
+                    src={blog.image || blog.hero?.image}
+                    alt={blog.title || blog.hero?.title || "Blog cover"}
                     className="w-full h-full object-cover hover:scale-105 transition-all duration-300"
                 />
             </div>

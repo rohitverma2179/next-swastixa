@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { memo } from "react";
 import { useNavigate } from "@/lib/router";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ const ExcellenceHero = () => {
 
         {/* CENTER TITLE */}
         <div className="text-center pt-20 lg:pt-24 pb-20">
-          <h2
+          <h1
             className="
               text-white
               font-bold
@@ -25,7 +25,7 @@ const ExcellenceHero = () => {
             "
           >
             Video Production House
-          </h2>
+          </h1>
         </div>
 
         {/* CONTENT */}
@@ -34,7 +34,7 @@ const ExcellenceHero = () => {
           {/* LEFT CONTENT */}
           <div className="max-w-[520px]">
 
-            <h1
+            <h2
               className="
                 text-white
                 uppercase
@@ -47,7 +47,7 @@ const ExcellenceHero = () => {
               "
             >
               Bring Your Stories to Life
-            </h1>
+            </h2>
 
             <p
               className="
@@ -89,6 +89,7 @@ const ExcellenceHero = () => {
                   hover:scale-[1.02]
                   cursor-pointer
                 "
+                aria-label="Start Our Project - Contact Swastixa Digital"
                 onClick={() => {
                   navigate("/#contact");
                 }}
@@ -98,6 +99,7 @@ const ExcellenceHero = () => {
 
               <Link
                 href="/video-production-house-in-gurugram"
+                aria-label="Know More about Video Production House in Gurugram"
                 className="
                   inline-block
                   bg-[#1F1F22]
@@ -131,8 +133,14 @@ const ExcellenceHero = () => {
                   shadow-[0_20px_80px_rgba(255,255,255,0.04)]
                 "
               >
-                <img loading="lazy" decoding="async"                   src="https://cdn.swastixa.com/swastixaservice/service-all-eight-pages-images/swastixa-service-video-production.webp"
-                  alt="Team Meeting"
+                <img
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  width={560}
+                  height={480}
+                  src="https://cdn.swastixa.com/swastixaservice/service-all-eight-pages-images/swastixa-service-video-production.webp"
+                  alt="Cinematic Video Production House and Brand Storytelling - Swastixa Digital"
                   className="
                     w-full
                     h-[420px]
@@ -140,7 +148,7 @@ const ExcellenceHero = () => {
                     object-cover
                     transition-transform
                     max-sm:h-auto
-        max-sm:object-contain
+                    max-sm:object-contain
                   "
                 />
               </div>
@@ -156,4 +164,4 @@ const ExcellenceHero = () => {
   );
 };
 
-export default ExcellenceHero;
+export default memo(ExcellenceHero);

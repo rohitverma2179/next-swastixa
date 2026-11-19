@@ -56,14 +56,10 @@ const LightRays = ({
     const meshRef = useRef(null);
     const cleanupFunctionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
     const observerRef = useRef(null);
 
     useEffect(() => {
-        setIsMobile(window.innerWidth < 768);
-    }, []);
-
-    useEffect(() => {
+        if (typeof window !== 'undefined' && window.innerWidth < 768) return;
         if (!containerRef.current) return;
 
         observerRef.current = new IntersectionObserver(
@@ -85,7 +81,8 @@ const LightRays = ({
     }, []);
 
     useEffect(() => {
-        if (!isVisible || !containerRef.current || isMobile) return;
+        if (typeof window !== 'undefined' && window.innerWidth < 768) return;
+        if (!isVisible || !containerRef.current) return;
 
         if (cleanupFunctionRef.current) {
             cleanupFunctionRef.current();
@@ -389,6 +386,7 @@ void main() {
     ]);
 
     useEffect(() => {
+        if (typeof window !== 'undefined' && window.innerWidth < 768) return;
         const handleMouseMove = e => {
             if (!containerRef.current || !rendererRef.current) return;
             const rect = containerRef.current.getBoundingClientRect();
@@ -403,32 +401,27 @@ void main() {
         }
     }, [followMouse]);
 
-    if (isMobile) {
-        return (
+    return (
+        <div className={`w-full h-full pointer-events-none z-[3] overflow-hidden relative ${className}`.trim()}>
+            {/* Pure CSS Mobile Spotlight - zero JS execution, instant paint on frame 1 */}
+            <div
+                className="block md:hidden absolute inset-0 pointer-events-none"
+                style={{
+                    background: `
+                        radial-gradient(ellipse 75% 65% at 50% -10%, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.12) 35%, rgba(255, 255, 255, 0.02) 65%, transparent 100%),
+                        linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.04) 40%, transparent 80%)
+                    `,
+                    maskImage: "radial-gradient(ellipse 90% 90% at 50% 0%, black 50%, transparent 95%)",
+                    WebkitMaskImage: "radial-gradient(ellipse 90% 90% at 50% 0%, black 50%, transparent 95%)"
+                }}
+            />
+
+            {/* Desktop WebGL Shader - initialized on md (>= 768px) */}
             <div
                 ref={containerRef}
-                className={`w-full h-full pointer-events-none z-[3] overflow-hidden relative ${className}`.trim()}
-            >
-                <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{
-                        background: `
-                            radial-gradient(ellipse 75% 65% at 50% -10%, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.12) 35%, rgba(255, 255, 255, 0.02) 65%, transparent 100%),
-                            linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.04) 40%, transparent 80%)
-                        `,
-                        maskImage: "radial-gradient(ellipse 90% 90% at 50% 0%, black 50%, transparent 95%)",
-                        WebkitMaskImage: "radial-gradient(ellipse 90% 90% at 50% 0%, black 50%, transparent 95%)"
-                    }}
-                />
-            </div>
-        );
-    }
-
-    return (
-        <div
-            ref={containerRef}
-            className={`w-full h-full pointer-events-none z-[3] overflow-hidden relative ${className}`.trim()}
-        />
+                className="hidden md:block w-full h-full pointer-events-none absolute inset-0"
+            />
+        </div>
     );
 };
 

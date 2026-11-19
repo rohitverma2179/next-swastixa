@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { blogs } from "@/data/blogs";
-import { getBlogMetadata, BreadcrumbJsonLd } from "@/lib/seo";
+import { getBlogMetadata, BreadcrumbJsonLd, FaqJsonLd } from "@/lib/seo";
 import View from "@/views/BlogInner";
 
 export function generateStaticParams() {
@@ -17,12 +17,16 @@ export default async function Page({ params }) {
   const blog = blogs.find((b) => b.slug === slug);
   if (!blog) notFound();
 
+  const heroImg = blog.hero?.image
+    ? (blog.hero.image.startsWith("http") ? blog.hero.image : `https://swastixa.com${blog.hero.image}`)
+    : "https://cdn.swastixa.com/Swastixa_white.png";
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: blog.hero?.metaTitle || blog.slug,
     description: blog.hero?.description || "",
-    image: blog.hero?.image ? [blog.hero.image] : ["https://cdn.swastixa.com/Swastixa_white.png"],
+    image: [heroImg],
     url: `https://swastixa.com/blog/${slug}`,
     publisher: {
       "@type": "Organization",
@@ -44,6 +48,15 @@ export default async function Page({ params }) {
 
   return (
     <>
+      {blog.hero?.image && (
+        <link
+          rel="preload"
+          as="image"
+          href={blog.hero.image}
+          type="image/webp"
+          fetchPriority="high"
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -55,7 +68,8 @@ export default async function Page({ params }) {
           { name: blog.hero?.metaTitle || blog.slug, path: `/blog/${slug}` },
         ]}
       />
-      <View />
+      {blog.faq && blog.faq.length > 0 && <FaqJsonLd faqs={blog.faq} />}
+      <View blog={blog} />
     </>
   );
 }

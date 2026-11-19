@@ -30,7 +30,7 @@ const OurApproach = () => {
     <section className="bg-black text-white py-16 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 w-full flex flex-col items-center select-none border-t border-[#121214]">
       {/* Header Section */}
       <div className="text-center max-w-3xl mb-16">
-        <span className="text-[#71717a] text-xs font-semibold uppercase tracking-[0.25em] block mb-3">
+        <span className="text-[#9ca3af] text-xs font-semibold uppercase tracking-[0.25em] block mb-3">
           Our Approach
         </span>
         <h2 className="text-3xl sm:text-[42px] font-extrabold tracking-tight text-white mb-4 leading-none">
@@ -66,7 +66,7 @@ const OurApproach = () => {
             </h3>
 
             {/* Description */}
-            <p className="text-[#71717a] group-hover:text-zinc-400 text-sm leading-relaxed font-light transition-colors duration-300 max-w-[260px] sm:max-w-none">
+            <p className="text-[#a1a1aa] group-hover:text-zinc-300 text-sm leading-relaxed font-light transition-colors duration-300 max-w-[260px] sm:max-w-none">
               {step.description}
             </p>
           </div>

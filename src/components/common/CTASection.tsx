@@ -52,6 +52,7 @@ const CTASection = () => {
             onClick={() => {
               navigate("/#contact");
             }}
+            aria-label="Contact Us - Start your project with Swastixa"
           >
             Contact Us
           </button>

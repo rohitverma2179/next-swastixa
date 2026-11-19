@@ -9,9 +9,9 @@ export default function FAQ({ faqs }) {
   return (
     <section className="bg-black py-20 px-4 md:px-16">
       <div className="max-w-4xl mx-auto">
-        <p className="text-2xl text-gray-100 mb-2">
+        <h2 className="text-2xl text-gray-100 mb-2 font-bold">
           Frequently Asked Questions
-        </p>
+        </h2>
 {/* 
         <h2 className="text-4xl md:text-5xl text-white mb-10">
           Common Questions

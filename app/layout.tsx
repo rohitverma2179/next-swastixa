@@ -164,20 +164,6 @@ export default function RootLayout({ children }) {
           href="/llms.txt"
           title="LLMs Text"
         />
-        <link
-          rel="preload"
-          as="image"
-          href="/posters/swastixa-hero-poster.webp"
-          type="image/webp"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          as="video"
-          href="/swastixa-top-update.mp4"
-          type="video/mp4"
-          fetchPriority="high"
-        />
       </head>
       <body suppressHydrationWarning>
         <script

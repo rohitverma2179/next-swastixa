@@ -15,17 +15,18 @@ const VirtualVideoList = ({ videos = defaultVideoList }) => {
     const measure = () => {
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect();
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
         setScrollMargin(rect.top + scrollTop);
       }
     };
-    
+
     measure();
     // Re-measure after a short delay to account for dynamic content like hero videos
     const timer = setTimeout(measure, 500);
-    window.addEventListener('resize', measure);
+    window.addEventListener("resize", measure);
     return () => {
-      window.removeEventListener('resize', measure);
+      window.removeEventListener("resize", measure);
       clearTimeout(timer);
     };
   }, []);
@@ -44,7 +45,8 @@ const VirtualVideoList = ({ videos = defaultVideoList }) => {
 
   const rowVirtualizer = useVirtualizer({
     count: videos.length,
-    getScrollElement: () => (typeof document !== "undefined" ? document.documentElement : null),
+    getScrollElement: () =>
+      typeof document !== "undefined" ? document.documentElement : null,
     estimateSize: getEstimatedSize,
     overscan: 10, // Increased significantly for smoother up/down scrolling
     scrollMargin: scrollMargin,

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { memo } from "react";
 import { useNavigate } from "@/lib/router";
 
 const ExcellenceHero = () => {
@@ -12,7 +12,7 @@ const ExcellenceHero = () => {
 
         {/* CENTER TITLE */}
         <div className="text-center pt-20 lg:pt-24 pb-20">
-          <h2
+          <h1
             className="
               text-white
               font-bold
@@ -24,7 +24,7 @@ const ExcellenceHero = () => {
             "
           >
             Performance Marketing
-          </h2>
+          </h1>
         </div>
 
         {/* CONTENT */}
@@ -33,7 +33,7 @@ const ExcellenceHero = () => {
           {/* LEFT CONTENT */}
           <div className="max-w-[520px]">
 
-            <h1
+            <h2
               className="
                 text-white
                 uppercase
@@ -46,7 +46,7 @@ const ExcellenceHero = () => {
               "
             >
               Drive Measurable Growth with Conversion-Focused Campaigns
-            </h1>
+            </h2>
 
             <p
               className="
@@ -87,6 +87,7 @@ const ExcellenceHero = () => {
                 hover:scale-[1.02]
                 cursor-pointer
               "
+              aria-label="Start Our Project - Contact Swastixa Digital"
               onClick={() => {
                 navigate("/#contact");
               }}
@@ -108,8 +109,14 @@ const ExcellenceHero = () => {
                   shadow-[0_20px_80px_rgba(255,255,255,0.04)]
                 "
               >
-                <img loading="lazy" decoding="async"                   src="https://cdn.swastixa.com/swastixaservice/service-all-eight-pages-images/swastixa-service-performance-marketing.webp"
-                  alt="Team Meeting"
+                <img
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  width={560}
+                  height={480}
+                  src="https://cdn.swastixa.com/swastixaservice/service-all-eight-pages-images/swastixa-service-performance-marketing.webp"
+                  alt="Performance Marketing and Paid Advertising Campaigns - Swastixa Digital"
                   className="
                     w-full
                     h-[420px]
@@ -117,7 +124,7 @@ const ExcellenceHero = () => {
                     object-cover
                     transition-transform
                     max-sm:h-auto
-        max-sm:object-contain
+                    max-sm:object-contain
                   "
                 />
               </div>
@@ -133,4 +140,4 @@ const ExcellenceHero = () => {
   );
 };
 
-export default ExcellenceHero;
+export default memo(ExcellenceHero);

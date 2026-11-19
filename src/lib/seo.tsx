@@ -21,7 +21,8 @@ export function getPageMetadata(path: string, overrides: SeoOverrides = {}) {
   const title = overrides.title || d.title;
   const description = overrides.description || d.description;
   const url = SITE_URL + (path === "/" ? "/" : path);
-  const image = overrides.image || DEFAULT_IMAGE;
+  const rawImage = overrides.image || DEFAULT_IMAGE;
+  const image = rawImage.startsWith("http") ? rawImage : `${SITE_URL}${rawImage.startsWith("/") ? "" : "/"}${rawImage}`;
   return {
     title,
     description,

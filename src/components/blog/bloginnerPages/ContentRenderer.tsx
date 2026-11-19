@@ -84,6 +84,7 @@ export default function ContentRenderer({ block }) {
               <iframe
                 src={embedUrl}
                 title={block.title || "Video"}
+                loading="lazy"
                 className="absolute top-0 left-0 w-full h-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -92,6 +93,7 @@ export default function ContentRenderer({ block }) {
               <video
                 src={rawUrl}
                 controls
+                preload="metadata"
                 className="w-full h-full object-cover"
               />
             )}
@@ -138,11 +140,13 @@ export default function ContentRenderer({ block }) {
           <img
             loading="lazy"
             decoding="async"
+            width={900}
+            height={500}
             src={src}
-            alt={alt}
+            alt={alt && alt !== "blog image" ? alt : "Swastixa Blog visual guide illustration"}
             className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
           />
-          {alt && <p className="text-center text-sm text-gray-400 mt-2 p-2">{alt}</p>}
+          {alt && alt !== "blog image" && <p className="text-center text-sm text-gray-400 mt-2 p-2">{alt}</p>}
         </div>
       );
     }
@@ -151,8 +155,13 @@ export default function ContentRenderer({ block }) {
       return (
         <div className="flex flex-col md:flex-row gap-8 items-center mb-12">
           <div className="w-full md:w-1/2 overflow-hidden rounded-xl border border-white/10">
-            <img loading="lazy" decoding="async"               src={block.image}
-              alt={block.alt || "content image"}
+            <img
+              loading="lazy"
+              decoding="async"
+              width={600}
+              height={400}
+              src={block.image}
+              alt={block.alt && block.alt !== "content image" ? block.alt : "Swastixa Blog visual section illustration"}
               className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
@@ -165,8 +174,13 @@ export default function ContentRenderer({ block }) {
     case "imageRightText":
       return (
         <div className="flex justify-center items-center mb-12 overflow-hidden rounded-2xl border border-white/10">
-          <img loading="lazy" decoding="async"             src={block.image}
-            alt={block.alt || "image"}
+          <img
+            loading="lazy"
+            decoding="async"
+            width={900}
+            height={500}
+            src={block.image}
+            alt={block.alt && block.alt !== "image" ? block.alt : "Swastixa Blog visual overview diagram"}
             className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500"
           />
         </div>

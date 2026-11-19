@@ -84,7 +84,12 @@ const ServiceCards = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
 
         {filteredServices.map((service, index) => (
-          <Link key={index} href={service.path} className="block">
+          <Link
+            key={index}
+            href={service.path}
+            className="block"
+            aria-label={`${service.title} - ${service.description}`}
+          >
           <PixelCard
             variant="blue"
             noFocus={true}
@@ -92,7 +97,7 @@ const ServiceCards = () => {
           >
           
             {/* Number */}
-            <div className="text-[#71717a] group-hover:text-[#a1a1aa] font-medium text-base mb-3 transition-colors duration-300">
+            <div className="text-[#9ca3af] group-hover:text-white font-medium text-base mb-3 transition-colors duration-300">
               0{index + 1}
             </div>
 
@@ -101,7 +106,7 @@ const ServiceCards = () => {
               {service.title}
             </h3>
             {/* Description */}
-            <p className="text-[#a1a1aa] group-hover:text-zinc-300 text-sm sm:text-[15px] leading-relaxed mb-5 font-light transition-colors duration-300">
+            <p className="text-[#a1a1aa] group-hover:text-zinc-200 text-sm sm:text-[15px] leading-relaxed mb-5 font-light transition-colors duration-300">
               {service.description}
             </p>
 

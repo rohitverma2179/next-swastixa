@@ -139,7 +139,8 @@ const Particles = ({
       container.addEventListener('mousemove', handleMouseMove);
     }
 
-    const count = particleCount;
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    const count = isMobile ? Math.min(particleCount, 60) : particleCount;
     const positions = new Float32Array(count * 3);
     const randoms = new Float32Array(count * 4);
     const colors = new Float32Array(count * 3);
@@ -186,12 +187,15 @@ const Particles = ({
     let animationFrameId;
     let lastTime = performance.now();
     let elapsed = 0;
+    const fpsInterval = 1000 / 30; // 30 FPS cap prevents mobile CPU lock
 
     const update = t => {
       if (!isVisible) return;
       animationFrameId = requestAnimationFrame(update);
+
       const delta = t - lastTime;
-      lastTime = t;
+      if (delta < fpsInterval) return;
+      lastTime = t - (delta % fpsInterval);
       elapsed += delta * speed;
 
       program.uniforms.uTime.value = elapsed * 0.001;

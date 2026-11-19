@@ -244,7 +244,7 @@ export default function PixelCard({ variant = 'default', gap = undefined, speed 
       onMouseLeave={onMouseLeave}
       onFocus={finalNoFocus ? undefined : onFocus}
       onBlur={finalNoFocus ? undefined : onBlur}
-      tabIndex={rest.tabIndex !== undefined ? rest.tabIndex : (finalNoFocus ? -1 : undefined)}
+      tabIndex={rest.tabIndex !== undefined ? rest.tabIndex : (finalNoFocus ? undefined : 0)}
       {...rest}
     >
       <canvas className="absolute inset-0 w-full h-full block z-0 pointer-events-none" ref={canvasRef} />

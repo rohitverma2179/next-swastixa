@@ -147,7 +147,7 @@ export default function FAQSection() {
                                             <div className="border-t border-white/5 px-6 py-6">
                                                 <p
                                                     className="
-                            text-[#9A9A9A]
+                            text-[#a1a1aa]
                             text-[15px]
                             leading-8
                             lg:max-w-[95%]

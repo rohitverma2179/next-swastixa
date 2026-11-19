@@ -189,6 +189,7 @@ export default function Navbar() {
             >
               <button
                 onClick={() => setIsOpen(false)}
+                aria-label="Close navigation sidebar"
                 className="self-end p-1 rounded-lg hover:bg-gray-200 transition bg-white/10"
               >
                 <svg

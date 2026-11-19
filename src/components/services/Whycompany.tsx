@@ -134,7 +134,7 @@ const WhyCompany = () => {
     >
       {/* Header Section */}
       <div className="max-w-4xl mb-12">
-        <span className="text-[#71717a] text-xs font-semibold uppercase tracking-[0.25em] block mb-2.5">
+        <span className="text-[#9ca3af] text-xs font-semibold uppercase tracking-[0.25em] block mb-2.5">
           Why Swastixa
         </span>
         <h2 className="text-3xl sm:text-[40px] font-extrabold tracking-tight text-white mb-4 leading-tight">
@@ -163,7 +163,7 @@ const WhyCompany = () => {
             }}
           >
             {/* Number */}
-            <div className="text-[#71717a] font-medium text-base mb-6 group-hover:text-[#a1a1aa] transition-colors duration-300">
+            <div className="text-[#9ca3af] font-medium text-base mb-6 group-hover:text-white transition-colors duration-300">
               {card.number}
             </div>
 
@@ -191,7 +191,7 @@ const WhyCompany = () => {
       </div>
 
       {/* Progress Scrollbar Indicator */}
-      <div className="w-full h-[3px] bg-zinc-900 rounded-full mt-16 relative overflow-hidden">
+      <div role="progressbar" aria-label="Why Swastixa carousel progress" className="w-full h-[3px] bg-zinc-900 rounded-full mt-16 relative overflow-hidden">
         <div 
           ref={progressBarFillRef}
           className="h-full bg-zinc-500 rounded-full w-0"
