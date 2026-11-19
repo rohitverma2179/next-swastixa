@@ -30,9 +30,8 @@ export default function BlogCard({ blog, index = 0 }: { blog: any; index?: numbe
                     overflow-hidden
                 "
                 style={{
-                    background: "#4e4e4e66", // Transparent background
-                    backdropFilter: "blur(15px)",        // Blur effect
-                    boxShadow: "rgb(110 109 109 / 25%) 1.5px 1px 2.8px inset", // Inner shadow
+                    background: "#18181b",
+                    boxShadow: "rgb(110 109 109 / 25%) 1.5px 1px 2.8px inset",
                     borderRadius: "0.8rem"
                 }} >
                 <picture>
@@ -40,13 +39,13 @@ export default function BlogCard({ blog, index = 0 }: { blog: any; index?: numbe
                     {desktopImg && <source media="(min-width: 641px)" srcSet={desktopImg} type="image/webp" />}
                     <img
                         loading={isPriority ? "eager" : "lazy"}
-                        decoding={isPriority ? "sync" : "async"}
+                        decoding="async"
                         fetchPriority={isPriority ? "high" : "low"}
                         width={600}
                         height={350}
                         src={mobileImg || desktopImg}
                         alt={altText}
-                        className="w-full h-full object-cover hover:scale-105 transition-all duration-300"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                 </picture>
             </div>

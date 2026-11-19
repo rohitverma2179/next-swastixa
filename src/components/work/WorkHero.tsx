@@ -6,7 +6,7 @@ import OptimizedVideo from "../common/OptimizedVideo";
 const videoCards = [
   {
     id: 1,
-    src: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-one-video.mp4",
+    src: "https://cdn.swastixa.com/swastixawork/production-house-video/swastixa-five-video/swastixa-about-one-video.mp4",
     poster: "/posters/1.webp",
     mobileBg: "bg-[#2f2d2d]",
     className: `
@@ -22,7 +22,7 @@ const videoCards = [
   },
   {
     id: 2,
-    src: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-two-video.mp4",
+    src: "https://cdn.swastixa.com/swastixawork/production-house-video/swastixa-five-video/swastixa-about-two-video.mp4",
     poster: "/posters/2.webp",
     mobileBg: "bg-[#ededed]",
     className: `
@@ -38,7 +38,7 @@ const videoCards = [
   },
   {
     id: 3,
-    src: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-three-video.mp4",
+    src: "https://cdn.swastixa.com/swastixawork/production-house-video/swastixa-five-video/swastixa-about-three-video.mp4",
     poster: "/posters/3.webp",
     mobileBg: "bg-[#bdb9b9]",
     className: `
@@ -53,7 +53,7 @@ const videoCards = [
   },
   {
     id: 4,
-    src: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-four-video.mp4",
+    src: "https://cdn.swastixa.com/swastixawork/production-house-video/swastixa-five-video/swastixa-about-four-video.mp4",
     poster: "/posters/4.webp",
     mobileBg: "bg-[#d9d9d9]",
     className: `
@@ -70,7 +70,7 @@ const videoCards = [
   },
   {
     id: 5,
-    src: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
+    src: "https://cdn.swastixa.com/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
     poster: "/posters/5.webp",
     mobileBg: "bg-[#625f5f]",
     className: ` 
