@@ -15,6 +15,7 @@ const Hero = () => {
     const containerEl = containerRef.current;
     if (!containerEl) return;
 
+
     const videoEl = containerEl.querySelector("video");
     if (!videoEl) return;
 

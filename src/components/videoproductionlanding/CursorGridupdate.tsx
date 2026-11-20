@@ -276,11 +276,15 @@ const CursorGridupdate = ({
     let last = 0;
     let visible = true;
 
+    const isMobileDevice =
+      typeof window !== 'undefined' &&
+      (window.innerWidth < 768 || (window.matchMedia && window.matchMedia('(pointer: coarse)').matches));
+
     const resize = () => {
       const s = settingsRef.current;
       view.width = Math.max(1, container.clientWidth);
       view.height = Math.max(1, container.clientHeight);
-      view.ratio = Math.min(s.dpr || window.devicePixelRatio || 1, 2);
+      view.ratio = isMobileDevice ? 0.75 : Math.min(s.dpr || window.devicePixelRatio || 1, 1.5);
       canvas.width = Math.max(1, Math.round(view.width * view.ratio));
       canvas.height = Math.max(1, Math.round(view.height * view.ratio));
       if (!pointer.inside && mouse.x === 0 && mouse.y === 0) {
@@ -339,6 +343,7 @@ const CursorGridupdate = ({
         gl.bindVertexArray(null);
       };
 
+      let lastDrawTime = 0;
       const frame = (now: number) => {
         raf = 0;
         if (!visible || document.hidden) return;
@@ -357,8 +362,17 @@ const CursorGridupdate = ({
           if (clock - pulses[i].t0 > 1.45) pulses.splice(i, 1);
         }
 
+        const active =
+          pointer.inside ||
+          pulses.length > 0 ||
+          Math.hypot(pointer.x - mouse.x, pointer.y - mouse.y) > 0.5 ||
+          presence > 0.005;
+
         drawWebGL();
-        if (!reduce) raf = requestAnimationFrame(frame);
+
+        if (active && !reduce) {
+          raf = requestAnimationFrame(frame);
+        }
       };
 
       const wake = () => {
@@ -403,6 +417,7 @@ const CursorGridupdate = ({
 
       const onPointerLeave = () => {
         pointer.inside = false;
+        wake();
       };
 
       const onVisibility = () => {
@@ -428,7 +443,6 @@ const CursorGridupdate = ({
 
       resize();
       drawWebGL();
-      if (!reduce) wake();
 
       return () => {
         cancelAnimationFrame(raf);

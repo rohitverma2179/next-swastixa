@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { preconnect } from "react-dom";
 import dynamic from "next/dynamic";
 import HeroSection from "@/components/realestatemarketing/HeroSection";
 import HeroSecond from "@/components/realestatemarketing/HeroSecond";
@@ -101,6 +102,8 @@ const faqSchemaData = {
 };
 
 export default function RealEstateMarketingAgencyInGurugram() {
+  preconnect("https://cdn.swastixa.com", { crossOrigin: "anonymous" });
+  preconnect("https://wsrv.nl", { crossOrigin: "anonymous" });
   return (
     <div className="bg-black min-h-screen text-white selection:bg-blue-500 selection:text-white">
       {/* FAQ Schema */}

@@ -50,6 +50,8 @@ export default function AboutSection() {
                   <img
                     src="/assets/location.webp"
                     alt="About Swastixa Digital - Real Estate Marketing Agency in Gurugram"
+                    width={480}
+                    height={480}
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                     loading="lazy"
                     decoding="async"

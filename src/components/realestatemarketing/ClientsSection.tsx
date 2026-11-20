@@ -34,73 +34,52 @@ import React from "react";
 const realEstateLogos = [
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/dlf-logo.png",
-    alt: "dlf-logo",
+    alt: "DLF Homes",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/emaar-logo.png",
-    alt: "Munchon",
+    alt: "Emaar India",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/mthreem-logo.png",
-    alt: "Munchon",
+    alt: "M3M India",
   },
-  // m3m
-
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/mrg-logo.png",
-    alt: "Munchon",
+    alt: "MRG Group",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/signature-global-logo.png",
     alt: "Signature Global",
-    // link: "https://signatureglobal.in" 
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/ganga-logo.png",
-    alt: "Munchon",
+    alt: "Ganga Realty",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/aarize-logo.png",
-    alt: "Mahagun",
-    // link: "https://mahagunindia.com"
+    alt: "Aarize Group",
   },
-
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/smart-world-logo.png",
-    alt: "Munchon",
+    alt: "Smart World Developers",
   },
-  
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/sare-logo.png",
-    alt: "Munchon",
+    alt: "Sare Homes",
   },
- 
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/grace-aesthetic-logo.png",
-    alt: "Munchon",
+    alt: "Grace Aesthetic",
   },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/ishaadrii-logo.png",
-    alt: "Munchon",
+    alt: "Ishaadrii",
   },
-  // {
-  //   url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/swadeshi-logo.png",
-  //   alt: "Munchon",
-  // },
-  // {
-  //   url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/washguys-logo.png",
-  //   alt: "Munchon",
-  // },
-  // {
-  //   url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/kloy-logo.png",
-  //   alt: "Munchon",
-  // },
   {
     url: "https://cdn.swastixa.com/swastixadigital/swastixa-clients-logos/one-group-logo.png",
-    alt: "Munchon",
+    alt: "The One Group",
   },
-
-
 ];
 
 

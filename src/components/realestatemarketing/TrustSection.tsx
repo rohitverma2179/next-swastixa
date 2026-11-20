@@ -57,6 +57,8 @@ export default function TrustSection() {
                   <img
                     src="/assets/trust.webp"
                     alt="Why Gurugram Developers Trust Swastixa Digital - Real Estate Marketing Agency"
+                    width={480}
+                    height={480}
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                     loading="lazy"
                     decoding="async"

@@ -61,8 +61,13 @@ export default function TrustSection() {
 
                 <div className="relative rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-950 border border-white/10">
                   <img
-                    src="https://cdn.swastixa.com/video-production-house/why-brands-trust-video-production-house-gurugram.png"
+                    src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.swastixa.com%2Fvideo-production-house%2Fwhy-brands-trust-video-production-house-gurugram.png&w=600&q=75&output=webp"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = "https://cdn.swastixa.com/video-production-house/why-brands-trust-video-production-house-gurugram.png";
+                    }}
                     alt="Why Brands Trust a Video Production House In Gurugram"
+                    width={480}
+                    height={480}
                     className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                     loading="lazy"
                     decoding="async"

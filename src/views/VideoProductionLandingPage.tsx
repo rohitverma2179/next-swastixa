@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { preconnect } from "react-dom";
 import HeroSection from "@/components/videoproductionlanding/HeroSection";
 import HeroSecond from "@/components/videoproductionlanding/HeroSecond";
 import AboutSection from "@/components/videoproductionlanding/AboutSection";
@@ -100,6 +101,8 @@ const faqSchemaData = {
 };
 
 export default function VideoProductionLandingPage() {
+  preconnect("https://cdn.swastixa.com", { crossOrigin: "anonymous" });
+  preconnect("https://wsrv.nl", { crossOrigin: "anonymous" });
   return (
     <div className="bg-black min-h-screen text-white selection:bg-blue-500 selection:text-white overflow-x-hidden">
       {/* FAQ Schema */}

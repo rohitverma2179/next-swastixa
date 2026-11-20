@@ -46,8 +46,13 @@ export default function HeroSecond() {
 
                 <div className="relative rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-950 border border-white/10">
                   <img
-                    src="https://cdn.swastixa.com/video-production-house/swastixa-digital-video-production-company-gurugram.png"
+                    src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.swastixa.com%2Fvideo-production-house%2Fswastixa-digital-video-production-company-gurugram.png&w=650&q=75&output=webp"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = "https://cdn.swastixa.com/video-production-house/swastixa-digital-video-production-company-gurugram.png";
+                    }}
                     alt="Swastixa Digital - Video Production House In Gurugram"
+                    width={520}
+                    height={520}
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                     loading="lazy"
                     decoding="async"

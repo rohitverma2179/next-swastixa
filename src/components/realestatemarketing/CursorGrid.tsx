@@ -360,7 +360,10 @@ const CursorGrid = ({
     let pixels = new Uint8Array(0);
     let presence = 0;
     let clock = 0;
-    let introClock = settingsRef.current.intro && !reduce ? 0 : 1;
+    const isMobileDevice =
+      typeof window !== 'undefined' &&
+      (window.innerWidth < 768 || (window.matchMedia && window.matchMedia('(pointer: coarse)').matches));
+    let introClock = settingsRef.current.intro && !reduce && !isMobileDevice ? 0 : 1;
     let raf = 0;
     let last = 0;
     let visible = true;
@@ -370,7 +373,7 @@ const CursorGrid = ({
       const s = settingsRef.current;
       view.width = Math.max(1, container.clientWidth);
       view.height = Math.max(1, container.clientHeight);
-      view.ratio = Math.min(s.dpr || window.devicePixelRatio || 1, 2);
+      view.ratio = isMobileDevice ? 1 : Math.min(s.dpr || window.devicePixelRatio || 1, 1.5);
       canvas.width = Math.max(1, Math.round(view.width * view.ratio));
       canvas.height = Math.max(1, Math.round(view.height * view.ratio));
       const size = s.cellSize;
@@ -548,6 +551,10 @@ const CursorGrid = ({
       if (Math.abs(mouse.x - pointer.x) + Math.abs(mouse.y - pointer.y) > 0.05 && presence > 0.002) active = true;
       if (s.ambient > 0 && !reduce) active = true;
 
+      if (isMobileDevice && !pointer.inside && pulses.length === 0) {
+        return;
+      }
+
       draw();
       if (active) raf = requestAnimationFrame(frame);
     };
@@ -615,9 +622,14 @@ const CursorGrid = ({
     document.documentElement.addEventListener('pointerleave', onPointerLeave);
     document.addEventListener('visibilitychange', onVisibility);
     rebuild();
-    if (introClock < 1) pulses.push({ x: view.width / 2, y: view.height / 2, t0: 0.15, strength: 0.6 });
+    if (introClock < 1 && !isMobileDevice) pulses.push({ x: view.width / 2, y: view.height / 2, t0: 0.15, strength: 0.6 });
     draw();
-    wake();
+    let initTimer: any = null;
+    if (!isMobileDevice) {
+      initTimer = setTimeout(() => {
+        wake();
+      }, 80);
+    }
     wakeRef.current = () => {
       const s = settingsRef.current;
       if (s.cellSize !== view.cellSize) rebuild();
@@ -627,6 +639,7 @@ const CursorGrid = ({
     };
 
     return () => {
+      clearTimeout(initTimer);
       cancelAnimationFrame(raf);
       wakeRef.current = null;
       resizeObserver.disconnect();
@@ -644,7 +657,7 @@ const CursorGrid = ({
 
   useEffect(() => {
     wakeRef.current?.();
-  });
+  }, [cellSize, color, gridColor, radius, falloff, highlight, holdTime, fadeDuration, lineWidth, maxOpacity, fillOpacity, gridOpacity, gridStyle, cellRadius, cellGap, spotlight, clickPulse, pulseSpeed, ambient, edgeFade, intro, dpr]);
 
   return (
     <div

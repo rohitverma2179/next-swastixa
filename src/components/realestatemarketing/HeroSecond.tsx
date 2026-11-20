@@ -141,6 +141,8 @@ export default function HeroSecond() {
                   <img
                     src="/assets/social.webp"
                     alt="Swastixa Digital Real Estate Strategy, Create, Market, Grow - DLF, Emaar, M3M, Signature Global"
+                    width={520}
+                    height={520}
                     className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                     loading="lazy"
                     decoding="async"

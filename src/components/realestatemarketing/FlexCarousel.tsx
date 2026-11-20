@@ -495,21 +495,26 @@ export default function FlexCarousel({ items = services }: FlexCarouselProps) {
         </div>
 
         {/* Right: Pagination Dots */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5">
           {items.map((item, idx) => (
             <button
               key={item.number}
+              type="button"
               onClick={() => goTo(idx)}
               aria-label={`Go to ${item.title}`}
-              className={`
-                h-2 rounded-full transition-all duration-300 cursor-pointer
-                ${
-                  idx === activeIndex
-                    ? "w-8 bg-white shadow-[0_0_12px_rgba(255,255,255,0.4)]"
-                    : "w-2 bg-white/20 hover:bg-white/40"
-                }
-              `}
-            />
+              className="w-7 h-7 flex items-center justify-center cursor-pointer"
+            >
+              <span
+                className={`
+                  h-2 rounded-full transition-all duration-300 block
+                  ${
+                    idx === activeIndex
+                      ? "w-8 bg-white shadow-[0_0_12px_rgba(255,255,255,0.4)]"
+                      : "w-2 bg-white/20 hover:bg-white/40"
+                  }
+                `}
+              />
+            </button>
           ))}
         </div>
       </div>
