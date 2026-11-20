@@ -12,8 +12,8 @@ import React, {
 import { preconnect } from "react-dom";
 import type { SMMItem } from "@/data/smmContent";
 
-const INITIAL_BATCH = 8;
-const LOAD_STEP = 8;
+const INITIAL_BATCH = 12;
+const LOAD_STEP = 12;
 
 const useIsomorphicLayoutEffect =
   typeof window !== "undefined" ? useLayoutEffect : useEffect;
@@ -27,60 +27,53 @@ const getColumnCount = () => {
   return 1;
 };
 
+const getOptimizedUrl = (url: string, width = 600, quality = 75) => {
+  if (!url) return "";
+  if (url.startsWith("https://cdn.swastixa.com/")) {
+    return `https://wsrv.nl/?url=${encodeURIComponent(url)}&w=${width}&q=${quality}&output=webp`;
+  }
+  return url;
+};
+
 interface GridItemProps {
   item: SMMItem;
   globalIndex: number;
 }
 
 const GridItem = memo(({ item, globalIndex }: GridItemProps) => {
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    const img = imgRef.current;
-    if (img && img.complete && img.naturalWidth > 0) {
-      setIsImageLoaded(true);
-    }
-  }, []);
-
+  const [currentSrc, setCurrentSrc] = useState(() => getOptimizedUrl(item.image, 600, 75));
   const isTopPriority = globalIndex < 4;
-  const isInitialBatch = globalIndex < 8;
+  const isTall = item.isTall;
 
   return (
     <div
       style={{
         contentVisibility: "auto",
-        containIntrinsicSize: item.isTall ? "auto 520px" : "auto 360px",
+        containIntrinsicSize: isTall ? "auto 520px" : "auto 360px",
       }}
-      className="w-full mb-5 sm:mb-6 relative rounded-2xl overflow-hidden bg-neutral-900 group shadow-2xl transform-gpu transition-transform duration-300 ease-out hover:-translate-y-1.5"
+      className="w-full mb-5 sm:mb-6 relative rounded-2xl overflow-hidden bg-neutral-900 group shadow-2xl transition-transform duration-300 ease-out hover:-translate-y-1.5"
     >
       <div
-        className={`relative w-full overflow-hidden bg-neutral-900 ${
-          isImageLoaded
-            ? "min-h-0"
-            : item.isTall
-            ? "min-h-[340px] sm:min-h-[420px]"
-            : "min-h-[240px] sm:min-h-[280px]"
-        }`}
+        className="relative w-full overflow-hidden bg-neutral-900"
+        style={{ aspectRatio: isTall ? "9 / 16" : "1 / 1" }}
       >
-        {!isImageLoaded && (
-          <div className="absolute inset-0 bg-gradient-to-br from-neutral-800/80 via-neutral-800/50 to-neutral-900 animate-pulse" />
-        )}
-
         <img
-          ref={imgRef}
-          src={item.image}
+          src={currentSrc}
+          srcSet={`
+            ${getOptimizedUrl(item.image, 400, 70)} 400w,
+            ${getOptimizedUrl(item.image, 650, 75)} 650w
+          `}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 33vw, 25vw"
           alt={item.title || "Social Media Content"}
           width={600}
-          height={item.isTall ? 750 : 600}
-          onLoad={() => setIsImageLoaded(true)}
-          onError={() => setIsImageLoaded(true)}
+          height={isTall ? 1067 : 600}
+          onError={() => {
+            if (currentSrc !== item.image) setCurrentSrc(item.image);
+          }}
           loading="lazy"
           decoding="async"
           fetchPriority="low"
-          className={`w-full h-auto block object-cover transition-[opacity,transform] duration-500 ease-out group-hover:scale-[1.03] ${
-            isImageLoaded ? "opacity-100" : "opacity-0"
-          }`}
+          className="w-full h-full block object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         />
       </div>
     </div>
@@ -95,6 +88,7 @@ interface SMMGridProps {
 
 const SMMGrid = ({ smmContent }: SMMGridProps) => {
   preconnect("https://cdn.swastixa.com", { crossOrigin: "anonymous" });
+  preconnect("https://wsrv.nl", { crossOrigin: "anonymous" });
 
   const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH);
   const [columns, setColumns] = useState<number>(3);

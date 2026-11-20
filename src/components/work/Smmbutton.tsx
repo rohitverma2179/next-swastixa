@@ -27,24 +27,28 @@ const Smmbutton = ({ activeTab }: { activeTab?: string }) => {
             <button
                 onClick={() => active !== 'posts' && navigate('/work/social-media-management')}
                 className={getButtonClass('posts')}
+                aria-label="View Social Media Posts portfolio"
             >
                 Posts
             </button>
             <button
                 onClick={() => active !== 'reels' && navigate('/work/reels')}
                 className={getButtonClass('reels')}
+                aria-label="View Video Reels portfolio"
             >
                 Reels
             </button>
             <button
                 onClick={() => active !== 'branding' && navigate('/work/branding')}
                 className={getButtonClass('branding')}
+                aria-label="View Brand Identity & Design portfolio"
             >
                 Branding
             </button>
             <button
                 onClick={() => active !== 'print' && navigate('/work/print')}
                 className={getButtonClass('print')}
+                aria-label="View Print Media portfolio"
             >
                 Print
             </button>

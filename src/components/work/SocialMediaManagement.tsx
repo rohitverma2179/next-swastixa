@@ -1,28 +1,23 @@
 "use client";
 
-import React, { lazy, Suspense } from 'react'
-import { preload } from "react-dom";
-import { useNavigate } from "@/lib/router";
-import smmContent from '../../data/smmContent'
+import React, { lazy, Suspense } from 'react';
+import { preload, preconnect } from "react-dom";
+import smmContent from '../../data/smmContent';
 
-// Preload critical hero gallery images
+// Preconnect to CDNs for blazing fast image streaming
+preconnect("https://cdn.swastixa.com", { crossOrigin: "anonymous" });
+preconnect("https://wsrv.nl", { crossOrigin: "anonymous" });
+
+// Preload critical hero gallery active image only
 preload("/images/gallery/m3m.webp", { as: "image", fetchPriority: "high" });
-preload("/images/gallery/kloy.webp", { as: "image", fetchPriority: "high" });
-preload("/images/gallery/bestmate.webp", { as: "image", fetchPriority: "high" });
-preload("/images/gallery/kevvali.webp", { as: "image", fetchPriority: "high" });
-preload("/images/gallery/mrg.webp", { as: "image", fetchPriority: "high" });
 
 // Lazy load heavy components for better initial performance
 const SMMGrid = lazy(() => import('./SMMGrid'));
-const ReelsGrid = lazy(() => import('./ReelsGrid'));
 const CircularGallery = lazy(() => import('./CircularGallery'));
 
-import { reelsData } from '../../data/reelsData'
 import Smmbutton from './Smmbutton';
 
 const SocialMediaManagement = () => {
-  const navigate = useNavigate();
-
   return (
     <main className="bg-black min-h-screen">
       {/* Hero Section with Circular Gallery */}

@@ -525,20 +525,23 @@ class App {
       }
     }
 
-    if (this.isCoverFlow) {
+    const isMoving = Math.abs(this.scroll.target - this.scroll.current) > 0.0005 || this.isDown || !this.hasRenderedOnce;
+
+    if (isMoving) {
       this.scroll.current = lerp(this.scroll.current, this.scroll.target, this.scroll.ease);
+      if (Math.abs(this.scroll.target - this.scroll.current) < 0.0005) {
+        this.scroll.current = this.scroll.target;
+      }
       const direction = this.scroll.current > this.scroll.last ? 'right' : 'left';
-      this.medias?.forEach(media => media.updateCoverFlow(this.scroll, direction));
-      this.scroll.last = this.scroll.current;
-    } else {
-      this.scroll.current = lerp(this.scroll.current, this.scroll.target, this.scroll.ease);
-      const direction = this.scroll.current > this.scroll.last ? 'right' : 'left';
-      if (this.medias) {
+      if (this.isCoverFlow) {
+        this.medias?.forEach(media => media.updateCoverFlow(this.scroll, direction));
+      } else if (this.medias) {
         this.medias.forEach(media => media.update(this.scroll, direction));
       }
       this.scroll.last = this.scroll.current;
+      this.renderer.render({ scene: this.scene, camera: this.camera });
+      this.hasRenderedOnce = true;
     }
-    this.renderer.render({ scene: this.scene, camera: this.camera });
     this.raf = window.requestAnimationFrame(this.boundUpdate || this.update.bind(this));
   }
   addEventListeners() {
@@ -547,25 +550,27 @@ class App {
     this.boundOnTouchDown = this.onTouchDown.bind(this);
     this.boundOnTouchMove = this.onTouchMove.bind(this);
     this.boundOnTouchUp = this.onTouchUp.bind(this);
-    window.addEventListener('resize', this.boundOnResize);
-    window.addEventListener('mousewheel', this.boundOnWheel);
-    window.addEventListener('wheel', this.boundOnWheel);
-    window.addEventListener('mousedown', this.boundOnTouchDown);
-    window.addEventListener('mousemove', this.boundOnTouchMove);
-    window.addEventListener('mouseup', this.boundOnTouchUp);
-    window.addEventListener('touchstart', this.boundOnTouchDown);
-    window.addEventListener('touchmove', this.boundOnTouchMove);
-    window.addEventListener('touchend', this.boundOnTouchUp);
+    window.addEventListener('resize', this.boundOnResize, { passive: true });
+    if (this.container) {
+      this.container.addEventListener('wheel', this.boundOnWheel, { passive: true });
+      this.container.addEventListener('mousedown', this.boundOnTouchDown);
+      this.container.addEventListener('touchstart', this.boundOnTouchDown, { passive: true });
+    }
+    window.addEventListener('mousemove', this.boundOnTouchMove, { passive: true });
+    window.addEventListener('mouseup', this.boundOnTouchUp, { passive: true });
+    window.addEventListener('touchmove', this.boundOnTouchMove, { passive: true });
+    window.addEventListener('touchend', this.boundOnTouchUp, { passive: true });
   }
   destroy() {
     window.cancelAnimationFrame(this.raf);
     window.removeEventListener('resize', this.boundOnResize);
-    window.removeEventListener('mousewheel', this.boundOnWheel);
-    window.removeEventListener('wheel', this.boundOnWheel);
-    window.removeEventListener('mousedown', this.boundOnTouchDown);
+    if (this.container) {
+      this.container.removeEventListener('wheel', this.boundOnWheel);
+      this.container.removeEventListener('mousedown', this.boundOnTouchDown);
+      this.container.removeEventListener('touchstart', this.boundOnTouchDown);
+    }
     window.removeEventListener('mousemove', this.boundOnTouchMove);
     window.removeEventListener('mouseup', this.boundOnTouchUp);
-    window.removeEventListener('touchstart', this.boundOnTouchDown);
     window.removeEventListener('touchmove', this.boundOnTouchMove);
     window.removeEventListener('touchend', this.boundOnTouchUp);
     this.medias?.forEach(media => media.destroy());
@@ -587,12 +592,17 @@ export default function CircularGallery({
 }: any) {
   const containerRef = useRef(null);
   useEffect(() => {
-    let app;
+    let app: any;
+    let timer: any;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           if (!app) {
-            app = new App(containerRef.current, { items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase });
+            timer = setTimeout(() => {
+              if (containerRef.current) {
+                app = new App(containerRef.current, { items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase });
+              }
+            }, 60);
           } else if (!app.raf) {
             // Restart loop if it was stopped
             app.update();
@@ -605,7 +615,7 @@ export default function CircularGallery({
           }
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.01, rootMargin: '50px 0px' }
     );
 
     if (containerRef.current) {
@@ -613,6 +623,7 @@ export default function CircularGallery({
     }
 
     return () => {
+      clearTimeout(timer);
       observer.disconnect();
       if (app) app.destroy();
     };
